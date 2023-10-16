@@ -39,32 +39,6 @@
       </tags>
   </entry>
   <entry>
-    <title>位1的个数</title>
-    <url>/2023/10/16/%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="位1的个数"><a href="#位1的个数" class="headerlink" title="位1的个数"></a>位1的个数</h1><p><a class="link"   href="https://leetcode.cn/problems/number-of-1-bits/description/" >191. 位1的个数 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><strong>题目</strong></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://qwe-pic.oss-cn-beijing.aliyuncs.com/images/202310162011445.png"
-                      alt="image-20231016201107536"
-                ></p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">hammingWeight</span><span class="params">(<span class="type">uint32_t</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n &amp; (<span class="number">1u</span> &lt;&lt; i)) &#123;</span><br><span class="line">            ret++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hammingWeight</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        a=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n&gt;<span class="number">0</span>:</span><br><span class="line">            a+=<span class="number">1</span></span><br><span class="line">            n &amp;= n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
-
-]]></content>
-      <categories>
-        <category>AC</category>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>位运算</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>两整数之和</title>
     <url>/2023/10/16/%E4%B8%A4%E6%95%B4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
     <content><![CDATA[<h1 id="两整数之和"><a href="#两整数之和" class="headerlink" title="两整数之和"></a>两整数之和</h1><p><a class="link"   href="https://leetcode.cn/problems/sum-of-two-integers/description/" >371. 两整数之和 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -91,14 +65,29 @@
       </tags>
   </entry>
   <entry>
-    <title>TEST</title>
-    <url>/2023/10/16/test/</url>
-    <content><![CDATA[]]></content>
+    <title>位1的个数</title>
+    <url>/2023/10/16/%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="位1的个数"><a href="#位1的个数" class="headerlink" title="位1的个数"></a>位1的个数</h1><p><a class="link"   href="https://leetcode.cn/problems/number-of-1-bits/description/" >191. 位1的个数 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>题目</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic.oss-cn-beijing.aliyuncs.com/images/202310162011445.png"
+                      alt="image-20231016201107536"
+                ></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">hammingWeight</span><span class="params">(<span class="type">uint32_t</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n &amp; (<span class="number">1u</span> &lt;&lt; i)) &#123;</span><br><span class="line">            ret++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hammingWeight</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        a=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n&gt;<span class="number">0</span>:</span><br><span class="line">            a+=<span class="number">1</span></span><br><span class="line">            n &amp;= n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+]]></content>
       <categories>
-        <category>help</category>
+        <category>AC</category>
+        <category>leetcode</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>位运算</tag>
       </tags>
   </entry>
   <entry>
@@ -132,6 +121,17 @@
       <tags>
         <tag>动态规划</tag>
         <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TEST</title>
+    <url>/2023/10/16/test/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>help</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
