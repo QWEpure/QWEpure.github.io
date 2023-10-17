@@ -534,15 +534,15 @@ mjx-container[display="true"] + br {
                 </div>
                 <div class="statistics">
                     <a class="item" href="/tags">
-                        <div class="number">5</div>
+                        <div class="number">6</div>
                         <div class="label">标签</div>
                     </a>
                     <a class="item" href="/categories">
-                        <div class="number">4</div>
+                        <div class="number">5</div>
                         <div class="label">分类</div>
                     </a>
                     <a class="item" href="/archives">
-                        <div class="number">8</div>
+                        <div class="number">10</div>
                         <div class="label">文章</div>
                     </a>
                 </div>
@@ -622,7 +622,9 @@ mjx-container[display="true"] + br {
 
                 <div class="home-article-content markdown-body">
                     
-                        AC的题解leetcod由于leetcode的题解只需要编写函数，所以leetcode上面的题就只给出函数。
+                        AC的题解题目分析由于一些题目类似，所以只在第一个题目做较多的解析。
+有详解的题在精选标签下。
+leetcod由于leetcode的题解只需要编写函数，所以leetcode上面的题就只给出函数。
 nomal study一般是完整的程序。
 
                     
@@ -687,6 +689,10 @@ nomal study一般是完整的程序。
             <li class="home-article-item">
 
                 
+                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
+                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>置顶
+                    </div>
+                
 
                 
 
@@ -701,8 +707,7 @@ nomal study一般是完整的程序。
                 <div class="home-article-content markdown-body">
                     
                         Mathjax 数学公式在文章页添加 mathjax: true 属性，至此，就可以在该页面中写公式了。
-ex:
-
+ex:i\hbar\frac{\partial}{\partial t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi...
                     
                 </div>
 
@@ -761,29 +766,26 @@ ex:
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/10/16/%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-                        爬楼梯
+                    <a href="/2023/10/17/%E7%AC%AC%20N%20%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+                        第 N 个泰波那契数
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        爬楼梯70. 爬楼梯 - 力扣（LeetCode） 
+                        
 题目
 
-分析共x阶台阶
-只能由和通过加一或者加二过来。
-
-法一：动态规划12345678910int climbStairs(int n) {    int p = 0, q = 0, r = 1...
+动态规划1234567891011121314int tribonacci(int n){    if(n==0) return 0;    if(n==1&amp;&amp;n==2) return 1;    int t0=0,t1=0...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Oct 16 2023 20:21:28 GMT+0800">
+            <span class="home-article-date" data-date="Tue Oct 17 2023 22:29:49 GMT+0800">
                 
-                    2023-10-16
+                    2023-10-17
                 
             </span>
         </span>
@@ -826,7 +828,195 @@ ex:
                     
                         <li>
                             | 
+                            <a href="/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91/">斐波那契</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/10/17/%E7%AC%AC%20N%20%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">阅读全文<span class="seo-reader-text">第 N 个泰波那契数</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/10/17/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+                        斐波那契数
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+题目
+
+动态规划
+f(x)=f(x−1)+f(x−2)123456789101112int fib(int n){    if (n &lt; 2) {        return n;//如果n为前两项则通项公式不成立    }    int p...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Oct 17 2023 21:41:08 GMT+0800">
+                
+                    2023-10-17
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/AC/">AC</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/AC/leetcode/">leetcode</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91/">斐波那契</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/10/17/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">阅读全文<span class="seo-reader-text">斐波那契数</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/10/16/%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+                        爬楼梯
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+70. 爬楼梯 - 力扣（LeetCode） 
+题目
+
+分析共x阶台阶
+只能由和通过加一或者加二过来。
+
+f(x)=f(x−1)+f(x−2)法一：动态规划12345678910int climbStairs(int n) {    int p =...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 16 2023 20:21:28 GMT+0800">
+                
+                    2023-10-16
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/AC/">AC</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/AC/leetcode/">leetcode</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/AC/leetcode/%E7%B2%BE%E9%80%89/">精选</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
                             <a href="/tags/%E9%80%92%E5%BD%92/">递归</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91/">斐波那契</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -855,10 +1045,11 @@ ex:
 
                 <div class="home-article-content markdown-body">
                     
-                        两整数之和371. 两整数之和 - 力扣（LeetCode） 
+                        
+371. 两整数之和 - 力扣（LeetCode） 
 题目
 
-12345int add(int a,int b)&#123;	if(b==0)		return a;	return add(a^b,((unsigned int)(a&amp;...
+12345int add(int a,int b)&#123;	if(b==0)		return a;	return add(a^b,((unsigned int)(a&amp;b))&...
                     
                 </div>
 
@@ -934,10 +1125,11 @@ ex:
 
                 <div class="home-article-content markdown-body">
                     
-                        位1的个数191. 位1的个数 - 力扣（LeetCode） 
+                        
+191. 位1的个数 - 力扣（LeetCode） 
 题目
 
-12345678910int hammingWeight(uint32_t n) &#123;    int ret = 0;    for (int i = 0; i &lt;...
+12345678910int hammingWeight(uint32_t n) &#123;    int ret = 0;    for (int i = 0; i &lt; 32;...
                     
                 </div>
 
@@ -1013,10 +1205,12 @@ ex:
 
                 <div class="home-article-content markdown-body">
                     
-                        设计机械累加LCR 189. 设计机械累加器 - 力扣（LeetCode） 
+                        
+LCR 189. 设计机械累加器 - 力扣（LeetCode） 
 题目
 
-1234int sumNums(int n)&#123;    n &amp;&amp; (n+=sumNums(n-1));    return n;&#125;...
+1234int sumNums(int n)&#123;    n &amp;&amp; (n+=sumNums(n-1));    return n;&#125;
+1234...
                     
                 </div>
 
