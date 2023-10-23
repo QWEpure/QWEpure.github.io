@@ -13,25 +13,32 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://QWEpure.gihub.io/2023/10/16/设计机械累加器/"/>
+    <link rel="canonical" href="http://QWEpure.gihub.io/2023/10/22/排序/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="LCR 189. 设计机械累加器 - 力扣（LeetCode）  题目  1234int sumNums(int n)&amp;#123;    n &amp;&amp; (n+&#x3D;sumNums(n-1));    return n;&amp;#125;        12345678class Solution:    def __init__(self):        self.res &#x3D; 0    de">
+        <meta name="description" content="C语言API（不需要算法） cmp需要自己实现   快速排序（Quick Sort）​	快速排序使用分治法（Divide and conquer）策略来把一个序列（list）分为较小和较大的 2 个子序列，然后递归地排序两个子序列。 步骤 1.挑选基准值：从数列中挑出一个元素，称为“基准”（pivot）； 2.分割（partition）：重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计机械累加">
-<meta property="og:url" content="http://qwepure.gihub.io/2023/10/16/%E8%AE%BE%E8%AE%A1%E6%9C%BA%E6%A2%B0%E7%B4%AF%E5%8A%A0%E5%99%A8/index.html">
+<meta property="og:title" content="排序">
+<meta property="og:url" content="http://qwepure.gihub.io/2023/10/22/%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="LCR 189. 设计机械累加器 - 力扣（LeetCode）  题目  1234int sumNums(int n)&amp;#123;    n &amp;&amp; (n+&#x3D;sumNums(n-1));    return n;&amp;#125;        12345678class Solution:    def __init__(self):        self.res &#x3D; 0    de">
+<meta property="og:description" content="C语言API（不需要算法） cmp需要自己实现   快速排序（Quick Sort）​	快速排序使用分治法（Divide and conquer）策略来把一个序列（list）分为较小和较大的 2 个子序列，然后递归地排序两个子序列。 步骤 1.挑选基准值：从数列中挑出一个元素，称为“基准”（pivot）； 2.分割（partition）：重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171224757.png">
-<meta property="article:published_time" content="2023-10-16T10:24:14.474Z">
-<meta property="article:modified_time" content="2023-10-17T14:38:19.382Z">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232207450.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232209095.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232210463.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222227594.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222237914.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222238355.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222301995.png">
+<meta property="article:published_time" content="2023-10-22T14:16:03.404Z">
+<meta property="article:modified_time" content="2023-10-23T14:10:44.674Z">
 <meta property="article:author" content="小禹君">
-<meta property="article:tag" content="递归">
+<meta property="article:tag" content="排序">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171224757.png">
+<meta name="twitter:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232207450.png">
     
     
     <!--- Icon Part-->
@@ -43,7 +50,7 @@
     
     <title>
         
-            设计机械累加 -
+            排序 -
         
         Myblog
     </title>
@@ -307,7 +314,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">设计机械累加</h1>
+                <h1 class="article-title-regular">排序</h1>
             
             </div>
             
@@ -329,15 +336,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-10-16 18:24:14</span>
-        <span class="mobile">2023-10-16 18:24:14</span>
+        <span class="desktop">2023-10-22 22:16:03</span>
+        <span class="mobile">2023-10-22 22:16:03</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-17 22:38:19</span>
-            <span class="mobile">2023-10-17 22:38:19</span>
+            <span class="desktop">2023-10-23 22:10:44</span>
+            <span class="mobile">2023-10-23 22:10:44</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -361,7 +368,7 @@
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/AC/leetcode/">leetcode</a>&nbsp;
+                            <a href="/categories/AC/%E6%8E%92%E5%BA%8F/">排序</a>&nbsp;
                         </li>
                     
                     
@@ -375,7 +382,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E9%80%92%E5%BD%92/">递归</a>&nbsp;
+                        <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>&nbsp;
                     </li>
                 
             </ul>
@@ -385,12 +396,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>58 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -410,24 +421,62 @@
 
         <div class="article-content markdown-body">
             <hr>
-<p><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/qiu-12n-lcof/description/" >LCR 189. 设计机械累加器 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><strong>题目</strong></p>
+<h1 id="C语言API（不需要算法）"><a href="#C语言API（不需要算法）" class="headerlink" title="C语言API（不需要算法）"></a>C语言API（不需要算法）</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232207450.png"
+                      alt="image-20231023220726170"
+                ></p>
+<p><strong>cmp需要自己实现</strong></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171224757.png"
-                      alt="image-20231017122408772"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232209095.png"
+                      alt="image-20231023220920703"
                 ></p>
-<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumNums</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    n &amp;&amp; (n+=sumNums(n<span class="number">-1</span>));</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232210463.png"
+                      alt="image-20231023221032006"
+                ></p>
+<h3 id="快速排序（Quick-Sort）"><a href="#快速排序（Quick-Sort）" class="headerlink" title="快速排序（Quick Sort）"></a>快速排序（Quick Sort）</h3><p>​	快速排序使用<strong>分治法</strong>（Divide and conquer）策略来把一个序列（list）分为较小和较大的 2 个子序列，然后递归地排序两个子序列。</p>
+<p><strong>步骤</strong></p>
+<p><strong>1.挑选基准值：</strong>从数列中挑出一个元素，称为“基准”（pivot）；</p>
+<p><strong>2.分割（partition）：</strong>重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（与基准值相等的数可以到任何一边）。在这个分割结束之后，对基准值的排序就已经完成；<br><strong>3.递归排序子序列：</strong>递归地将小于基准值元素的子序列和大于基准值元素的子序列排序。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222227594.png"
+                      alt="quick_sort.png"
+                ></p>
+<p>选取基准值pivot也有多种方式，且选取pivot的方法对排序的时间性能有着决定性的影响。例如，对于一个逆序数组，如果每次选取数组中的第一个元素为pivot，那么将其正序排列的过程将会变得非常慢，时间复杂$O(n2)O(n^2)O(n 2)$。因此，在具体实现中考虑随机化选择基准值pivot也是非常有必要的。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">partition</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            pivot = arr[low]                                        <span class="comment"># 选取最左边为pivot</span></span><br><span class="line"></span><br><span class="line">            left, right = low, high     <span class="comment"># 双指针</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">while</span> left&lt;right <span class="keyword">and</span> arr[right] &gt;= pivot:          <span class="comment"># 找到右边第一个&lt;pivot的元素</span></span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                arr[left] = arr[right]                             <span class="comment"># 并将其移动到left处</span></span><br><span class="line">                </span><br><span class="line">                <span class="keyword">while</span> left&lt;right <span class="keyword">and</span> arr[left] &lt;= pivot:           <span class="comment"># 找到左边第一个&gt;pivot的元素</span></span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                arr[right] = arr[left]                             <span class="comment"># 并将其移动到right处</span></span><br><span class="line">            </span><br><span class="line">            arr[left] = pivot           <span class="comment"># pivot放置到中间left=right处</span></span><br><span class="line">            <span class="keyword">return</span> left</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">randomPartition</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            pivot_idx = random.randint(low, high)                   <span class="comment"># 随机选择pivot</span></span><br><span class="line">            arr[low], arr[pivot_idx] = arr[pivot_idx], arr[low]     <span class="comment"># pivot放置到最左边</span></span><br><span class="line">            <span class="keyword">return</span> partition(arr, low, high)                        <span class="comment"># 调用partition函数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">quickSort</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            <span class="keyword">if</span> low &gt;= high:             <span class="comment"># 递归结束</span></span><br><span class="line">                <span class="keyword">return</span>  </span><br><span class="line">            <span class="comment"># mid = partition(arr, low, high)       # 以mid为分割点【非随机选择pivot】</span></span><br><span class="line">            mid = randomPartition(arr, low, high)   <span class="comment"># 以mid为分割点【随机选择pivot】</span></span><br><span class="line">            quickSort(arr, low, mid-<span class="number">1</span>)              <span class="comment"># 递归对mid两侧元素进行排序</span></span><br><span class="line">            quickSort(arr, mid+<span class="number">1</span>, high)</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        quickSort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums)-<span class="number">1</span>)             <span class="comment"># 调用快排函数对nums进行排序</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
+<h3 id="归并排序（Merge-Sort）"><a href="#归并排序（Merge-Sort）" class="headerlink" title="归并排序（Merge Sort）"></a>归并排序（Merge Sort）</h3><p>​	将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<p>「分」的阶段首先将序列一步步分解成小的子序列进行分段排序；</p>
+<p>「治」的阶段则将分段有序的子序列合并在一起，使得整个序列变得有序。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222237914.png"
+                      alt="meger_sort.png"
+                ></p>
+<p>下图以最后一步中合并分段有序的子序列为例做下说明：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222238355.png"
+                      alt="meger_sort_merge.png"
+                ></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">mergeSort</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            <span class="keyword">if</span> low &gt;= high:                 <span class="comment"># 递归结束标志</span></span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            </span><br><span class="line">            mid = low + (high-low)//<span class="number">2</span>       <span class="comment"># 中间位置</span></span><br><span class="line">            mergeSort(arr, low, mid)        <span class="comment"># 递归对前后两部分进行排序</span></span><br><span class="line">            mergeSort(arr, mid+<span class="number">1</span>, high)</span><br><span class="line"></span><br><span class="line">            left, right = low, mid+<span class="number">1</span>        <span class="comment"># 将arr一分为二：left指向前半部分（已有序），right指向后半部分（已有序）</span></span><br><span class="line">            tmp = []                        <span class="comment"># 记录排序结果</span></span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid <span class="keyword">and</span> right &lt;= high:    <span class="comment"># 比较排序，优先添加前后两部分中的较小者</span></span><br><span class="line">                <span class="keyword">if</span> arr[left] &lt;= arr[right]:         <span class="comment"># left指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[left])</span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:                               <span class="comment"># right指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[right])</span><br><span class="line">                    right += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid:              <span class="comment"># 若左半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[left])</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[left:mid+1]        # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> right &lt;= high:            <span class="comment"># 若右半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[right])</span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[right:high+1]      # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            arr[low: high+<span class="number">1</span>] = tmp          <span class="comment"># [low, high] 区间完成排序</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        mergeSort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums)-<span class="number">1</span>)     <span class="comment"># 调用mergeSort函数完成排序</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-
-
-
-
-
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">mechanicalAccumulator</span>(<span class="params">self, target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        target &gt; <span class="number">1</span> <span class="keyword">and</span> self.mechanicalAccumulator(target - <span class="number">1</span>)</span><br><span class="line">        self.res += target</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
+<h3 id="堆排序（Heap-Sort）"><a href="#堆排序（Heap-Sort）" class="headerlink" title="堆排序（Heap Sort）"></a>堆排序（Heap Sort）</h3><p>​	<strong>堆</strong>是一个近似<strong>完全二叉树</strong>的结构，并同时满足堆积的性质：即子节点的键值或索引总是小于（或者大于）它的父节点。</p>
+<p>​	<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222301995.png"
+                      alt="heap.png"
+                ></p>
 
         </div>
 
@@ -435,18 +484,18 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 设计机械累加</li>
+        <li><strong>标题:</strong> 排序</li>
         <li><strong>作者:</strong> 小禹君</li>
         <li><strong>创建于
-                :</strong> 2023-10-16 18:24:14</li>
+                :</strong> 2023-10-22 22:16:03</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-10-17 22:38:19
+                    :</strong> 2023-10-23 22:10:44
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2023/10/16/设计机械累加器/
+            <strong>链接:</strong> https://redefine.ohevan.com/2023/10/22/排序/
         </li>
         <li>
             <strong>
@@ -467,7 +516,11 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/%E9%80%92%E5%BD%92/">#递归</a>&nbsp;
+                        <a href="/tags/%E6%8E%92%E5%BA%8F/">#排序</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">#双指针</a>&nbsp;
                     </li>
                 
             </ul>
@@ -481,13 +534,13 @@
                     <div class="article-prev">
                         <a class="prev"
                         rel="prev"
-                        href="/2023/10/16/statement/"
+                        href="/2023/10/23/python%E8%AF%AD%E6%B3%95/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">statement</span>
+                                <span class="post-nav-title-item">python语法</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -497,10 +550,10 @@
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/10/16/test/"
+                        href="/2023/10/21/Untitled/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">TEST</span>
+                                <span class="post-nav-title-item">同余方程</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -565,8 +618,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">设计机械累加</div>
-        
+        <div class="page-title">排序</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80API%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-text">C语言API（不需要算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%88Quick-Sort%EF%BC%89"><span class="nav-text">快速排序（Quick Sort）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%EF%BC%88Merge-Sort%EF%BC%89"><span class="nav-text">归并排序（Merge Sort）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F%EF%BC%88Heap-Sort%EF%BC%89"><span class="nav-text">堆排序（Heap Sort）</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
