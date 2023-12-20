@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>同余方程</title>
+    <url>/2023/10/21/Untitled/</url>
+    <content><![CDATA[<hr>
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>蓝桥</category>
+      </categories>
+      <tags>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/10/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>help</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>help</title>
+    <url>/2023/10/16/help/</url>
+    <content><![CDATA[<h1 id="Mathjax-数学公式"><a href="#Mathjax-数学公式" class="headerlink" title="Mathjax 数学公式"></a>Mathjax 数学公式</h1><p>在文章页添加 <code>mathjax: true</code> 属性，至此，就可以在该页面中写公式了。</p>
+<p>ex:<mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.602ex;" xmlns="http://www.w3.org/2000/svg" width="25.832ex" height="5.018ex" role="img" focusable="false" viewBox="0 -1509.9 11417.6 2217.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(345,0)"><path data-c="210F" d="M182 599Q182 611 174 615T133 619Q118 619 114 621T109 630Q109 636 114 656T122 681Q125 685 202 688Q272 695 286 695Q304 695 304 684Q304 682 295 644T282 597Q282 592 360 592H399Q430 592 445 587T460 563Q460 552 451 541L442 535H266L251 468Q247 453 243 436T236 409T233 399Q233 395 244 404Q295 441 357 441Q405 441 445 417T485 333Q485 284 449 178T412 58T426 44Q447 44 466 68Q485 87 500 130L509 152H531H543Q562 152 562 144Q562 128 546 93T494 23T415 -13Q385 -13 359 3T322 44Q318 52 318 77Q318 99 352 196T386 337Q386 386 346 386Q318 386 286 370Q267 361 245 338T211 292Q207 287 193 235T162 113T138 21Q128 7 122 4Q105 -12 83 -12Q66 -12 54 -2T42 26L166 530Q166 534 161 534T129 535Q127 535 122 535T112 534Q74 534 74 562Q74 570 77 576T84 585T96 589T109 591T124 592T138 592L182 595V599Z"></path></g><g data-mml-node="mfrac" transform="translate(907,0)"><g data-mml-node="mi" transform="translate(400.5,676)"><path data-c="1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path></g><g data-mml-node="mi" transform="translate(566,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g></g><rect width="1127" height="60" x="120" y="220"></rect></g><g data-mml-node="mi" transform="translate(2274,0)"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g><g data-mml-node="mo" transform="translate(3202.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mo" transform="translate(4258.6,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mfrac" transform="translate(5036.6,0)"><g data-mml-node="msup" transform="translate(384.2,676)"><g data-mml-node="mi"><path data-c="210F" d="M182 599Q182 611 174 615T133 619Q118 619 114 621T109 630Q109 636 114 656T122 681Q125 685 202 688Q272 695 286 695Q304 695 304 684Q304 682 295 644T282 597Q282 592 360 592H399Q430 592 445 587T460 563Q460 552 451 541L442 535H266L251 468Q247 453 243 436T236 409T233 399Q233 395 244 404Q295 441 357 441Q405 441 445 417T485 333Q485 284 449 178T412 58T426 44Q447 44 466 68Q485 87 500 130L509 152H531H543Q562 152 562 144Q562 128 546 93T494 23T415 -13Q385 -13 359 3T322 44Q318 52 318 77Q318 99 352 196T386 337Q386 386 346 386Q318 386 286 370Q267 361 245 338T211 292Q207 287 193 235T162 113T138 21Q128 7 122 4Q105 -12 83 -12Q66 -12 54 -2T42 26L166 530Q166 534 161 534T129 535Q127 535 122 535T112 534Q74 534 74 562Q74 570 77 576T84 585T96 589T109 591T124 592T138 592L182 595V599Z"></path></g><g data-mml-node="mn" transform="translate(646.1,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(500,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g><rect width="1578" height="60" x="120" y="220"></rect></g><g data-mml-node="msup" transform="translate(6854.6,0)"><g data-mml-node="mi"><path data-c="2207" d="M46 676Q46 679 51 683H781Q786 679 786 676Q786 674 617 326T444 -26Q439 -33 416 -33T388 -26Q385 -22 216 326T46 676ZM697 596Q697 597 445 597T193 596Q195 591 319 336T445 80L697 596Z"></path></g><g data-mml-node="mn" transform="translate(866,413) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mi" transform="translate(8124.1,0)"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g><g data-mml-node="mo" transform="translate(8997.3,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(9997.6,0)"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g><g data-mml-node="mi" transform="translate(10766.6,0)"><path data-c="1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></g></g></g></svg></mjx-container></p>
+]]></content>
+      <categories>
+        <category>help</category>
+      </categories>
+      <tags>
+        <tag>statement</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python语法</title>
+    <url>/2023/10/23/python%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<hr>
+<h2 id="变量多重赋值"><a href="#变量多重赋值" class="headerlink" title="变量多重赋值"></a>变量多重赋值</h2><p>​	赋值的过程是<strong>元组</strong>解包(不用加括号，用逗号隔开就行)。</p>
+<p>在被赋值的单个变量前面加上*可以实现多个数据以元组的形式赋值给一个变量。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#方一</span></span><br><span class="line">a, b, *c = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment">#c</span></span><br><span class="line"><span class="comment">#[3, 4, 5]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#方二</span></span><br><span class="line">num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">a,b,c=num[<span class="number">0</span>],num[<span class="number">1</span>],num[<span class="number">2</span>:]</span><br><span class="line"><span class="comment">#c</span></span><br><span class="line"><span class="comment">#[3, 4, 5]</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#变量交换</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="局部变量全局化"><a href="#局部变量全局化" class="headerlink" title="局部变量全局化"></a>局部变量全局化</h2><p>​	当需要在函数里面<em>引用全局变量</em>时可用<strong>nonlocal 变量名</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="标准函数"><a href="#标准函数" class="headerlink" title="标准函数"></a>标准函数</h2><p>​	<strong>items()</strong> ：函数以列表返回可遍历的(键, 值) 元组。</p>
+<p>将字典中的键值对以元组存储，并将众多元组存在列表中。</p>
+<p>例如:   dict.items()  就把字典的key和value存到了列表的元组里。</p>
+<p>​	<strong>map（）</strong>：可以对列表进行一个一个的运算。比如sum(int,input().split（）)可以直接转化列表中的字符串成整数而int（）不能直接对列表操作。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232238563.jpeg"
+                      alt="image"
+                ></p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>​	函数如果有多个返回值则为元组形式返回</p>
+<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
+<li><p>binary &#x3D; 0b1010 # 二进制</p>
+</li>
+<li><p>octal &#x3D; 0o123 # 八进制</p>
+</li>
+<li><p>decimal &#x3D; 123 # 十进制</p>
+</li>
+<li><p>hexadecimal &#x3D; 0x2f # 十六进制</p>
+<p><strong>进制转换</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232241801.jpeg"
+                      alt="image"
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232241656.jpeg"
+                      alt="image"
+                ></p>
+</li>
+</ul>
+<h2 id="面向对象-类"><a href="#面向对象-类" class="headerlink" title="面向对象(类)"></a>面向对象(类)</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232243861.jpeg"
+                      alt="image"
+                ></p>
+<ul>
+<li><p><strong>class Solution:</strong>#创建一个类</p>
+</li>
+<li><p><strong>def sumNums()</strong>#创建方法</p>
+</li>
+<li><p>self:#对象</p>
+</li>
+<li><p>self.res#每个对象递归不会对其重复初始化</p>
+</li>
+</ul>
+<h2 id="列表（顺序表）"><a href="#列表（顺序表）" class="headerlink" title="列表（顺序表）"></a>列表（顺序表）</h2><p><strong>list.append(value)</strong>:在list尾部添加指定value</p>
+<p><strong>list.insert(index,value)</strong>:在指定index前插入指定value</p>
+<p><strong>list1.extend(list2)</strong>:将list2加到list1后面</p>
+<p><strong>del list[index]</strong>:删除指定下标</p>
+<p><strong>list.pop(index)</strong>:删除方式同上，但是index默认删除list尾部的元素，返回被删除的值。</p>
+<p><strong>list.clear()</strong>:清空列表</p>
+<p><strong>list,index(value)</strong>:查找value的下标（索引）</p>
+<p><strong>list.count(value)</strong>:统计相同元素(value)个数</p>
+<p><strong>max(list)</strong> <strong>min(list)</strong></p>
+<p><strong>new list&#x3D;list.copy()</strong>:复制列表类似与list[:]</p>
+<p><strong>list.sort(key&#x3D;none,reverse&#x3D;False)</strong>:返回排序后原来的列表</p>
+<p>key&#x3D;none:默认为升序</p>
+<p>reverse&#x3D;True:反转</p>
+<p>reverse&#x3D;False:不反转</p>
+<p><strong>sorted(type,key,reverse)</strong>:返回一个排序后新的列表</p>
+<p><em>还有改，索引，切片等操作（与字符串差不多）</em></p>
+<h4 id="判断列表为空"><a href="#判断列表为空" class="headerlink" title="判断列表为空"></a>判断列表为空</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">list</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;list is empty&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="列表相加"><a href="#列表相加" class="headerlink" title="列表相加"></a>列表相加</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>([<span class="number">1</span>,<span class="number">2</span>]+[<span class="number">2</span>])</span><br><span class="line"><span class="comment">#[1,2,2]</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典的<strong>键具有唯一性</strong>（后面出现的键会覆盖掉前面相同的键）</p>
+<p><strong>定义</strong>:dict&#x3D;{key:value,key1:value1,…..}</p>
+<p><strong>dict[key]</strong>:访问字典键的值(修改)</p>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if-elif-else"><a href="#if-elif-else" class="headerlink" title="if elif else"></a>if elif else</h3><p>只有if条件为假 elif为真  elif才执行</p>
+<p>if为真跳过elif</p>
+<p>else在if elif全为假时执行</p>
+]]></content>
+      <categories>
+        <category>-python</category>
+      </categories>
+      <tags>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TEST</title>
+    <url>/2023/10/16/test/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>help</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/11/17/text/</url>
+    <content><![CDATA[<hr>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>两整数之和</title>
+    <url>/2023/10/16/%E4%B8%A4%E6%95%B4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/sum-of-two-integers/description/" >371. 两整数之和 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>题目</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171222610.png"
+                      alt="image-20231017122228271"
+                ></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	<span class="keyword">return</span> add(a^b,((<span class="type">unsigned</span> <span class="type">int</span>)(a&amp;b))&lt;&lt;<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getSum</span>(<span class="params">self, a: <span class="built_in">int</span>, b: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        x = <span class="number">0xffffffff</span></span><br><span class="line">        a, b = a &amp; x, b &amp; x</span><br><span class="line">        <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line">            a, b = (a ^ b), (a &amp; b) &lt;&lt; <span class="number">1</span> &amp; x</span><br><span class="line">        <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= <span class="number">0x7fffffff</span> <span class="keyword">else</span> ~(a ^ x)</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>statement</title>
+    <url>/2023/10/16/statement/</url>
+    <content><![CDATA[<h1 id="AC的题解"><a href="#AC的题解" class="headerlink" title="AC的题解"></a>AC的题解</h1><h3 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h3><p>由于一些题目类似，所以只在第一个题目做较多的解析。</p>
+<p>有详解的题在<em>精选</em>标签下。</p>
+<h2 id="leetcod"><a href="#leetcod" class="headerlink" title="leetcod"></a>leetcod</h2><p>由于leetcode的题解只需要编写函数，所以leetcode上面的题就只给出函数。</p>
+<h2 id="nomal-study"><a href="#nomal-study" class="headerlink" title="nomal study"></a>nomal study</h2><p>一般是完整的程序。</p>
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>help</category>
+      </categories>
+      <tags>
+        <tag>statement</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>位1的个数</title>
+    <url>/2023/10/16/%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/number-of-1-bits/description/" >191. 位1的个数 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>题目</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171223828.png"
+                      alt="image-20231017122309401"
+                ></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">hammingWeight</span><span class="params">(<span class="type">uint32_t</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n &amp; (<span class="number">1u</span> &lt;&lt; i)) &#123;</span><br><span class="line">            ret++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hammingWeight</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        a=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n&gt;<span class="number">0</span>:</span><br><span class="line">            a+=<span class="number">1</span></span><br><span class="line">            n &amp;= n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>交换链表中的节点</title>
+    <url>/2023/10/26/%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/swapping-nodes-in-a-linked-list/description/" >1721. 交换链表中的节点 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310262154666.png"
+                      alt="image-20231026215410428"
+                ></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">swapNodes</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode], k: <span class="built_in">int</span></span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">      temp1,temp2,n=head,head,head</span><br><span class="line">      i=<span class="number">1</span></span><br><span class="line">      <span class="keyword">while</span> n:</span><br><span class="line">        <span class="keyword">if</span> i&lt;k:</span><br><span class="line">          temp1=temp1.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">if</span> i&gt;k:</span><br><span class="line">          temp2=temp2.<span class="built_in">next</span></span><br><span class="line">        n=n.<span class="built_in">next</span></span><br><span class="line">        i+=<span class="number">1</span></span><br><span class="line">      temp1.val,temp2.val=temp2.val,temp1.val</span><br><span class="line">      <span class="keyword">return</span> head</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>双指针</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于python的链表</title>
+    <url>/2023/10/26/%E5%85%B3%E4%BA%8Epython%E7%9A%84%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<hr>
+<hr>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span>:<span class="comment">#创建类（结构体）</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,data</span>):</span><br><span class="line">        self.data=data</span><br><span class="line">        self.<span class="built_in">next</span>=<span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">creaat_list</span>(<span class="params">l</span>):<span class="comment">#创建单链表</span></span><br><span class="line">    head=Node(l[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> l[<span class="number">1</span>:]:</span><br><span class="line">        node=Node(i)</span><br><span class="line">        node.<span class="built_in">next</span>=head</span><br><span class="line">        head=node</span><br><span class="line">    <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">lk=creaat_list([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])<span class="comment">#lk=head（头结点）</span></span><br><span class="line"><span class="built_in">print</span>(lk.<span class="built_in">next</span>.data)</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+        <tag>指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删掉一个元素以后全为 1 的最长子数组</title>
+    <url>/2023/11/03/%E5%88%A0%E6%8E%89%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BB%A5%E5%90%8E%E5%85%A8%E4%B8%BA%201%20%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/description/" >1493. 删掉一个元素以后全为 1 的最长子数组 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311030053870.png"
+                      alt="image-20231103005258488"
+                ></p>
+<h1 id="移动窗口解题思路"><a href="#移动窗口解题思路" class="headerlink" title="移动窗口解题思路"></a>移动窗口解题思路</h1><p><strong>思路</strong></p>
+<p>​	定义两个游标<strong>left，right</strong></p>
+<p>​	right随着循环移动</p>
+<p>​	当符合<strong>判断条件</strong>时<strong>left移动</strong></p>
+<p>​	right和left在判断之后，之间的数据为所需要的数据</p>
+<p><strong>难点</strong></p>
+<p>​	left怎么移动</p>
+<h3 id="本题思路"><a href="#本题思路" class="headerlink" title="本题思路"></a>本题思路</h3><p>​	在第一次写的时候把<em><strong>判断条件</strong></em>定为遇到第二个0时，导致解题思路不通畅</p>
+<p>​	<strong>判断条件</strong>：包含一个 0 的非空子数组（left右移遇到1继续移直到下一个0）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">longestSubarray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        left=right=<span class="number">0</span></span><br><span class="line">        count_0=<span class="number">0</span></span><br><span class="line">        <span class="built_in">max</span>=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[right]==<span class="number">0</span>:</span><br><span class="line">                count_0+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> count_0&gt;<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> nums[left]==<span class="number">0</span>:</span><br><span class="line">                    count_0-=<span class="number">1</span></span><br><span class="line">                left+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">max</span>&lt;right-left:</span><br><span class="line">                <span class="built_in">max</span>=right-left</span><br><span class="line">            right+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>移动窗口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分隔链表</title>
+    <url>/2023/10/23/%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/partition-list/submissions/476705639/" >86. 分隔链表 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>题目</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\小禹君\AppData\Roaming\Typora\typora-user-images\image-20231023235745849.png"
+                      alt="image-20231023235745849"
+                ></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">partition</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode], x: <span class="built_in">int</span></span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        sml_dummy, big_dummy = ListNode(<span class="number">0</span>), ListNode(<span class="number">0</span>)<span class="comment">#建立两个新的链表</span></span><br><span class="line">        sml, big = sml_dummy, big_dummy</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> head.val&lt;x:</span><br><span class="line">                sml.<span class="built_in">next</span>=head</span><br><span class="line">                sml=sml.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                big.<span class="built_in">next</span>=head</span><br><span class="line">                big=big.<span class="built_in">next</span></span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        sml.<span class="built_in">next</span>=big_dummy.<span class="built_in">next</span></span><br><span class="line">        big.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> sml_dummy.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">partition</span><span class="params">(<span class="keyword">struct</span> ListNode* head, <span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">small</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">smallHead</span> =</span> small;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">large</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">largeHead</span> =</span> large;</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (head-&gt;val &lt; x) &#123;</span><br><span class="line">            small-&gt;next = head;</span><br><span class="line">            small = small-&gt;next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            large-&gt;next = head;</span><br><span class="line">            large = large-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    large-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    small-&gt;next = largeHead-&gt;next;</span><br><span class="line">    <span class="keyword">return</span> smallHead-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*作者：力扣官方题解</span></span><br><span class="line"><span class="comment">链接：https://leetcode.cn/problems/partition-list/description/</span></span><br><span class="line"><span class="comment">来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+        <tag>指针</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态规划</title>
+    <url>/2023/11/16/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<h2 id="递推"><a href="#递推" class="headerlink" title="递推"></a>递推</h2><p>例题：<a href="">‪<a class="link" href="http://localhost:4000/2023/10/16/%E7%88%AC%E6%A5%BC%E6%A2%AF/">爬楼梯 - Myblog <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></a></p>
+<h2 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h2>]]></content>
+      <categories>
+        <category>AC</category>
+        <category>动态规划</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图书整理</title>
+    <url>/2023/10/26/%E5%9B%BE%E4%B9%A6%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/description/" >LCR 123. 图书整理 I - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310262221540.png"
+                      alt="image-20231026222140677"
+                ></p>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>​	递归的本质是栈</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reverseBookList</span>(<span class="params">self, head: ListNode</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        <span class="keyword">if</span> head:</span><br><span class="line">            <span class="keyword">return</span> self.reverseBookList(head.<span class="built_in">next</span>)+[head.val]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>位1的个数</title>
+    <url>/2023/11/05/%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E4%BC%98%E5%88%92%E5%88%86/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311050013646.png" >https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311050013646.png <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311050013646.png"
+                      alt="image-20231105001334089"
+                ></p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>​	遍历，遇到重复的就切割</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">partitionString</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        j, cnt, window = <span class="number">0</span>, <span class="number">0</span>, &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(s):</span><br><span class="line">            <span class="keyword">if</span> s[j] <span class="keyword">in</span> window: <span class="comment">#如果有重复的值出现，结果加1，重新计算重复</span></span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                window = &#123;&#125;  </span><br><span class="line">            window[s[j]]=<span class="number">0</span><span class="comment">#把新出现的值加入字典</span></span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> cnt + <span class="number">1</span>  </span><br></pre></td></tr></table></figure></div>
+
+<p>还可以用集合，列表来当已经遍历（待切割）的暂存窗口。</p>
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬楼梯</title>
+    <url>/2023/11/16/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</url>
+    <content><![CDATA[<hr>
+<p><a class="link" href="https://leetcode.cn/problems/house-robber/">198. 打家劫舍 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="C:\Users\小禹君\AppData\Roaming\Typora\typora-user-images\image-20231116155943125.png" alt="image-20231116155943125"></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h2 id="方法一：线性dp"><a href="#方法一：线性dp" class="headerlink" title="方法一：线性dp"></a>方法一：线性dp</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">rob</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">0</span>]=<span class="number">0</span></span><br><span class="line">        dp[<span class="number">1</span>]=nums[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=<span class="built_in">max</span>(dp[i-<span class="number">1</span>],dp[i-<span class="number">2</span>]+nums[i-<span class="number">1</span>])<span class="comment">#前者是状态滞后，后者是状态的更新（保证每次的状态都是最大）</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="优化内存"><a href="#优化内存" class="headerlink" title="优化内存"></a>优化内存</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">rob</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    prev = <span class="number">0</span></span><br><span class="line">    curr = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 每次循环，计算“偷到当前房子为止的最大金额”</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">        <span class="comment"># 循环开始时，curr 表示 dp[k-1]，prev 表示 dp[k-2]</span></span><br><span class="line">        <span class="comment"># dp[k] = max{ dp[k-1], dp[k-2] + i }</span></span><br><span class="line">        prev, curr = curr, <span class="built_in">max</span>(curr, prev + i)</span><br><span class="line">        <span class="comment"># 循环结束时，curr 表示 dp[k]，prev 表示 dp[k-1]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> curr</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>线性dp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序</title>
+    <url>/2023/10/22/%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<hr>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">selectionsorts</span>(<span class="params">a</span>):</span><br><span class="line">    n=<span class="built_in">len</span>(a)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):<span class="comment">#顺序对每一个数进行操作</span></span><br><span class="line">        <span class="built_in">min</span>=i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>,n):<span class="comment">#对每个数后面的数进行遍历，找出最小的数与操作数交换位置</span></span><br><span class="line">            <span class="keyword">if</span> a[j]&lt;a[<span class="built_in">min</span>]:</span><br><span class="line">                <span class="built_in">min</span>=j</span><br><span class="line">        a[i],a[<span class="built_in">min</span>]=a[<span class="built_in">min</span>],a[i]</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">BubbleSort</span>(<span class="params">a</span>):</span><br><span class="line">    n=<span class="built_in">len</span>(a)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>):<span class="comment">#逆序对每一个数进行操作</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,i)：<span class="comment">#对每个数前面面的数进行遍历，比较每个数与后面一个数的大小，从而找出最大的数排到最后面</span></span><br><span class="line">       		 <span class="keyword">if</span> a[j]&gt;a[j+<span class="number">1</span>]:</span><br><span class="line">        		a[j],a[j+<span class="number">1</span>]=a[j+<span class="number">1</span>],a[j]</span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">TnsertionSort</span>(<span class="params">a</span>):</span><br><span class="line">    n=<span class="built_in">len</span>(a)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):<span class="comment">#遍历每一个数  </span></span><br><span class="line">        x=a[i]</span><br><span class="line">        j=i-<span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j&gt;=<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> x&lt;=a[j]:</span><br><span class="line">                a[j+<span class="number">1</span>]=a[j]<span class="comment">#把大于x的数向后移</span></span><br><span class="line">                j-=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        a[j+<span class="number">1</span>]=x</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>​	将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<p>「分」的阶段首先将序列一步步分解成小的子序列进行分段排序；</p>
+<p>「治」的阶段则将分段有序的子序列合并在一起，使得整个序列变得有序。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222237914.png"
+                      alt="meger_sort.png"
+                ></p>
+<p>下图以最后一步中合并分段有序的子序列为例做下说明：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222238355.png"
+                      alt="meger_sort_merge.png"
+                ></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">mergeSort</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            <span class="keyword">if</span> low &gt;= high:                 <span class="comment"># 递归结束标志</span></span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            </span><br><span class="line">            mid = low + (high-low)//<span class="number">2</span>       <span class="comment"># 中间位置</span></span><br><span class="line">            mergeSort(arr, low, mid)        <span class="comment"># 递归对前后两部分进行排序</span></span><br><span class="line">            mergeSort(arr, mid+<span class="number">1</span>, high)</span><br><span class="line"></span><br><span class="line">            left, right = low, mid+<span class="number">1</span>        <span class="comment"># 将arr一分为二：left指向前半部分（已有序），right指向后半部分（已有序）</span></span><br><span class="line">            tmp = []                        <span class="comment"># 记录排序结果</span></span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid <span class="keyword">and</span> right &lt;= high:    <span class="comment"># 比较排序，优先添加前后两部分中的较小者</span></span><br><span class="line">                <span class="keyword">if</span> arr[left] &lt;= arr[right]:         <span class="comment"># left指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[left])</span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:                               <span class="comment"># right指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[right])</span><br><span class="line">                    right += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid:              <span class="comment"># 若左半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[left])</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[left:mid+1]        # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> right &lt;= high:            <span class="comment"># 若右半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[right])</span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[right:high+1]      # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            arr[low: high+<span class="number">1</span>] = tmp          <span class="comment"># [low, high] 区间完成排序</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        mergeSort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums)-<span class="number">1</span>)     <span class="comment"># 调用mergeSort函数完成排序</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Merge</span>(<span class="params">a, start, mid, end</span>):</span><br><span class="line">    tmp = []</span><br><span class="line">    l = start</span><br><span class="line">    r = mid + <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> l &lt;= mid <span class="keyword">and</span> r &lt;= end:</span><br><span class="line">        <span class="keyword">if</span> a[l] &lt;= a[r]:</span><br><span class="line">            tmp.append(a[l])</span><br><span class="line">            l += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            tmp.append(a[r])</span><br><span class="line">            r += <span class="number">1</span></span><br><span class="line">    tmp.extend(a[l:mid + <span class="number">1</span>])</span><br><span class="line">    tmp.extend(a[r:end + <span class="number">1</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start, end + <span class="number">1</span>):</span><br><span class="line">        a[i] = tmp[i - start]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">MergeSort</span>(<span class="params">a, start, end</span>):<span class="comment">#先递归分成一份一份，然后调用排序合并函数</span></span><br><span class="line">    <span class="keyword">if</span> start == end:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = (start + end) // <span class="number">2</span></span><br><span class="line">    MergeSort(a, start, mid)</span><br><span class="line">    MergeSort(a, mid + <span class="number">1</span>, end)</span><br><span class="line">    Merge(a, start, mid, end)</span><br><span class="line">    </span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">CountSort</span>(<span class="params">a</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(a)</span><br><span class="line">    cntlen = <span class="built_in">max</span>(a) + <span class="number">1</span></span><br><span class="line">    cnt = [<span class="number">0</span>] * cntlen</span><br><span class="line">    <span class="keyword">for</span> val <span class="keyword">in</span> a:</span><br><span class="line">        cnt[val] += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(cnt)</span><br><span class="line"></span><br><span class="line">    n = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> val <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, cntlen):</span><br><span class="line">        <span class="keyword">while</span> cnt[val] &gt; <span class="number">0</span>:</span><br><span class="line">            cnt[val] -= <span class="number">1</span></span><br><span class="line">            a[n] = val</span><br><span class="line">            n += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="C语言API（不需要算法）"><a href="#C语言API（不需要算法）" class="headerlink" title="C语言API（不需要算法）"></a>C语言API（不需要算法）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232207450.png"
+                      alt="image-20231023220726170"
+                ></p>
+<p><strong>cmp需要自己实现</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232209095.png"
+                      alt="image-20231023220920703"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232210463.png"
+                      alt="image-20231023221032006"
+                ></p>
+<h3 id="快速排序（Quick-Sort）"><a href="#快速排序（Quick-Sort）" class="headerlink" title="快速排序（Quick Sort）"></a>快速排序（Quick Sort）</h3><p>​	快速排序使用<strong>分治法</strong>（Divide and conquer）策略来把一个序列（list）分为较小和较大的 2 个子序列，然后递归地排序两个子序列。</p>
+<p><strong>步骤</strong></p>
+<p><strong>1.挑选基准值：</strong>从数列中挑出一个元素，称为“基准”（pivot）；</p>
+<p><strong>2.分割（partition）：</strong>重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（与基准值相等的数可以到任何一边）。在这个分割结束之后，对基准值的排序就已经完成；<br><strong>3.递归排序子序列：</strong>递归地将小于基准值元素的子序列和大于基准值元素的子序列排序。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222227594.png"
+                      alt="quick_sort.png"
+                ></p>
+<p>选取基准值pivot也有多种方式，且选取pivot的方法对排序的时间性能有着决定性的影响。例如，对于一个逆序数组，如果每次选取数组中的第一个元素为pivot，那么将其正序排列的过程将会变得非常慢，时间复杂$O(n2)O(n^2)O(n 2)$。因此，在具体实现中考虑随机化选择基准值pivot也是非常有必要的。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">partition</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            pivot = arr[low]                                        <span class="comment"># 选取最左边为pivot</span></span><br><span class="line"></span><br><span class="line">            left, right = low, high     <span class="comment"># 双指针</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">while</span> left&lt;right <span class="keyword">and</span> arr[right] &gt;= pivot:          <span class="comment"># 找到右边第一个&lt;pivot的元素</span></span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                arr[left] = arr[right]                             <span class="comment"># 并将其移动到left处</span></span><br><span class="line">                </span><br><span class="line">                <span class="keyword">while</span> left&lt;right <span class="keyword">and</span> arr[left] &lt;= pivot:           <span class="comment"># 找到左边第一个&gt;pivot的元素</span></span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                arr[right] = arr[left]                             <span class="comment"># 并将其移动到right处</span></span><br><span class="line">            </span><br><span class="line">            arr[left] = pivot           <span class="comment"># pivot放置到中间left=right处</span></span><br><span class="line">            <span class="keyword">return</span> left</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">randomPartition</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            pivot_idx = random.randint(low, high)                   <span class="comment"># 随机选择pivot</span></span><br><span class="line">            arr[low], arr[pivot_idx] = arr[pivot_idx], arr[low]     <span class="comment"># pivot放置到最左边</span></span><br><span class="line">            <span class="keyword">return</span> partition(arr, low, high)                        <span class="comment"># 调用partition函数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">quickSort</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            <span class="keyword">if</span> low &gt;= high:             <span class="comment"># 递归结束</span></span><br><span class="line">                <span class="keyword">return</span>  </span><br><span class="line">            <span class="comment"># mid = partition(arr, low, high)       # 以mid为分割点【非随机选择pivot】</span></span><br><span class="line">            mid = randomPartition(arr, low, high)   <span class="comment"># 以mid为分割点【随机选择pivot】</span></span><br><span class="line">            quickSort(arr, low, mid-<span class="number">1</span>)              <span class="comment"># 递归对mid两侧元素进行排序</span></span><br><span class="line">            quickSort(arr, mid+<span class="number">1</span>, high)</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        quickSort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums)-<span class="number">1</span>)             <span class="comment"># 调用快排函数对nums进行排序</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="堆排序（Heap-Sort）"><a href="#堆排序（Heap-Sort）" class="headerlink" title="堆排序（Heap Sort）"></a>堆排序（Heap Sort）</h3><p>​	<strong>堆</strong>是一个近似<strong>完全二叉树</strong>的结构，并同时满足堆积的性质：即子节点的键值或索引总是小于（或者大于）它的父节点。</p>
+<p>​	<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222301995.png"
+                      alt="heap.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>排序</category>
+      </categories>
+      <tags>
+        <tag>双指针</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>斐波那契数</title>
+    <url>/2023/10/17/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<p><strong>题目</strong></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310172141080.png" alt="image-20231017214118740"></p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="26.473ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11700.9 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1511,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(2177.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(3233.6,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(3783.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(4172.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(4966.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(5967,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(6467,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(7078.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(8078.4,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(8628.4,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(9017.4,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9811.7,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(10811.9,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(11311.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fib</span><span class="params">(<span class="type">int</span> n)</span>{</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">2</span>) {</span><br><span class="line">        <span class="keyword">return</span> n;<span class="comment">//如果n为前两项则通项公式不成立</span></span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> p=<span class="number">0</span>,q=<span class="number">0</span>,res=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;++i){</span><br><span class="line">        p=q;</span><br><span class="line">        q=res;</span><br><span class="line">        res=p+q;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>斐波那契</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/2023/12/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<hr>
+]]></content>
+      <categories>
+        <category>AC</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>设计机械累加</title>
+    <url>/2023/10/16/%E8%AE%BE%E8%AE%A1%E6%9C%BA%E6%A2%B0%E7%B4%AF%E5%8A%A0%E5%99%A8/</url>
+    <content><![CDATA[<hr>
+<p><a class="link"   href="https://leetcode.cn/problems/qiu-12n-lcof/description/" >LCR 189. 设计机械累加器 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>题目</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171224757.png"
+                      alt="image-20231017122408772"
+                ></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sumNums</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    n &amp;&amp; (n+=sumNums(n<span class="number">-1</span>));</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">mechanicalAccumulator</span>(<span class="params">self, target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        target &gt; <span class="number">1</span> <span class="keyword">and</span> self.mechanicalAccumulator(target - <span class="number">1</span>)</span><br><span class="line">        self.res += target</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 N 个泰波那契数</title>
+    <url>/2023/10/17/%E7%AC%AC%20N%20%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/</url>
+    <content><![CDATA[<hr>
+<p><strong>题目</strong></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310172230355.png" alt="image-20231017223036906"></p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">tribonacci</span><span class="params">(<span class="type">int</span> n)</span>{</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>&amp;&amp;n==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t0=<span class="number">0</span>,t1=<span class="number">0</span>,t2=<span class="number">1</span>,res=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>;i&lt;=n;i++){</span><br><span class="line">        t0=t1;</span><br><span class="line">        t1=t2;</span><br><span class="line">        t2=res;</span><br><span class="line">        res=t0+t1+t2;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>斐波那契</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬楼梯</title>
+    <url>/2023/10/16/%E7%88%AC%E6%A5%BC%E6%A2%AF/</url>
+    <content><![CDATA[<hr>
+<p><a class="link" href="https://leetcode.cn/problems/climbing-stairs/solutions/286022/pa-lou-ti-by-leetcode-solution/">70. 爬楼梯 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>题目</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171955438.png" alt="image-20231017122108897"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>共x阶台阶</p>
+<p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.299ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1900 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1511,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>只能由<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="8.196ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3622.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1733.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2733.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(3233.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>和<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="8.196ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3622.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1733.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2733.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(3233.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>通过加一或者加二过来。</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="26.473ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11700.9 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1511,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(2177.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(3233.6,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(3783.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(4172.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(4966.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(5967,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(6467,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(7078.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(8078.4,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(8628.4,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(9017.4,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9811.7,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(10811.9,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(11311.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
+<h3 id="法一：动态规划（滚动数组）"><a href="#法一：动态规划（滚动数组）" class="headerlink" title="法一：动态规划（滚动数组）"></a>法一：动态规划（滚动数组）</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> {</span><br><span class="line">    <span class="type">int</span> p = <span class="number">0</span>, q = <span class="number">0</span>, r = <span class="number">1</span>;#利用了 滚动数组 节省了空间</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) {</span><br><span class="line">        p = q;</span><br><span class="line">        q = r;</span><br><span class="line">        r = p + q;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>​	通过p，q的动态存储<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="8.196ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3622.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1733.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2733.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(3233.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>和<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="8.196ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3622.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1733.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2733.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(3233.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>来节约空间</p>
+<h3 id="法二：记忆化递归"><a href="#法二：记忆化递归" class="headerlink" title="法二：记忆化递归"></a>法二：记忆化递归</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> memo[<span class="number">45</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span>{</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(*(memo+n<span class="number">-1</span>)) <span class="keyword">return</span> *(memo+n<span class="number">-1</span>);<span class="comment">//如果之前求过f（n）则在meno数组回忆</span></span><br><span class="line">    <span class="keyword">else</span> *(memo+n<span class="number">-1</span>) = climbStairs(n - <span class="number">1</span>) + climbStairs(n - <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> *(memo+n<span class="number">-1</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310172032530.png" alt="image.png">	</p>
+<p>​	用了*（memo+n-1)来优化，但是差别不大。</p>
+<h3 id="法三：通项公式"><a href="#法三：通项公式" class="headerlink" title="法三：通项公式"></a>法三：通项公式</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> {</span><br><span class="line">    <span class="type">double</span> sqrt5 = <span class="built_in">sqrt</span>(<span class="number">5</span>);</span><br><span class="line">    <span class="type">double</span> fibn = <span class="built_in">pow</span>((<span class="number">1</span> + sqrt5) / <span class="number">2</span>, n + <span class="number">1</span>) - <span class="built_in">pow</span>((<span class="number">1</span> - sqrt5) / <span class="number">2</span>, n + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">int</span>) round(fibn / sqrt5);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+        <category>精选</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>递归</tag>
+        <tag>斐波那契</tag>
+      </tags>
+  </entry>
+</search>
