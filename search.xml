@@ -14,30 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/10/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>help</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>help</title>
     <url>/2023/10/16/help/</url>
     <content><![CDATA[<h1 id="Mathjax-数学公式"><a href="#Mathjax-数学公式" class="headerlink" title="Mathjax 数学公式"></a>Mathjax 数学公式</h1><p>在文章页添加 <code>mathjax: true</code> 属性，至此，就可以在该页面中写公式了。</p>
@@ -139,12 +115,18 @@
 <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典的<strong>键具有唯一性</strong>（后面出现的键会覆盖掉前面相同的键）</p>
 <p><strong>定义</strong>:dict&#x3D;{key:value,key1:value1,…..}</p>
 <p><strong>dict[key]</strong>:访问字典键的值(修改)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403231400976.png"
+                      alt="image-20240323140000777"
+                ></p>
 <h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if-elif-else"><a href="#if-elif-else" class="headerlink" title="if elif else"></a>if elif else</h3><p>只有if条件为假 elif为真  elif才执行</p>
 <p>if为真跳过elif</p>
 <p>else在if elif全为假时执行</p>
 ]]></content>
       <categories>
-        <category>-python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>语法</tag>
@@ -341,7 +323,9 @@
     <title>动态规划</title>
     <url>/2023/11/16/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<h2 id="递推"><a href="#递推" class="headerlink" title="递推"></a>递推</h2><p>例题：<a href="">‪<a class="link" href="http://localhost:4000/2023/10/16/%E7%88%AC%E6%A5%BC%E6%A2%AF/">爬楼梯 - Myblog <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></a></p>
-<h2 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h2>]]></content>
+<h2 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h2><h3 id="0-1背包问题"><a href="#0-1背包问题" class="headerlink" title="0/1背包问题"></a>0/1背包问题</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findTargetSumWays</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], S: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        sumAll = <span class="built_in">sum</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> S &gt; sumAll <span class="keyword">or</span> (S + sumAll) % <span class="number">2</span>:<span class="comment">#</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        target = (S + sumAll) // <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        dp = [<span class="number">0</span>] * (target + <span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span><span class="comment">#如果nums数组中的元素全都是0，那么dp[0]应该仍然是1。</span></span><br><span class="line">        		<span class="comment">#因为在构造表达式时，可以在每个整数前添加 ‘+’ 或 ‘-’，对于nums数组中的0，无论添加什么符号，最终对表达式的值没有任何影响，因此可以忽略。</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(target, num - <span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">                dp[j] = dp[j] + dp[j - num]</span><br><span class="line">        <span class="keyword">return</span> dp[-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
       <categories>
         <category>AC</category>
         <category>动态规划</category>
@@ -450,13 +434,13 @@
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310222238355.png"
                       alt="meger_sort_merge.png"
                 ></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">mergeSort</span>(<span class="params">arr, low, high</span>):</span><br><span class="line">            <span class="keyword">if</span> low &gt;= high:                 <span class="comment"># 递归结束标志</span></span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            </span><br><span class="line">            mid = low + (high-low)//<span class="number">2</span>       <span class="comment"># 中间位置</span></span><br><span class="line">            mergeSort(arr, low, mid)        <span class="comment"># 递归对前后两部分进行排序</span></span><br><span class="line">            mergeSort(arr, mid+<span class="number">1</span>, high)</span><br><span class="line"></span><br><span class="line">            left, right = low, mid+<span class="number">1</span>        <span class="comment"># 将arr一分为二：left指向前半部分（已有序），right指向后半部分（已有序）</span></span><br><span class="line">            tmp = []                        <span class="comment"># 记录排序结果</span></span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid <span class="keyword">and</span> right &lt;= high:    <span class="comment"># 比较排序，优先添加前后两部分中的较小者</span></span><br><span class="line">                <span class="keyword">if</span> arr[left] &lt;= arr[right]:         <span class="comment"># left指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[left])</span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:                               <span class="comment"># right指示的元素较小</span></span><br><span class="line">                    tmp.append(arr[right])</span><br><span class="line">                    right += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span> left &lt;= mid:              <span class="comment"># 若左半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[left])</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[left:mid+1]        # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> right &lt;= high:            <span class="comment"># 若右半部分还有剩余，将其直接添加到结果中</span></span><br><span class="line">                tmp.append(arr[right])</span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">            <span class="comment"># tmp += arr[right:high+1]      # 等价于以上三行</span></span><br><span class="line"></span><br><span class="line">            arr[low: high+<span class="number">1</span>] = tmp          <span class="comment"># [low, high] 区间完成排序</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        mergeSort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums)-<span class="number">1</span>)     <span class="comment"># 调用mergeSort函数完成排序</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#归并两个列表里面的数据（使其从小到大）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">s1,s2,s</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;将两个列表是s1，s2按顺序融合为一个列表s,s为原列表&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># j和i就相当于两个指向的位置，i指s1，j指s2</span></span><br><span class="line">    i = j = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i+j&lt;<span class="built_in">len</span>(s):</span><br><span class="line">        <span class="comment"># j==len(s2)时说明s2走完了，或者s1没走完并且s1中该位置是最小的</span></span><br><span class="line">        <span class="comment">#注意and的顺序，判断越界</span></span><br><span class="line">        <span class="keyword">if</span> j==<span class="built_in">len</span>(s2) <span class="keyword">or</span> (i&lt;<span class="built_in">len</span>(s1) <span class="keyword">and</span> s1[i]&lt;s2[j]):</span><br><span class="line">            s[i+j] = s1[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            s[i+j] = s2[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line"><span class="comment">#递归操作</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">s</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;归并排序&quot;&quot;&quot;</span></span><br><span class="line">    n = <span class="built_in">len</span>(s)</span><br><span class="line">    <span class="comment"># 剩一个或没有直接返回，不用排序</span></span><br><span class="line">    <span class="keyword">if</span> n &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="comment"># 拆分</span></span><br><span class="line">    mid = n // <span class="number">2</span></span><br><span class="line">    s1 = s[<span class="number">0</span>:mid]</span><br><span class="line">    s2 = s[mid:n]</span><br><span class="line">    <span class="comment"># 子序列递归调用排序</span></span><br><span class="line">    merge_sort(s1)</span><br><span class="line">    merge_sort(s2)</span><br><span class="line">    <span class="comment"># 合并</span></span><br><span class="line">    merge(s1,s2,s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    s = [<span class="number">1</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>]</span><br><span class="line">    merge_sort(s)</span><br><span class="line">    <span class="built_in">print</span>(s)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
 
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Merge</span>(<span class="params">a, start, mid, end</span>):</span><br><span class="line">    tmp = []</span><br><span class="line">    l = start</span><br><span class="line">    r = mid + <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> l &lt;= mid <span class="keyword">and</span> r &lt;= end:</span><br><span class="line">        <span class="keyword">if</span> a[l] &lt;= a[r]:</span><br><span class="line">            tmp.append(a[l])</span><br><span class="line">            l += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            tmp.append(a[r])</span><br><span class="line">            r += <span class="number">1</span></span><br><span class="line">    tmp.extend(a[l:mid + <span class="number">1</span>])</span><br><span class="line">    tmp.extend(a[r:end + <span class="number">1</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start, end + <span class="number">1</span>):</span><br><span class="line">        a[i] = tmp[i - start]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">MergeSort</span>(<span class="params">a, start, end</span>):<span class="comment">#先递归分成一份一份，然后调用排序合并函数</span></span><br><span class="line">    <span class="keyword">if</span> start == end:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = (start + end) // <span class="number">2</span></span><br><span class="line">    MergeSort(a, start, mid)</span><br><span class="line">    MergeSort(a, mid + <span class="number">1</span>, end)</span><br><span class="line">    Merge(a, start, mid, end)</span><br><span class="line">    </span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">self, nums, l, r</span>):</span><br><span class="line">        <span class="keyword">if</span> l == r:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        mid = (l + r) // <span class="number">2</span></span><br><span class="line">        self.merge_sort(nums, l, mid)</span><br><span class="line">        self.merge_sort(nums, mid + <span class="number">1</span>, r)</span><br><span class="line">        tmp = []</span><br><span class="line">        i, j = l, mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;= mid <span class="keyword">or</span> j &lt;= r:</span><br><span class="line">            <span class="keyword">if</span> i &gt; mid <span class="keyword">or</span> (j &lt;= r <span class="keyword">and</span> nums[j] &lt; nums[i]):</span><br><span class="line">                tmp.append(nums[j])</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tmp.append(nums[i])</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">        nums[l: r + <span class="number">1</span>] = tmp</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sortArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        self.merge_sort(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">作者：力扣官方题解</span><br><span class="line">链接：https://leetcode.cn/problems/sort-an-array/solutions/<span class="number">178305</span>/pai-xu-shu-zu-by-leetcode-solution/</span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">CountSort</span>(<span class="params">a</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(a)</span><br><span class="line">    cntlen = <span class="built_in">max</span>(a) + <span class="number">1</span></span><br><span class="line">    cnt = [<span class="number">0</span>] * cntlen</span><br><span class="line">    <span class="keyword">for</span> val <span class="keyword">in</span> a:</span><br><span class="line">        cnt[val] += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(cnt)</span><br><span class="line"></span><br><span class="line">    n = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> val <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, cntlen):</span><br><span class="line">        <span class="keyword">while</span> cnt[val] &gt; <span class="number">0</span>:</span><br><span class="line">            cnt[val] -= <span class="number">1</span></span><br><span class="line">            a[n] = val</span><br><span class="line">            n += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
 
 
 
@@ -532,10 +516,19 @@
     <title>正则表达式</title>
     <url>/2023/12/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<hr>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202312202013135.png"
+                      alt="image-20231220201303588"
+                ></p>
 ]]></content>
       <categories>
-        <category>AC</category>
+        <category>study</category>
       </categories>
+      <tags>
+        <tag>正则表达式</tag>
+      </tags>
   </entry>
   <entry>
     <title>设计机械累加</title>
@@ -615,6 +608,141 @@
         <tag>动态规划</tag>
         <tag>递归</tag>
         <tag>斐波那契</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/17/Untitled%201/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>python数据结构</title>
+    <url>/2024/03/04/python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
+    <content><![CDATA[<h3 id="python里面定义数据结构的方式"><a href="#python里面定义数据结构的方式" class="headerlink" title="python里面定义数据结构的方式"></a>python里面定义数据结构的方式</h3><h4 id="树"><a href="#树" class="headerlink" title="树"></a>树</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, val=<span class="number">0</span>, left=<span class="literal">None</span>, right=<span class="literal">None</span></span>):</span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前缀和与差分</title>
+    <url>/2024/03/21/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</url>
+    <content><![CDATA[<hr>
+<h2 id="前缀和与差分"><a href="#前缀和与差分" class="headerlink" title="前缀和与差分"></a>前缀和与差分</h2><p>一般<strong>原序列</strong>就是<strong>差分序列的前缀和</strong>，所以把差分看做前缀和的逆运算</p>
+]]></content>
+      <categories>
+        <category>Aq</category>
+      </categories>
+      <tags>
+        <tag>前缀和</tag>
+        <tag>差分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/21/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86%20(copy)/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>回文子串</title>
+    <url>/2024/03/17/%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
+    <content><![CDATA[<p><a class="link" href="https://leetcode.cn/problems/palindromic-substrings/description/">647. 回文子串 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403171410643.png" alt="image-20240317140952513"></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">countSubstrings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        dp=[[<span class="number">0</span>]*n <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>):<span class="comment">#倒序遍历，如果正序，递推的条件不满足。</span></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i,n):</span><br><span class="line">                <span class="keyword">if</span> s[i]==s[j]:</span><br><span class="line">                    <span class="keyword">if</span> j-i&lt;=<span class="number">1</span>:<span class="comment">#</span></span><br><span class="line">                        dp[i][j]=<span class="number">1</span></span><br><span class="line">                        res+=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">if</span> dp[i+<span class="number">1</span>][j-<span class="number">1</span>]==<span class="number">1</span>:<span class="comment">#向内展开</span></span><br><span class="line">                            dp[i][j]=<span class="number">1</span></span><br><span class="line">                            res+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403171412849.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>动态规划</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>截断数组</title>
+    <url>/2024/03/18/%E6%88%AA%E6%96%AD%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<hr>
+<p>[3956. 截断数组 - AcWing题库</p>
+<p><a class="link"   href="https://www.acwing.com/problem/content/description/3959/" > <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>找到两个分割点，一个第二个分割点与前面的第一个分割点组合</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">a=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split()))</span><br><span class="line">s=<span class="built_in">sum</span>(a)</span><br><span class="line"><span class="keyword">if</span> s%<span class="number">3</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    p=ans=pre=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">        pre+=a[i]</span><br><span class="line">        <span class="keyword">if</span> pre==s*<span class="number">2</span>//<span class="number">3</span>:<span class="comment">##</span></span><br><span class="line">            ans+=p</span><br><span class="line">        <span class="keyword">if</span> pre==s//<span class="number">3</span>:</span><br><span class="line">            p+=<span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(ans)</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+      </categories>
+      <tags>
+        <tag>前缀和</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论专题</title>
+    <url>/2024/02/22/%E6%95%B0%E8%AE%BA%E4%B8%93%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="题目里面用数学方法的技巧题解"><a href="#题目里面用数学方法的技巧题解" class="headerlink" title="题目里面用数学方法的技巧题解"></a>题目里面用数学方法的技巧题解</h3><hr>
+<p><a class="link"   href="https://leetcode.cn/problems/count-of-matches-in-tournament/" >1688. 比赛中的配对次数 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">numberOfMatches</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">return</span> n-<span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>每次配对都会淘汰一个对，所有配对次数等于淘汰掉的对手</p>
+<p><a class="link"   href="https://leetcode.cn/problems/count-operations-to-obtain-zero/solutions/1270345/de-dao-0-de-cao-zuo-shu-by-leetcode-solu-d8kh/" >2169. 得到 0 的操作数 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">countOperations</span>(<span class="params">self, num1: <span class="built_in">int</span>, num2: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        res = <span class="number">0</span>   <span class="comment"># 相减操作的总次数</span></span><br><span class="line">        <span class="keyword">while</span> num1 <span class="keyword">and</span> num2:</span><br><span class="line">            <span class="comment"># 每一步辗转相除操作</span></span><br><span class="line">            res += num1 // num2</span><br><span class="line">            num1 %= num2</span><br><span class="line">            num1, num2 = num2, num1</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>如果num1远大于num2，辗转相除法可以省去很多循环，因为在num1&#x3D;num2之前小的那一个一直在，所以相当于在做除法。</p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵中的最长递增路径</title>
+    <url>/2024/03/15/%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E8%B7%AF%E5%BE%84/</url>
+    <content><![CDATA[<hr>
+<p>[LCR 112. 矩阵中的最长递增路径 - 力扣（LeetCode）</p>
+<p><a class="link" href="https://leetcode.cn/problems/fpTFWP/description/"> <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403132210645.png" alt="image-20240313220958689"></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def longestIncreasingPath(self, matrix: List[List[int]]) -&gt; int:</span><br><span class="line">        if not matrix:#</span><br><span class="line">            return 0#</span><br><span class="line">        m,n=len(matrix),len(matrix[0])</span><br><span class="line">        dp=[[0]*n for _ in range(m)]</span><br><span class="line">        xy=[[1,0],[0,-1],[0,1],[-1,0]]</span><br><span class="line">        </span><br><span class="line">        def dfs(x,y):</span><br><span class="line">            if dp[x][y]!=0:#</span><br><span class="line">                return dp[x][y]#</span><br><span class="line">            dp[x][y]=1</span><br><span class="line">            for dx,dy in xy:</span><br><span class="line">                if (0&lt;=x+dx&lt;n and 0&lt;=y+dy&lt;m) and matrix[x+dx][y+dy]&gt;matrix[x][y]:#&lt;,&gt;都可以</span><br><span class="line">                    dp[x][y]=max(dp[x][y],dfs(x+dx,y+dy)+1)#当前的值动态规划（+上下一个符合条件的值），这里是递归，虽然不是用函数返回值实现的</span><br><span class="line">            return d[x][y]#返回当前最大长度，只返回最开始输入的输出数据（这里不是递归</span><br><span class="line">        ans=0</span><br><span class="line">        for i in range(m):</span><br><span class="line">            for j in range(n):</span><br><span class="line">                ans = max(ans, dfs(i, j))#善于用max可以使用最值方便</span><br><span class="line">        return ans</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>dfs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最长连续因子</title>
+    <url>/2024/02/22/%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%9B%A0%E5%AD%90/</url>
+    <content><![CDATA[<hr>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202402221751461.png"
+                      alt="image-20240222175124331"
+                ></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line"></span><br><span class="line">l = []</span><br><span class="line"></span><br><span class="line">p = 2</span><br><span class="line">while p &lt;= n:</span><br><span class="line">    if n % p == 0:</span><br><span class="line">        l.append(p)</span><br><span class="line">    p += 1</span><br><span class="line"></span><br><span class="line">m = 1</span><br><span class="line">low = 0</span><br><span class="line">high = 0</span><br><span class="line">mi = 0</span><br><span class="line">ma = 0</span><br><span class="line">for num in range(len(l) - 1):</span><br><span class="line">    if l[num] + 1 == l[num + 1]:</span><br><span class="line">        high += 1</span><br><span class="line">    else:</span><br><span class="line">        if high - low + 1 &gt; m:</span><br><span class="line">            mi = low</span><br><span class="line">            ma = high</span><br><span class="line">            m = high - low + 1</span><br><span class="line">        low = high + 1</span><br><span class="line">        high = low</span><br><span class="line"></span><br><span class="line">print(m)</span><br><span class="line"></span><br><span class="line">la = []</span><br><span class="line"></span><br><span class="line">j = 1</span><br><span class="line">for i in range(mi, ma + 1):</span><br><span class="line">    j *= l[i]</span><br><span class="line">    if j &gt; n:</span><br><span class="line">        break</span><br><span class="line">    la.append(l[i])</span><br><span class="line"></span><br><span class="line">la = list(map(str, la))</span><br><span class="line">print(&quot;*&quot;.join(la))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import math #导入数学计算相关的包</span><br><span class="line">maxLen = 0 #最长连续因子个数</span><br><span class="line">resultList = []#连续因子</span><br><span class="line">isPrimary = True #标识是否为质数</span><br><span class="line"></span><br><span class="line">num = int(input())</span><br><span class="line"></span><br><span class="line">for i in range(2,int(math.sqrt(num))+1):#从2开始依次遍历至最大因子</span><br><span class="line">    tempNum = num</span><br><span class="line">    tempList=[]</span><br><span class="line">    start = i</span><br><span class="line">    while tempNum%start==0:#一轮遍历</span><br><span class="line">        isPrimary=False</span><br><span class="line">        tempNum = tempNum//start</span><br><span class="line">        tempList.append(str(start))</span><br><span class="line">        start+=1</span><br><span class="line">    tempLen=start-i</span><br><span class="line">    if tempLen &gt; maxLen :#更新数据</span><br><span class="line">        resultList=tempList</span><br><span class="line">        maxLen=tempLen</span><br><span class="line"></span><br><span class="line">if isPrimary == True:#输出结果</span><br><span class="line">    print(1)</span><br><span class="line">    print(num)</span><br><span class="line">else:</span><br><span class="line">    print(maxLen)</span><br><span class="line">    print(&quot;*&quot;.join(resultList))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>AC</category>
+        <category>pta</category>
+      </categories>
+      <tags>
+        <tag>双指针</tag>
       </tags>
   </entry>
 </search>
