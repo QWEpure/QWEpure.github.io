@@ -18,20 +18,23 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="变量多重赋值​	赋值的过程是元组解包(不用加括号，用逗号隔开就行)。 在被赋值的单个变量前面加上*可以实现多个数据以元组的形式赋值给一个变量。 1234567891011#方一a, b, *c &#x3D; [1,2,3,4,5]#c#[3, 4, 5]#方二num &#x3D; [1,2,3,4,5]a,b,c&#x3D;num[0],num[1],num[2:]#c#[3, 4, 5]  123#变量交换a,b&#x3D;b,a">
+        <meta name="description" content="[TOC] 判断语句if elif else只有if条件为假 elif为真  elif才执行 if为真跳过elif else在if elif全为假时执行 循环语句enumerate（）函数 123for i , item in enumerate(b):##i赋予下标，item赋予下标对应的值 变量多重赋值​    赋值的过程是元组解包(不用加括号，用逗号隔开就行)。 在被赋值的单个变量前面加上">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python语法">
 <meta property="og:url" content="http://qwepure.gihub.io/2023/10/23/python%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="变量多重赋值​	赋值的过程是元组解包(不用加括号，用逗号隔开就行)。 在被赋值的单个变量前面加上*可以实现多个数据以元组的形式赋值给一个变量。 1234567891011#方一a, b, *c &#x3D; [1,2,3,4,5]#c#[3, 4, 5]#方二num &#x3D; [1,2,3,4,5]a,b,c&#x3D;num[0],num[1],num[2:]#c#[3, 4, 5]  123#变量交换a,b&#x3D;b,a">
+<meta property="og:description" content="[TOC] 判断语句if elif else只有if条件为假 elif为真  elif才执行 if为真跳过elif else在if elif全为假时执行 循环语句enumerate（）函数 123for i , item in enumerate(b):##i赋予下标，item赋予下标对应的值 变量多重赋值​    赋值的过程是元组解包(不用加括号，用逗号隔开就行)。 在被赋值的单个变量前面加上">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232238563.jpeg">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232241801.jpeg">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232241656.jpeg">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232243861.jpeg">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161520407.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161524423.png">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404160858524.png">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403231400976.png">
 <meta property="article:published_time" content="2023-10-23T14:29:14.474Z">
-<meta property="article:modified_time" content="2024-03-23T06:00:14.031Z">
+<meta property="article:modified_time" content="2024-04-18T02:58:54.383Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary">
@@ -340,8 +343,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-23 14:14</span>
-            <span class="mobile">2024-03-23 14:14</span>
+            <span class="desktop">2024-04-18 10:58:54</span>
+            <span class="mobile">2024-04-18 10:58:54</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -379,12 +382,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>641 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.3k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
         </span>
     
     
@@ -404,36 +407,41 @@
 
         <div class="article-content markdown-body">
             <hr>
-<h2 id="变量多重赋值"><a href="#变量多重赋值" class="headerlink" title="变量多重赋值"></a>变量多重赋值</h2><p>​	赋值的过程是<strong>元组</strong>解包(不用加括号，用逗号隔开就行)。</p>
+<p>[TOC]</p>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h4 id="if-elif-else"><a href="#if-elif-else" class="headerlink" title="if elif else"></a>if elif else</h4><p>只有if条件为假 elif为真  elif才执行</p>
+<p>if为真跳过elif</p>
+<p>else在if elif全为假时执行</p>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><p>enumerate（）函数</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i , item in enumerate(b):</span><br><span class="line">#</span><br><span class="line">#i赋予下标，item赋予下标对应的值</span><br></pre></td></tr></table></figure></div>
+<h2 id="变量多重赋值"><a href="#变量多重赋值" class="headerlink" title="变量多重赋值"></a>变量多重赋值</h2><p>​    赋值的过程是<strong>元组</strong>解包(不用加括号，用逗号隔开就行)。</p>
 <p>在被赋值的单个变量前面加上*可以实现多个数据以元组的形式赋值给一个变量。</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方一</span></span><br><span class="line">a, b, *c = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment">#c</span></span><br><span class="line"><span class="comment">#[3, 4, 5]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#方二</span></span><br><span class="line">num = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">a,b,c=num[<span class="number">0</span>],num[<span class="number">1</span>],num[<span class="number">2</span>:]</span><br><span class="line"><span class="comment">#c</span></span><br><span class="line"><span class="comment">#[3, 4, 5]</span></span><br></pre></td></tr></table></figure></div>
-
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#变量交换</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="局部变量全局化"><a href="#局部变量全局化" class="headerlink" title="局部变量全局化"></a>局部变量全局化</h2><p>​	当需要在函数里面<em>引用全局变量</em>时可用<strong>nonlocal 变量名</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="标准函数"><a href="#标准函数" class="headerlink" title="标准函数"></a>标准函数</h2><p>​	<strong>items()</strong> ：函数以列表返回可遍历的(键, 值) 元组。</p>
+<h2 id="局部变量全局化"><a href="#局部变量全局化" class="headerlink" title="局部变量全局化"></a>局部变量全局化</h2><p>​    当需要在函数里面<em>引用全局变量</em>时可用<strong>global </strong>关键字</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">global_var = <span class="number">10</span>  <span class="comment"># 全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">modify_global</span>():</span><br><span class="line">    <span class="keyword">global</span> global_var  <span class="comment"># 声明变量为全局变量</span></span><br><span class="line">    global_var += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">modify_global()</span><br><span class="line"><span class="built_in">print</span>(global_var)  <span class="comment"># 输出: 11</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h2 id="标准函数"><a href="#标准函数" class="headerlink" title="标准函数"></a>标准函数</h2><p>​    <strong>items()</strong> ：函数以列表返回可遍历的(键, 值) 元组。</p>
 <p>将字典中的键值对以元组存储，并将众多元组存在列表中。</p>
 <p>例如:   dict.items()  就把字典的key和value存到了列表的元组里。</p>
-<p>​	<strong>map（）</strong>：可以对列表进行一个一个的运算。比如sum(int,input().split（）)可以直接转化列表中的字符串成整数而int（）不能直接对列表操作。</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p><img  
+<p>​    <strong>map（）</strong>：可以对列表进行一个一个的运算。比如sum(int,input().split（）)可以直接转化列表中的字符串成整数而int（）不能直接对列表操作。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h4 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h4><p>Python这样的语言中，其中<strong>函数参数传递的是引用而不是值的拷贝</strong>。因此，如果你修改了传递的可变对象，原始对象也会被修改。</p>
+<p>例如在dfs递归里面</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dfs</span>(<span class="params">cur_nums, cur_res, index</span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(cur_res) == k:</span><br><span class="line">                res.append(cur_res[:])  <span class="comment"># 创建一个新列表保存当前结果###</span></span><br><span class="line">                <span class="keyword">return</span></span><br></pre></td></tr></table></figure></div>
+<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310232238563.jpeg"
                       alt="image"
                 ></p>
-<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>​	函数如果有多个返回值则为元组形式返回</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个列表，其中包含了一些子列表</span></span><br><span class="line">nested_list = [[<span class="number">1</span>, <span class="number">5</span>, <span class="number">3</span>], [<span class="number">7</span>, <span class="number">2</span>, <span class="number">4</span>], [<span class="number">9</span>, <span class="number">8</span>, <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sorted 函数对列表进行降序排序，按照子列表的最后一个元素进行排序</span></span><br><span class="line">sorted_list = <span class="built_in">sorted</span>(nested_list, key=<span class="keyword">lambda</span> x: x[-<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出排序后的列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;降序排序后的列表:&quot;</span>, sorted_list)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><p>​    函数如果有多个返回值则为元组形式返回</p>
 <h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
-<li><p>binary &#x3D; 0b1010 # 二进制</p>
+<li><p>binary = 0b1010 # 二进制</p>
 </li>
-<li><p>octal &#x3D; 0o123 # 八进制</p>
+<li><p>octal = 0o123 # 八进制</p>
 </li>
-<li><p>decimal &#x3D; 123 # 十进制</p>
+<li><p>decimal = 123 # 十进制</p>
 </li>
-<li><p>hexadecimal &#x3D; 0x2f # 十六进制</p>
+<li><p>hexadecimal = 0x2f # 十六进制</p>
 <p><strong>进制转换</strong></p>
 <p><img  
                      lazyload
@@ -464,30 +472,52 @@
 <li><p>self.res#每个对象递归不会对其重复初始化</p>
 </li>
 </ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>想把字符串分割成每一个字符，直接把字符串转换成list</p>
 <h2 id="列表（顺序表）"><a href="#列表（顺序表）" class="headerlink" title="列表（顺序表）"></a>列表（顺序表）</h2><p><strong>list.append(value)</strong>:在list尾部添加指定value</p>
 <p><strong>list.insert(index,value)</strong>:在指定index前插入指定value</p>
 <p><strong>list1.extend(list2)</strong>:将list2加到list1后面</p>
 <p><strong>del list[index]</strong>:删除指定下标</p>
 <p><strong>list.pop(index)</strong>:删除方式同上，但是index默认删除list尾部的元素，返回被删除的值。</p>
 <p><strong>list.clear()</strong>:清空列表</p>
-<p><strong>list,index(value)</strong>:查找value的下标（索引）</p>
+<p><strong>list.index(value)</strong>:查找value的下标（索引）</p>
 <p><strong>list.count(value)</strong>:统计相同元素(value)个数</p>
 <p><strong>max(list)</strong> <strong>min(list)</strong></p>
-<p><strong>new list&#x3D;list.copy()</strong>:复制列表类似与list[:]</p>
-<p><strong>list.sort(key&#x3D;none,reverse&#x3D;False)</strong>:返回排序后原来的列表</p>
-<p>key&#x3D;none:默认为升序</p>
-<p>reverse&#x3D;True:反转</p>
-<p>reverse&#x3D;False:不反转</p>
+<p><strong>new list=list.copy()</strong>:复制列表类似与list[:]</p>
+<p><strong>list.sort(key=none,reverse=False)</strong>:返回排序后原来的列表</p>
+<p>key=none:默认为升序</p>
+<p>reverse=True:反转</p>
+<p>reverse=False:不反转</p>
 <p><strong>sorted(type,key,reverse)</strong>:返回一个排序后新的列表</p>
 <p><em>还有改，索引，切片等操作（与字符串差不多）</em></p>
 <h4 id="判断列表为空"><a href="#判断列表为空" class="headerlink" title="判断列表为空"></a>判断列表为空</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">list</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;list is empty&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-
 <h4 id="列表相加"><a href="#列表相加" class="headerlink" title="列表相加"></a>列表相加</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>([<span class="number">1</span>,<span class="number">2</span>]+[<span class="number">2</span>])</span><br><span class="line"><span class="comment">#[1,2,2]</span></span><br></pre></td></tr></table></figure></div>
-
-
-
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d=&#123;1,2,3&#125;</span><br><span class="line"></span><br><span class="line">d=set()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161520407.png"
+                      alt="image-20240416152007418"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161524423.png"
+                      alt="image-20240416152411995"
+                ></p>
+<p><strong>python给定一些集合，怎么把含有相同元素都集合合在一起</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h4 id="使用add-函数"><a href="#使用add-函数" class="headerlink" title="使用add()函数"></a>使用add()函数</h4><p>add()函数只能接收一个变量，否则会报错</p>
+<p><strong>add()函数的参数只能接收可哈希数据类型</strong>，<strong>即不可变数据类型</strong>，<br>比如整型、浮点型、元组、字符串<br>添加整型数据时</p>
+<h4 id="使用update-函数"><a href="#使用update-函数" class="headerlink" title="使用update()函数"></a>使用update()函数</h4><p>我们使用update()向集合中添加元素时，<strong>update接收的参数应该是可迭代的数据类型</strong>，比如字符串、元组、列表、集合、字典。这些都可以向集合中添加元素，但是整型、浮点型不可以。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404160858524.png"
+                      alt="image-20240416085825356"
+                ></p>
 <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典的<strong>键具有唯一性</strong>（后面出现的键会覆盖掉前面相同的键）</p>
-<p><strong>定义</strong>:dict&#x3D;{key:value,key1:value1,…..}</p>
+<p><strong>定义</strong>:dict={key:value,key1:value1,…..}</p>
 <p><strong>dict[key]</strong>:访问字典键的值(修改)</p>
 <p><img  
                      lazyload
@@ -495,9 +525,10 @@
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202403231400976.png"
                       alt="image-20240323140000777"
                 ></p>
-<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if-elif-else"><a href="#if-elif-else" class="headerlink" title="if elif else"></a>if elif else</h3><p>只有if条件为假 elif为真  elif才执行</p>
-<p>if为真跳过elif</p>
-<p>else在if elif全为假时执行</p>
+<p><strong>使用del语句：</strong><br>使用del语句可以删除字典中的元素。语法格式为 del dict[key]，其中dict表示字典，key表示要删除的键。例如，假设有一个字典dict，其中有一个键“name”，要删除这个键，可以使用以下语句： del dict[“name”]</p>
+<p><strong>使用pop()方法</strong>：<br>使用pop()方法可以删除字典中的指定元素。语法格式为 dict.pop(key)，其中dict表示字典，key表示要删除的键。例如，假设有一个字典dict，其中有一个键“name”，要删除这个键，可以使用以下语句： dict.pop(“name”)</p>
+<p><strong>使用popitem()方法：</strong><br>使用popitem()方法可以随机删除字典中的一个元素。语法格式为 dict.popitem()，其中dict表示字典。例如，假设有一个字典dict，要随机删除其中的一个元素，可以使用以下语句： dict.popitem()</p>
+<p><strong>使用clear()方法：</strong><br>使用clear()方法可以清空字典。语法格式为 dict.clear()，其中dict表示字典。例如，假设有一个字典dict，要清空它，可以使用以下语句： dict.clear()</p>
 
         </div>
 
@@ -512,7 +543,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-03-23 14:00:14
+                    :</strong> 2024-04-18 10:58:54
             </li>
         
         <li>
@@ -551,13 +582,13 @@
                     <div class="article-prev">
                         <a class="prev"
                         rel="prev"
-                        href="/2023/10/23/%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8/"
+                        href="/2023/10/26/%E5%85%B3%E4%BA%8Epython%E7%9A%84%E9%93%BE%E8%A1%A8/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">分隔链表</span>
+                                <span class="post-nav-title-item">关于python的链表</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -636,7 +667,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">python语法</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A4%9A%E9%87%8D%E8%B5%8B%E5%80%BC"><span class="nav-text">变量多重赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%85%A8%E5%B1%80%E5%8C%96"><span class="nav-text">局部变量全局化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%87%BD%E6%95%B0"><span class="nav-text">标准函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-text">返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6"><span class="nav-text">进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E7%B1%BB"><span class="nav-text">面向对象(类)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%EF%BC%88%E9%A1%BA%E5%BA%8F%E8%A1%A8%EF%BC%89"><span class="nav-text">列表（顺序表）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-text">字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="nav-text">判断语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if-elif-else"><span class="nav-text">if elif else</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="nav-text">判断语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A4%9A%E9%87%8D%E8%B5%8B%E5%80%BC"><span class="nav-text">变量多重赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%85%A8%E5%B1%80%E5%8C%96"><span class="nav-text">局部变量全局化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%87%BD%E6%95%B0"><span class="nav-text">标准函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6"><span class="nav-text">进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E7%B1%BB"><span class="nav-text">面向对象(类)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%EF%BC%88%E9%A1%BA%E5%BA%8F%E8%A1%A8%EF%BC%89"><span class="nav-text">列表（顺序表）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-text">字典</span></a></li></ol>
 
     </div>
 </div>
