@@ -18,16 +18,16 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940n &#x3D; int(input())l &#x3D; []p &#x3D; 2while p &lt;&#x3D; n:    if n % p &#x3D;&#x3D; 0:        l.append(p)    p +&#x3D; 1m &#x3D; 1low &#x3D; 0high &#x3D; 0mi &#x3D; 0ma &#x3D; 0for n">
+        <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839n &#x3D; int(input())l &#x3D; []if n&lt;&#x3D;1:    print(0)    exit()p &#x3D; 2while p &lt;&#x3D; n:    if n % p &#x3D;&#x3D; 0:        l.append(p)    p +&#x3D; 1m &#x3D; 1l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模拟集合">
 <meta property="og:url" content="http://qwepure.gihub.io/2024/04/18/%E6%A8%A1%E6%8B%9F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940n &#x3D; int(input())l &#x3D; []p &#x3D; 2while p &lt;&#x3D; n:    if n % p &#x3D;&#x3D; 0:        l.append(p)    p +&#x3D; 1m &#x3D; 1low &#x3D; 0high &#x3D; 0mi &#x3D; 0ma &#x3D; 0for n">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839n &#x3D; int(input())l &#x3D; []if n&lt;&#x3D;1:    print(0)    exit()p &#x3D; 2while p &lt;&#x3D; n:    if n % p &#x3D;&#x3D; 0:        l.append(p)    p +&#x3D; 1m &#x3D; 1l">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202402221751461.png">
 <meta property="article:published_time" content="2024-04-18T02:36:18.766Z">
-<meta property="article:modified_time" content="2024-04-18T02:46:18.020Z">
+<meta property="article:modified_time" content="2024-04-20T02:53:09.348Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="模拟">
 <meta name="twitter:card" content="summary">
@@ -322,7 +322,7 @@
                     <div class="author flex items-center">
                         <span class="name text-default-text-color text-lg font-semibold">小禹君</span>
                         
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
                         
                     </div>
                     <div class="meta-info">
@@ -336,8 +336,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-04-18 10:46:18</span>
-            <span class="mobile">2024-04-18 10:46:18</span>
+            <span class="desktop">2024-04-20 10:53:09</span>
+            <span class="mobile">2024-04-20 10:53:09</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -395,7 +395,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>209 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>214 字</span>
         </span>
     
     
@@ -426,8 +426,10 @@
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202402221751461.png"
                       alt="image-20240222175124331"
                 ></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line"></span><br><span class="line">l = []</span><br><span class="line"></span><br><span class="line">p = 2</span><br><span class="line">while p &lt;= n:</span><br><span class="line">    if n % p == 0:</span><br><span class="line">        l.append(p)</span><br><span class="line">    p += 1</span><br><span class="line"></span><br><span class="line">m = 1</span><br><span class="line">low = 0</span><br><span class="line">high = 0</span><br><span class="line">mi = 0</span><br><span class="line">ma = 0</span><br><span class="line">for num in range(len(l) - 1):</span><br><span class="line">    if l[num] + 1 == l[num + 1]:</span><br><span class="line">        high += 1</span><br><span class="line">    else:</span><br><span class="line">        if high - low + 1 &gt; m:</span><br><span class="line">            mi = low</span><br><span class="line">            ma = high</span><br><span class="line">            m = high - low + 1</span><br><span class="line">        low = high + 1</span><br><span class="line">        high = low</span><br><span class="line"></span><br><span class="line">print(m)</span><br><span class="line"></span><br><span class="line">la = []</span><br><span class="line"></span><br><span class="line">j = 1</span><br><span class="line">for i in range(mi, ma + 1):</span><br><span class="line">    j *= l[i]</span><br><span class="line">    if j &gt; n:</span><br><span class="line">        break</span><br><span class="line">    la.append(l[i])</span><br><span class="line"></span><br><span class="line">la = list(map(str, la))</span><br><span class="line">print(&quot;*&quot;.join(la))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line"></span><br><span class="line">l = []</span><br><span class="line"></span><br><span class="line">if n&lt;=1:</span><br><span class="line">    print(0)</span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line">p = 2</span><br><span class="line">while p &lt;= n:</span><br><span class="line">    if n % p == 0:</span><br><span class="line">        l.append(p)</span><br><span class="line">    p += 1</span><br><span class="line"></span><br><span class="line">m = 1</span><br><span class="line">low = 0</span><br><span class="line">high = 0</span><br><span class="line">mi = 0</span><br><span class="line">ma = 0</span><br><span class="line">for high in range(len(l) - 1):</span><br><span class="line">    if l[high] + 1 == l[high + 1]:</span><br><span class="line">        if high+1 - low + 1 &gt; m:</span><br><span class="line">            res=1</span><br><span class="line">            for i in l[low:high+2]:</span><br><span class="line">                res*=i</span><br><span class="line">            if res&lt;=n:</span><br><span class="line">                mi = low</span><br><span class="line">                ma = high+1</span><br><span class="line">                m = high+1 - low + 1</span><br><span class="line">    else:</span><br><span class="line">        low=high+1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(m)</span><br><span class="line"></span><br><span class="line">la=l[mi:ma+1]</span><br><span class="line">la = list(map(str, la))</span><br><span class="line">print(&quot;*&quot;.join(la))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="comment">#导入数学计算相关的包</span></span><br><span class="line">maxLen = <span class="number">0</span> <span class="comment">#最长连续因子个数</span></span><br><span class="line">resultList = []<span class="comment">#连续因子</span></span><br><span class="line">isPrimary = <span class="literal">True</span> <span class="comment">#标识是否为质数</span></span><br><span class="line"></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="built_in">int</span>(math.sqrt(num))+<span class="number">1</span>):<span class="comment">#从2开始依次遍历至最大因子</span></span><br><span class="line">    tempNum = num</span><br><span class="line">    tempList=[]</span><br><span class="line">    start = i</span><br><span class="line">    <span class="keyword">while</span> tempNum%start==<span class="number">0</span>:<span class="comment">#一轮遍历</span></span><br><span class="line">        isPrimary=<span class="literal">False</span></span><br><span class="line">        tempNum = tempNum//start</span><br><span class="line">        tempList.append(<span class="built_in">str</span>(start))</span><br><span class="line">        start+=<span class="number">1</span></span><br><span class="line">    tempLen=start-i</span><br><span class="line">    <span class="keyword">if</span> tempLen &gt; maxLen :<span class="comment">#更新数据</span></span><br><span class="line">        resultList=tempList</span><br><span class="line">        maxLen=tempLen</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> isPrimary == <span class="literal">True</span>:<span class="comment">#输出结果</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(num)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(maxLen)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;*&quot;</span>.join(resultList))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
 
         </div>
 
@@ -442,7 +444,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-04-18 10:46:18
+                    :</strong> 2024-04-20 10:53:09
             </li>
         
         <li>
