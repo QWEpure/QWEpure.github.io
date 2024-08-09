@@ -18,18 +18,18 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="双指针和滑动窗口双指针计算过程仅与两端点相关的称为双指针。不固定大小。双指针可以同向移动可以双向移动。 滑动窗口计算过程与两端点表示的区间相关的称为滑动窗口。默认固定大小的窗口（区间），在一些条件触发的情况下，可能会将其大小进行修改。滑动窗口一定是同向移动的。 例题滑动窗口1. 2405. 子字符串的最优划分 - 力扣（LeetCode）  解题思路​    遍历，遇到重复的就切割 123456">
+        <meta name="description" content="双指针和滑动窗口双指针计算过程仅与两端点相关的称为双指针。不固定大小。双指针可以同向移动可以双向移动。 滑动窗口计算过程与两端点表示的区间相关的称为滑动窗口。默认固定大小的窗口（区间），在一些条件触发的情况下，可能会将其大小进行修改。滑动窗口一定是同向移动的。 例题滑动窗口1. 2405. 子字符串的最优划分 - 力扣（LeetCode）  解题思路​	遍历，遇到重复的就切割 123456789">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双指针和滑动窗口">
 <meta property="og:url" content="http://qwepure.gihub.io/2024/04/18/%E5%8F%8C%E6%8C%87%E9%92%88%E5%92%8C%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="双指针和滑动窗口双指针计算过程仅与两端点相关的称为双指针。不固定大小。双指针可以同向移动可以双向移动。 滑动窗口计算过程与两端点表示的区间相关的称为滑动窗口。默认固定大小的窗口（区间），在一些条件触发的情况下，可能会将其大小进行修改。滑动窗口一定是同向移动的。 例题滑动窗口1. 2405. 子字符串的最优划分 - 力扣（LeetCode）  解题思路​    遍历，遇到重复的就切割 123456">
+<meta property="og:description" content="双指针和滑动窗口双指针计算过程仅与两端点相关的称为双指针。不固定大小。双指针可以同向移动可以双向移动。 滑动窗口计算过程与两端点表示的区间相关的称为滑动窗口。默认固定大小的窗口（区间），在一些条件触发的情况下，可能会将其大小进行修改。滑动窗口一定是同向移动的。 例题滑动窗口1. 2405. 子字符串的最优划分 - 力扣（LeetCode）  解题思路​	遍历，遇到重复的就切割 123456789">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311050013646.png">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311030053870.png">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404110929292.png">
 <meta property="article:published_time" content="2024-04-18T02:25:36.085Z">
-<meta property="article:modified_time" content="2024-04-18T02:37:30.674Z">
+<meta property="article:modified_time" content="2024-08-09T22:34:21.979Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="双指针">
 <meta property="article:tag" content="滑动窗口">
@@ -339,8 +339,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-04-18 10:37:30</span>
-            <span class="mobile">2024-04-18 10:37:30</span>
+            <span class="desktop">2024-08-10 06:34:21</span>
+            <span class="mobile">2024-08-10 06:34:21</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -355,16 +355,6 @@
                         
                         <li>
                             <a href="/categories/AC/">AC</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/AC/%E5%A4%A7%E7%BA%B2/">大纲</a>&nbsp;
                         </li>
                     
                     
@@ -392,7 +382,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>598 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>599 字</span>
         </span>
     
     
@@ -426,8 +416,9 @@
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202311050013646.png"
                       alt="image-20231105001334089"
                 ></p>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>​    遍历，遇到重复的就切割</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>​	遍历，遇到重复的就切割</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">partitionString</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        j, cnt, window = <span class="number">0</span>, <span class="number">0</span>, &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(s):</span><br><span class="line">            <span class="keyword">if</span> s[j] <span class="keyword">in</span> window: <span class="comment">#如果有重复的值出现，结果加1，重新计算重复</span></span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                window = &#123;&#125;  </span><br><span class="line">            window[s[j]]=<span class="number">0</span><span class="comment">#把新出现的值加入字典</span></span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> cnt + <span class="number">1</span>  </span><br></pre></td></tr></table></figure></div>
+
 <p>还可以用集合，列表来当已经遍历（待切割）的暂存窗口。</p>
 <p><strong>2.</strong></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/description/" >1493. 删掉一个元素以后全为 1 的最长子数组 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -438,17 +429,20 @@
                       alt="image-20231103005258488"
                 ></p>
 <p><strong>思路</strong></p>
-<p>​    定义两个游标<strong>left，right</strong></p>
-<p>​    right随着循环移动</p>
-<p>​    当符合<strong>判断条件</strong>时<strong>left移动</strong></p>
-<p>​    right和left在判断之后，之间的数据为所需要的数据</p>
+<p>​	定义两个游标<strong>left，right</strong></p>
+<p>​	right随着循环移动</p>
+<p>​	当符合<strong>判断条件</strong>时<strong>left移动</strong></p>
+<p>​	right和left在判断之后，之间的数据为所需要的数据</p>
 <p><strong>难点</strong></p>
-<p>​    left怎么移动</p>
-<h3 id="本题思路"><a href="#本题思路" class="headerlink" title="本题思路"></a>本题思路</h3><p>​    在第一次写的时候把<strong><em>判断条件</em></strong>定为遇到第二个0时，导致解题思路不通畅</p>
-<p>​    <strong>判断条件</strong>：包含一个 0 的非空子数组（left右移遇到1继续移直到下一个0）</p>
+<p>​	left怎么移动</p>
+<h3 id="本题思路"><a href="#本题思路" class="headerlink" title="本题思路"></a>本题思路</h3><p>​	在第一次写的时候把<em><strong>判断条件</strong></em>定为遇到第二个0时，导致解题思路不通畅</p>
+<p>​	<strong>判断条件</strong>：包含一个 0 的非空子数组（left右移遇到1继续移直到下一个0）</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">longestSubarray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        left=right=<span class="number">0</span></span><br><span class="line">        count_0=<span class="number">0</span></span><br><span class="line">        <span class="built_in">max</span>=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[right]==<span class="number">0</span>:</span><br><span class="line">                count_0+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> count_0&gt;<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> nums[left]==<span class="number">0</span>:</span><br><span class="line">                    count_0-=<span class="number">1</span></span><br><span class="line">                left+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">max</span>&lt;right-left:</span><br><span class="line">                <span class="built_in">max</span>=right-left</span><br><span class="line">            right+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span></span><br></pre></td></tr></table></figure></div>
+
+
+
 <h2 id="双指针-1"><a href="#双指针-1" class="headerlink" title="双指针"></a>双指针</h2><h5 id="双指针-dp"><a href="#双指针-dp" class="headerlink" title="双指针+dp"></a>双指针+dp</h5><p><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-increasing-quadruplets/description/" >2552. 统计上升四元组 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>nums=[1,3,2,4,5]时dp</p>
+<p>nums&#x3D;[1,3,2,4,5]时dp</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -457,6 +451,7 @@
                 ></p>
 <p>dp[i] [nums(j)] 在范围小于i的小于nums[j]的数量</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">countQuadruplets</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line"></span><br><span class="line">        dp = [[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n + <span class="number">1</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">                dp[i][x] = dp[i - <span class="number">1</span>][x]</span><br><span class="line">            dp[i][nums[i]] += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">                dp[i][x] += dp[i][x - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n - <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(j + <span class="number">1</span>, n - <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> nums[k] &lt; nums[j]:</span><br><span class="line">                    ii = dp[j - <span class="number">1</span>][nums[k] - <span class="number">1</span>]</span><br><span class="line">                    ll = (dp[n-<span class="number">1</span>][n] - dp[n-<span class="number">1</span>][nums[j]]) - (dp[k][n] - dp[k][nums[j]])</span><br><span class="line">                    res += ii * ll</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
 
         </div>
 
@@ -471,7 +466,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-04-18 10:37:30
+                    :</strong> 2024-08-10 06:34:21
             </li>
         
         <li>
@@ -520,7 +515,7 @@
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">模拟集合</span>
+                                <span class="post-nav-title-item">模拟</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>

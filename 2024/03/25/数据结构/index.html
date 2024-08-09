@@ -18,16 +18,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="二叉树性质1.在二叉树的第i层上至多有 2^i-1 个结点。(i≥1) 2.深度为 k 的二叉树上至多含 2^(k-1) 个结点（k≥1）。 3.对任何一棵二叉树，若它含有n0 个叶子结点、n2 个度为 2 的结点，则必存在关系式：n0 &#x3D; n2+1。 4.具有 n 个结点的完全二叉树的深度为 [log2n] +1 。(向下取整) 5.若对含 n 个结点的完全二叉树从上到下且从左至右进行 1 至">
+        <meta name="description" content="[TOC] 链表约瑟夫问题题目描述$n$ 个人围成一圈，从第一个人开始报数,数到 $m$ 的人出列，再由下一个人重新从 $1$ 开始报数，数到 $m$ 的人再出圈，依次类推，直到所有的人都出圈，请输出依次出圈人的编号。 注意：本题和《深入浅出-基础篇》上例题的表述稍有不同。书上表述是给出淘汰 $n-1$ 名小朋友，而该题是全部出圈。 输入格式输入两个整数 $n,m$。 输出格式输出一行 $n$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构 -数据结构">
+<meta property="og:title" content="数据结构">
 <meta property="og:url" content="http://qwepure.gihub.io/2024/03/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="二叉树性质1.在二叉树的第i层上至多有 2^i-1 个结点。(i≥1) 2.深度为 k 的二叉树上至多含 2^(k-1) 个结点（k≥1）。 3.对任何一棵二叉树，若它含有n0 个叶子结点、n2 个度为 2 的结点，则必存在关系式：n0 &#x3D; n2+1。 4.具有 n 个结点的完全二叉树的深度为 [log2n] +1 。(向下取整) 5.若对含 n 个结点的完全二叉树从上到下且从左至右进行 1 至">
+<meta property="og:description" content="[TOC] 链表约瑟夫问题题目描述$n$ 个人围成一圈，从第一个人开始报数,数到 $m$ 的人出列，再由下一个人重新从 $1$ 开始报数，数到 $m$ 的人再出圈，依次类推，直到所有的人都出圈，请输出依次出圈人的编号。 注意：本题和《深入浅出-基础篇》上例题的表述稍有不同。书上表述是给出淘汰 $n-1$ 名小朋友，而该题是全部出圈。 输入格式输入两个整数 $n,m$。 输出格式输出一行 $n$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-25T06:25:23.498Z">
-<meta property="article:modified_time" content="2024-04-18T02:18:04.663Z">
+<meta property="article:modified_time" content="2024-08-09T22:37:07.916Z">
 <meta property="article:author" content="小禹君">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
     
     
@@ -40,7 +41,7 @@
     
     <title>
         
-            数据结构 -数据结构 -
+            数据结构 -
         
         Myblog
     </title>
@@ -304,7 +305,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">数据结构 -数据结构</h1>
+                <h1 class="article-title-regular">数据结构</h1>
             
             </div>
             
@@ -333,8 +334,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-04-18 10:18:04</span>
-            <span class="mobile">2024-04-18 10:18:04</span>
+            <span class="desktop">2024-08-10 06:37:07</span>
+            <span class="mobile">2024-08-10 06:37:07</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -353,30 +354,31 @@
                     
                     
                 
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A4%A7%E7%BA%B2/">大纲</a>&nbsp;
-                        </li>
-                    
-                    
-                
             </ul>
         </span>
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>189 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.5k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 分钟</span>
         </span>
     
     
@@ -396,12 +398,147 @@
 
         <div class="article-content markdown-body">
             <hr>
+<p>[TOC]</p>
+<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h4 id="约瑟夫问题"><a href="#约瑟夫问题" class="headerlink" title="约瑟夫问题"></a>约瑟夫问题</h4><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>$n$ 个人围成一圈，从第一个人开始报数,数到 $m$ 的人出列，再由下一个人重新从 $1$ 开始报数，数到 $m$ 的人再出圈，依次类推，直到所有的人都出圈，请输出依次出圈人的编号。</p>
+<p><strong>注意：本题和《深入浅出-基础篇》上例题的表述稍有不同。书上表述是给出淘汰 $n-1$ 名小朋友，而该题是全部出圈。</strong></p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入两个整数 $n,m$。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一行 $n$ 个整数，按顺序输出每个出圈人的编号。</p>
+<h4 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h4><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 3</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 6 9 2 7 1 8 5 10 4</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>$1 \le m, n \le 100$</p>
+<p>利用取余来模拟循环队列</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">n,m=map(int,input().split())</span><br><span class="line"></span><br><span class="line">visit=[0]*(n+1)</span><br><span class="line">p=0</span><br><span class="line">for i in range(n):</span><br><span class="line">    for j in range(m):</span><br><span class="line">        p+=1</span><br><span class="line">        while visit[p % n] == 1:</span><br><span class="line">            p += 1</span><br><span class="line"></span><br><span class="line">    if p % n==0:</span><br><span class="line">        print(n,end=&quot; &quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(p % n, end=&quot; &quot;)</span><br><span class="line">    visit[p%n] = 1</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h4 id="后缀表达式"><a href="#后缀表达式" class="headerlink" title="后缀表达式"></a>后缀表达式</h4><h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>所谓后缀表达式是指这样的一个表达式：式中不再引用括号，运算符号放在两个运算对象之后，所有计算按运算符号出现的顺序，严格地由左而右新进行（不用考虑运算符的优先级）。</p>
+<p>本题中运算符仅包含 $\texttt{+-*&#x2F;}$。保证对于 $\texttt{&#x2F;}$ 运算除数不为 0。特别地，其中 $\texttt{&#x2F;}$ 运算的结果需要<strong>向 0 取整</strong>（即与 C++ <code>/</code> 运算的规则一致）。</p>
+<p>如：$\texttt{3*(5-2)+7}$ 对应的后缀表达式为：$\texttt{3.5.2.-*7.+@}$。在该式中，<code>@</code> 为表达式的结束符号。<code>.</code> 为操作数的结束符号。</p>
+<h4 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入一行一个字符串 $s$，表示后缀表达式。</p>
+<h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一个整数，表示表达式的值。</p>
+<h4 id="样例-1-1"><a href="#样例-1-1" class="headerlink" title="样例 #1"></a>样例 #1</h4><h4 id="样例输入-1-1"><a href="#样例输入-1-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.5.2.-*7.+@</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-1-1"><a href="#样例输出-1-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">16</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例-2"><a href="#样例-2" class="headerlink" title="样例 #2"></a>样例 #2</h4><h4 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入 #2"></a>样例输入 #2</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10.28.30./*7.-@</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出 #2"></a>样例输出 #2</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-7</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h4><p>数据保证，$1 \leq |s| \leq 50$，答案和计算过程中的每一个值的绝对值不超过 $10^9$。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#读题</span><br><span class="line">s=input().split(&#x27;.&#x27;)</span><br><span class="line"></span><br><span class="line">stack=[]</span><br><span class="line">for i in s:</span><br><span class="line">    if i.isdigit():</span><br><span class="line">        stack.append(i)</span><br><span class="line">    else:</span><br><span class="line">        s=0</span><br><span class="line">        for q in range(len(i)):</span><br><span class="line">            j=i[q]</span><br><span class="line">            if j == &#x27;+&#x27;:</span><br><span class="line">                a = int(stack[-1]) + int(stack[-2])</span><br><span class="line">                stack[-2] = a</span><br><span class="line">                stack.pop()</span><br><span class="line">            elif j == &#x27;-&#x27;:</span><br><span class="line">                a = int(stack[-2]) - int(stack[-1])</span><br><span class="line">                stack[-2] = a</span><br><span class="line">                stack.pop()</span><br><span class="line">            elif j == &#x27;*&#x27;:</span><br><span class="line">                a = int(stack[-1]) * int(stack[-2])</span><br><span class="line">                stack[-2] = a</span><br><span class="line">                stack.pop()</span><br><span class="line">            elif j == &#x27;/&#x27;:</span><br><span class="line">                a = int(stack[-2]) // int(stack[-1])</span><br><span class="line">                stack[-2] = a</span><br><span class="line">                stack.pop()</span><br><span class="line">            elif j == &#x27;@&#x27;:</span><br><span class="line">                break</span><br><span class="line">            else:</span><br><span class="line">                if s==0:</span><br><span class="line">                    stack.append(j)</span><br><span class="line">                    s=1</span><br><span class="line">                else:</span><br><span class="line">                    stack[-1]=stack[-1]+j</span><br><span class="line">                continue</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(stack[0])</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h3 id="NOIP2010-提高组-机器翻译"><a href="#NOIP2010-提高组-机器翻译" class="headerlink" title="[NOIP2010 提高组] 机器翻译"></a>[NOIP2010 提高组] 机器翻译</h3><h4 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h4><p>NOIP2010 提高组 T1</p>
+<h4 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h4><p>小晨的电脑上安装了一个机器翻译软件，他经常用这个软件来翻译英语文章。</p>
+<p>这个翻译软件的原理很简单，它只是从头到尾，依次将每个英文单词用对应的中文含义来替换。对于每个英文单词，软件会先在内存中查找这个单词的中文含义，如果内存中有，软件就会用它进行翻译；如果内存中没有，软件就会在外存中的词典内查找，查出单词的中文含义然后翻译，并将这个单词和译义放入内存，以备后续的查找和翻译。</p>
+<p>假设内存中有 $M$ 个单元，每单元能存放一个单词和译义。每当软件将一个新单词存入内存前，如果当前内存中已存入的单词数不超过 $M-1$，软件会将新单词存入一个未使用的内存单元；若内存中已存入 $M$ 个单词，软件会清空最早进入内存的那个单词，腾出单元来，存放新单词。</p>
+<p>假设一篇英语文章的长度为 $N$ 个单词。给定这篇待译文章，翻译软件需要去外存查找多少次词典？假设在翻译开始前，内存中没有任何单词。</p>
+<h4 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h4><p>共 $2$ 行。每行中两个数之间用一个空格隔开。</p>
+<p>第一行为两个正整数 $M,N$，代表内存容量和文章的长度。</p>
+<p>第二行为 $N$ 个非负整数，按照文章的顺序，每个数（大小不超过 $1000$）代表一个英文单词。文章中两个单词是同一个单词，当且仅当它们对应的非负整数相同。</p>
+<h4 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h4><p>一个整数，为软件需要查词典的次数。</p>
+<h4 id="样例-1-2"><a href="#样例-1-2" class="headerlink" title="样例 #1"></a>样例 #1</h4><h4 id="样例输入-1-2"><a href="#样例输入-1-2" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 7</span><br><span class="line">1 2 1 5 4 4 1</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-1-2"><a href="#样例输出-1-2" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="提示-2"><a href="#提示-2" class="headerlink" title="提示"></a>提示</h4><h4 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h4><p>整个查字典过程如下：每行表示一个单词的翻译，冒号前为本次翻译后的内存状况：</p>
+<ol>
+<li><code>1</code>：查找单词 1 并调入内存。</li>
+<li><code>1 2</code>：查找单词 2 并调入内存。</li>
+<li><code>1 2</code>：在内存中找到单词 1。</li>
+<li><code>1 2 5</code>：查找单词 5 并调入内存。</li>
+<li><code>2 5 4</code>：查找单词 4 并调入内存替代单词 1。</li>
+<li><code>2 5 4</code>：在内存中找到单词 4。</li>
+<li><code>5 4 1</code>：查找单词 1 并调入内存替代单词 2。</li>
+</ol>
+<p>共计查了 $5$ 次词典。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><ul>
+<li>对于 $10%$ 的数据有 $M&#x3D;1$，$N \leq 5$；</li>
+<li>对于 $100%$ 的数据有 $1 \leq M \leq 100$，$1 \leq N \leq 1000$。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">m,n=map(int,input().split())</span><br><span class="line">word=list(map(int,input().split()))</span><br><span class="line"></span><br><span class="line">temp=[]</span><br><span class="line"></span><br><span class="line">res=0</span><br><span class="line">for i in word:</span><br><span class="line">    if i in temp:</span><br><span class="line">        continue</span><br><span class="line">    else:</span><br><span class="line">        if len(temp)&gt;=m:</span><br><span class="line">            temp.pop(0)</span><br><span class="line">            temp.append(i)</span><br><span class="line">            res+=1</span><br><span class="line">        else:</span><br><span class="line">            temp.append(i)</span><br><span class="line">            res+=1</span><br><span class="line"></span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h4 id="修复公路"><a href="#修复公路" class="headerlink" title="修复公路"></a>修复公路</h4><h4 id="题目背景-1"><a href="#题目背景-1" class="headerlink" title="题目背景"></a>题目背景</h4><p>A 地区在地震过后，连接所有村庄的公路都造成了损坏而无法通车。政府派人修复这些公路。</p>
+<h4 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h4><p>给出 A 地区的村庄数 $N$，和公路数 $M$，公路是双向的。并告诉你每条公路的连着哪两个村庄，并告诉你什么时候能修完这条公路。问最早什么时候任意两个村庄能够通车，即最早什么时候任意两条村庄都存在至少一条修复完成的道路（可以由多条公路连成一条道路）。</p>
+<h4 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h4><p>第 $1$ 行两个正整数 $N,M$。</p>
+<p>下面 $M$ 行，每行 $3$ 个正整数 $x,y,t$，告诉你这条公路连着 $x,y$ 两个村庄，在时间 $t$ 时能修复完成这条公路。</p>
+<h4 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h4><p>如果全部公路修复完毕仍然存在两个村庄无法通车，则输出 $-1$，否则输出最早什么时候任意两个村庄能够通车。</p>
+<h4 id="样例-1-3"><a href="#样例-1-3" class="headerlink" title="样例 #1"></a>样例 #1</h4><h4 id="样例输入-1-3"><a href="#样例输入-1-3" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 4</span><br><span class="line">1 2 6</span><br><span class="line">1 3 4</span><br><span class="line">1 4 5</span><br><span class="line">4 2 3</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-1-3"><a href="#样例输出-1-3" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="提示-3"><a href="#提示-3" class="headerlink" title="提示"></a>提示</h4><p>$1\leq x, y\leq N \le 10 ^ 3$，$1\leq M, t \le 10 ^ 5$。</p>
+<p>如果两个村庄能连通，那么只用检查一个村庄能不能连通其他的村庄。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#dfs超时了一个数据</span><br><span class="line">n,m=map(int,input().split())</span><br><span class="line"></span><br><span class="line">ma=[]</span><br><span class="line">res=-1</span><br><span class="line"></span><br><span class="line">for i in range(m):</span><br><span class="line">    x,y,z=map(int,input().split())</span><br><span class="line">    ma.append([x,y,z])</span><br><span class="line"></span><br><span class="line">ma.sort(key= lambda x:x[2])</span><br><span class="line"></span><br><span class="line">visit=[0]*(n+1)</span><br><span class="line"></span><br><span class="line">def dfs(t):</span><br><span class="line">    visit[t]=1</span><br><span class="line">    for i in d[t]:</span><br><span class="line">        if visit[i]==0:</span><br><span class="line">            dfs(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">d=[[] for _ in range(n+1)]</span><br><span class="line">for qwe in ma:</span><br><span class="line">    d[qwe[0]].append(qwe[1])</span><br><span class="line">    d[qwe[1]].append(qwe[0])</span><br><span class="line">    visit = [0] * (n + 1)</span><br><span class="line">    dfs(1)</span><br><span class="line">    if all(visit[1:]):</span><br><span class="line">        res=qwe[2]</span><br><span class="line">        break</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>并查集</p>
+<p>连通分量如果变成1，那么每两个节点连通</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">def find(parent, x):</span><br><span class="line">    if parent[x] != x:</span><br><span class="line">        parent[x] = find(parent, parent[x])  # 路径压缩，以加快后续查找的速度。</span><br><span class="line">    return parent[x]</span><br><span class="line"></span><br><span class="line">def union(parent, rank, x, y):#将两个节点的祖宗节点跟新为最大的一个，既两个节点连通</span><br><span class="line">    rootX = find(parent, x)</span><br><span class="line">    rootY = find(parent, y)</span><br><span class="line">    if rootX != rootY:</span><br><span class="line">        if rank[rootX] &gt; rank[rootY]:</span><br><span class="line">            parent[rootY] = rootX</span><br><span class="line">        elif rank[rootX] &lt; rank[rootY]:</span><br><span class="line">            parent[rootX] = rootY</span><br><span class="line">        else:</span><br><span class="line">            parent[rootY] = rootX</span><br><span class="line">            rank[rootX] += 1</span><br><span class="line"></span><br><span class="line">n, m = map(int, input().split())</span><br><span class="line"></span><br><span class="line">edges = []</span><br><span class="line">for i in range(m):</span><br><span class="line">    x, y, z = map(int, input().split())</span><br><span class="line">    edges.append((z, x, y))</span><br><span class="line"></span><br><span class="line">edges.sort()  # 按照修复时间排序</span><br><span class="line"></span><br><span class="line">parent = [i for i in range(n + 1)]</span><br><span class="line">rank = [0] * (n + 1)</span><br><span class="line">components = n</span><br><span class="line">res = -1</span><br><span class="line"></span><br><span class="line">for z, x, y in edges:</span><br><span class="line">    if find(parent, x) != find(parent, y):#不是同一个祖宗节点说明不是同一个连通分量</span><br><span class="line">        union(parent, rank, x, y)</span><br><span class="line">        components -= 1  # 连通分量减少</span><br><span class="line">        if components == 1:  # 所有村庄都连通</span><br><span class="line">            res = z</span><br><span class="line">            break</span><br><span class="line"></span><br><span class="line">print(res)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+<h2 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h2><p>[]: </p>
+<h4 id="【模板】堆"><a href="#【模板】堆" class="headerlink" title="【模板】堆"></a>【模板】堆</h4><h4 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h4><p>给定一个数列，初始为空，请支持下面三种操作：</p>
+<ol>
+<li>给定一个整数 $x$，请将 $x$ 加入到数列中。</li>
+<li>输出数列中最小的数。</li>
+<li>删除数列中最小的数（如果有多个数最小，只删除 $1$ 个）。</li>
+</ol>
+<h4 id="输入格式-4"><a href="#输入格式-4" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行是一个整数，表示操作的次数 $n$。<br>接下来 $n$ 行，每行表示一次操作。每行首先有一个整数 $op$ 表示操作类型。</p>
+<ul>
+<li>若 $op &#x3D; 1$，则后面有一个整数 $x$，表示要将 $x$ 加入数列。</li>
+<li>若 $op &#x3D; 2$，则表示要求输出数列中的最小数。</li>
+<li>若 $op &#x3D; 3$，则表示删除数列中的最小数。如果有多个数最小，只删除 $1$ 个。</li>
+</ul>
+<h4 id="输出格式-4"><a href="#输出格式-4" class="headerlink" title="输出格式"></a>输出格式</h4><p>对于每个操作 $2$，输出一行一个整数表示答案。</p>
+<h4 id="样例-1-4"><a href="#样例-1-4" class="headerlink" title="样例 #1"></a>样例 #1</h4><h4 id="样例输入-1-4"><a href="#样例输入-1-4" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 2</span><br><span class="line">1 5</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="样例输出-1-4"><a href="#样例输出-1-4" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="提示-4"><a href="#提示-4" class="headerlink" title="提示"></a>提示</h4><p>【数据规模与约定】</p>
+<ul>
+<li><p>对于 $30%$ 的数据，保证 $n \leq 15$。</p>
+</li>
+<li><p>对于 $70%$ 的数据，保证 $n \leq 10^4$。</p>
+</li>
+<li><p>对于 $100%$ 的数据，保证 $1 \leq n \leq 10^6$，$1 \leq x \lt 2^{31}$，$op \in {1, 2, 3}$。</p>
+<p>python里面内置了堆</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3 id="二叉树性质"><a href="#二叉树性质" class="headerlink" title="二叉树性质"></a>二叉树性质</h3><p>1.在二叉树的第i层上至多有 2^i-1 个结点。(i≥1)</p>
 <p>2.深度为 k 的二叉树上至多含 2^(k-1) 个结点（k≥1）。</p>
-<p>3.对任何一棵二叉树，若它含有n0 个叶子结点、n2 个度为 2 的结点，则必存在关系式：n0 = n2+1。</p>
+<p>3.对任何一棵二叉树，若它含有n0 个叶子结点、n2 个度为 2 的结点，则必存在关系式：n0 &#x3D; n2+1。</p>
 <p>4.具有 n 个结点的完全二叉树的深度为 [log2n] +1 。(向下取整)</p>
 <p>5.若对含 n 个结点的完全二叉树从上到下且从左至右进行 1 至 n 的编号，则对完全二叉树中任意一个编号为 i 的结点。 </p>
 <h3 id="定义二叉树"><a href="#定义二叉树" class="headerlink" title="定义二叉树"></a>定义二叉树</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#定义一个节点</span><br><span class="line">class TreeNode:</span><br><span class="line">    def __init__(self, val=0, left=None, right=None):</span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br></pre></td></tr></table></figure></div>
+
 
         </div>
 
@@ -409,14 +546,14 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 数据结构 -数据结构</li>
+        <li><strong>标题:</strong> 数据结构</li>
         <li><strong>作者:</strong> 小禹君</li>
         <li><strong>创建于
                 :</strong> 2024-03-25 14:25:23</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-04-18 10:18:04
+                    :</strong> 2024-08-10 06:37:07
             </li>
         
         <li>
@@ -437,6 +574,14 @@
             </div>
         
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
         
 
         
@@ -531,8 +676,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">数据结构 -数据结构</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E6%80%A7%E8%B4%A8"><span class="nav-text">二叉树性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">定义二叉树</span></a></li></ol>
+        <div class="page-title">数据结构</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-text">链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88"><span class="nav-text">栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NOIP2010-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91"><span class="nav-text">[NOIP2010 提高组] 机器翻译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="nav-text">并查集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E5%A0%86"><span class="nav-text">二叉堆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E6%80%A7%E8%B4%A8"><span class="nav-text">二叉树性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">定义二叉树</span></a></li></ol></li></ol>
 
     </div>
 </div>
