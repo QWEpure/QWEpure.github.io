@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="小禹君">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://QWEpure.gihub.io/2024/06/23/爬虫/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="Requests 简介1. 什么是 Requests？　　Requests 是一个很实用的 Python HTTP 客户端库，编写爬虫和测试服务器响应数据时经常会用到。Requests 主要用途是发送 HTTP 请求，根据对方服务器的要求不通过，可以使用 GET、POST 等方式进行请求。并且可以对请求头进行伪装、使用代理访问等。 2. GET 请求　　 requests.get() 函数是获取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫">
+<meta property="og:url" content="http://qwepure.gihub.io/2024/06/23/%E7%88%AC%E8%99%AB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Requests 简介1. 什么是 Requests？　　Requests 是一个很实用的 Python HTTP 客户端库，编写爬虫和测试服务器响应数据时经常会用到。Requests 主要用途是发送 HTTP 请求，根据对方服务器的要求不通过，可以使用 GET、POST 等方式进行请求。并且可以对请求头进行伪装、使用代理访问等。 2. GET 请求　　 requests.get() 函数是获取">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210806/jyqngavd_OaXvPPNTlCiQ0nmqcPHT#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_mizQNVH8Vlzc4lCfBmon#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_Xy4v22ta8ffgOSOov5Ho#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_H2HB3p5DGp5Q9ugJ7mB1#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_MN0MQJLqgF1ZDpdqo6hK#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_7agTHA9a6grfw7JPKNvt#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_hi0uHVV4cCOBAWZRx4j8#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_v5qwadMMOLzkxlJnUxts#business_type=upload_markdown">
+<meta property="og:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_36HAKGD8hL9CgddPYYOL#business_type=upload_markdown">
+<meta property="article:published_time" content="2024-06-23T00:25:03.894Z">
+<meta property="article:modified_time" content="2024-08-09T22:30:05.888Z">
+<meta property="article:author" content="小禹君">
+<meta property="article:tag" content="python爬虫">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210806/jyqngavd_OaXvPPNTlCiQ0nmqcPHT#business_type=upload_markdown">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/OIP-C.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/OIP-C.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/OIP-C.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            爬虫 -
+        
+        Myblog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"qwepure.gihub.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background1.webp","dark":"/images/background2.webp"},"title":"/ᐠ - ˕ -マ Ⳋ","subtitle":{"text":["All you need just One More Try"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":"ture","links":{"zhihu":"https://www.zhihu.com/people/32-12-13-6# your ZhiHu URL","github":"https://github.com/QWEpure# your GitHub URL","instagram":null,"bilibili":"https://space.bilibili.com/372259848","email":"145780475@qq.com# your email"},"qrs":{"weixin":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171226598.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Connected Sky","artist":"Blue Archive# audio artist","url":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171229490.MP3# audio url","cover":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171228460.png# audio cover url"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":70},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}},"search":{"enable":"ture","preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"施工博客中","links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/3/18 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/OIP-C.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Myblog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        归档
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tags"></i>
+                                        
+                                        标签
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-folder"></i>
+                                        
+                                        分类
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                归档
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tags"></i>
+                                
+                                标签
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-regular fa-folder"></i>
+                                
+                                分类
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">爬虫</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/head2.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">小禹君</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-06-23 08:25:03</span>
+        <span class="mobile">2024-06-23 08:25:03</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-08-10 06:30:05</span>
+            <span class="mobile">2024-08-10 06:30:05</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python%E7%88%AC%E8%99%AB/">python爬虫</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>27 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h4 id="Requests-简介"><a href="#Requests-简介" class="headerlink" title="Requests 简介"></a>Requests 简介</h4><h5 id="1-什么是-Requests？"><a href="#1-什么是-Requests？" class="headerlink" title="1. 什么是 Requests？"></a>1. 什么是 Requests？</h5><p>　　Requests 是一个很实用的 <strong>Python HTTP 客户端库</strong>，编写爬虫和测试服务器响应数据时经常会用到。Requests 主要用途是<strong>发送 HTTP 请求</strong>，根据对方服务器的要求不通过，可以使用 GET、POST 等方式进行请求。并且可以对请求头进行伪装、使用代理访问等。</p>
+<h5 id="2-GET-请求"><a href="#2-GET-请求" class="headerlink" title="2. GET 请求"></a>2. GET 请求</h5><p>　　 <strong><code>requests.get()</code></strong> 函数是<strong>获取 HTML 网页的主要方法</strong>。语法格式如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.get(url, params = <span class="literal">None</span>, **kwargs)</span><br></pre></td></tr></table></figure></div>
+
+<p>　　参数说明：</p>
+<ul>
+<li><p>**<code>url</code>**：拟获取页面的 URL 链接。</p>
+</li>
+<li><p>**<code>params</code>**：URL 中的额外参数，字典或字节流格式，为可选参数。</p>
+</li>
+<li><p>**<code>\**kwargs</code>**：12个控制访问的参数。</p>
+</li>
+<li></li>
+<li><table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>字典、列表或元组的字节的文件，作用是向服务器提交资源，作为 request 的内容，与 params 不同的是，data 提交的数据并不放在 URL 链接中，而是放在 URL 链接对应位置的地方作为数据来存储。它也可以接受一个字符串对象</td>
+</tr>
+<tr>
+<td>json</td>
+<td>JSON 格式的数据，JSON 是 HTTP 中经常使用的数据格式，作为内容部分可以向服务器提交。例如：kv&#x3D;{‘key1’:’value1’} r&#x3D;requests.request(‘POST’,’<a class="link"   target="_blank" rel="noopener" href="https://httpbin.org/post',json=kv" >https://httpbin.org/post&#39;,json=kv <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>字典是 HTTP 的相关语，对应了向某个 URL 访问时所发起的 HTTP 的头字段，可以用这个字段来定义 HTTP 的访问的 HTTP 头，可以用来模拟任何想模拟的浏览器来对 URL 发起访问。例如：hd&#x3D;{‘user-agent’:’Chrome&#x2F;10’}r&#x3D;requests.request(‘POST’,’<a class="link"   target="_blank" rel="noopener" href="https://httpbin.org/post',headers=hd" >https://httpbin.org/post&#39;,headers=hd <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>)</td>
+</tr>
+<tr>
+<td>cookies</td>
+<td>字典或 CookieJar，指的是从 HTTP 中解析 Cookie</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>元组，用来支持 HTTP 认证功能</td>
+</tr>
+<tr>
+<td>files</td>
+<td>字典，是用来向服务器传输文件时使用的字段。例如：fs&#x3D;{‘files’:open(‘data.txt’,’rb’)}</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>用来设定超时时间，单位为秒，当发起一个 GET 请求时可以设置一个 timeout 时间，如果在 timeout 时间内请求内容没有返回，将产生一个 timeout 的异常</td>
+</tr>
+<tr>
+<td>proxies</td>
+<td>字典，用来设置访问代理服务器</td>
+</tr>
+<tr>
+<td>allow_redirects</td>
+<td>开关，表示是否允许对 URL 进行重定向，默认为 True</td>
+</tr>
+<tr>
+<td>stream</td>
+<td>开关，指是否对获取内容进行立即下载，默认为 True</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>开关，用于认证 SSL 证书，默认为 True</td>
+</tr>
+<tr>
+<td>cert</td>
+<td>用于设置保存本地 SSL 证书路径</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>返回值</strong>：返回一个包含服务器资源的 <strong>Response 对象</strong>。其中，Response 对象有以下属性，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>status_code</td>
+<td>HTTP 请求返回状态，若为 200 则表示请求成功</td>
+</tr>
+<tr>
+<td>text</td>
+<td>HTTP 响应内容的字符串形式，即返回的页面内容</td>
+</tr>
+<tr>
+<td>encoding</td>
+<td>从 HTTP header 中猜测的响应内容编码方式</td>
+</tr>
+<tr>
+<td>apparent_encoding</td>
+<td>从内容中分析出的响应内容编码方式（备选编码方式）</td>
+</tr>
+<tr>
+<td>content</td>
+<td>HTTP 响应内容的二进制形式</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="二、XPath-简介"><a href="#二、XPath-简介" class="headerlink" title="二、XPath 简介"></a>二、XPath 简介</h4><p>　　<strong>XPath 是 XML 路径语言</strong>，全名为“XML Path Language”，<strong>是一门可以在 XML 文件中查找信息的语言</strong>。该语言<strong>不仅可以实现 XML 文件的搜索，还可以在 HTML 文件中进行搜索</strong>。所以在爬虫中可以<strong>使用 XPath 在 HTML 文件或代码中进行可用信息的抓取</strong>。</p>
+<p>　　XPath 的功能非常强大，不仅提供了简洁明了的路径表达式，还提供了 100 多个函数，可用于字符串、数值、时间比较、序列处理、逻辑值等。XPath 于 1999 年 11 月 16 日成为 W3C 标准，被设计为供 XSLT、XPointer 以及其它 XML 解析软件使用，<strong>XPath 使用路径表达式在 XML 或 HTML 中选取节点</strong>，最常用的路径表达式如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>从当前节点选取子节点</td>
+</tr>
+<tr>
+<td>&#x2F;&#x2F;</td>
+<td>从当前节点选取子孙节点</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性</td>
+</tr>
+<tr>
+<td>*</td>
+<td>选取所有节点</td>
+</tr>
+</tbody></table>
+<h4 id="三、TXT-文件存储"><a href="#三、TXT-文件存储" class="headerlink" title="三、TXT 文件存储"></a>三、TXT 文件存储</h4><p>　　如果想要简单地进行 TXT 文件存储工作，可以通过 <strong><code>open()</code> 函数</strong>操作文件实现，即<strong>需要先创建或者打开指定的文件并创建文件对象</strong>。<code>open()</code> 函数的基本语法格式如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(filename[,mode[,buffering]])</span><br></pre></td></tr></table></figure></div>
+
+<p>　　参数说明：</p>
+<ul>
+<li><p><strong><code>file</code><strong>：</strong>被创建的文件对象</strong>。</p>
+</li>
+<li><p><strong><code>filename</code><strong>：</strong>要创建或打开文件的文件名称</strong>，需要使用<strong>单引号或双引号</strong>将其括起来。如果要打开的文件和当前文件在同一个目录下，那么直接写文件名即可，否则需要指定完整路径。例如，要打开当前路径下的名称为 <code>qingjiao.txt</code> 的文件，可以使用“qingjiao.txt”。</p>
+</li>
+<li><p><strong><code>mode</code><strong>：可选参数，</strong>用于指定文件的打开模式</strong>。其参数值如下表所示。默认的打开模式为只读（即 <code>r</code>）。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>以只读模式打开文件。文件的指针将会放在文件的开头</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>以二进制格式打开文件，并且采用只读模式。文件的指针将会放在文件的开头，一般用于非文本文件，如图片、声音等</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>打开文件后，可以读取文件内容，也可以写入新的内容覆盖原有内容（从文件开头进行覆盖）</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>rb+</td>
+<td>以二进制格式打开文件，并且采用读写模式。文件的指针将会放在文件的开头，一般用于非文本文件，如图片、声音等</td>
+<td>文件必须存在</td>
+</tr>
+<tr>
+<td>w</td>
+<td>以只写模式打开文件</td>
+<td>文件存在，则将其覆盖，否则创建新文件</td>
+</tr>
+<tr>
+<td>wb</td>
+<td>以二进制格式打开文件，并且采用只写模式。一般用于非文本文件，如图片、声音等</td>
+<td>文件存在，则将其覆盖，否则创建新文件</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>打开文件后，先清空原有内容，使其变为一个空的文件，对这个空文件有读写权限</td>
+<td>文件存在，则将其覆盖，否则创建新文件</td>
+</tr>
+<tr>
+<td>wb+</td>
+<td>以二进制格式打开文件，并且采用读写模式。一般用于非文本文件，如图片、声音等</td>
+<td>文件存在，则将其覆盖，否则创建新文件</td>
+</tr>
+<tr>
+<td>a</td>
+<td>以追加模式打开一个文件。如果该文件已经存在，文件指针将放在文件的末尾（即新内容会被写入到已有内容之后），否则，创建新文件用于写入</td>
+<td></td>
+</tr>
+<tr>
+<td>ab</td>
+<td>以二进制格式打开文件，并且采用追加模式。如果该文件已经存在，文件指针将放在文件的末尾（即新内容会被写入到已有内容之后），否则，创建新文件用于写入</td>
+<td></td>
+</tr>
+<tr>
+<td>a+</td>
+<td>以读写模式打开文件。如果该文件已经存在，文件指针将放在文件的末尾（即新内容会被写入到已有内容之后），否则，创建新文件用于读写</td>
+<td></td>
+</tr>
+<tr>
+<td>ab+</td>
+<td>以二进制格式打开文件，并且采用追加模式。如果该文件已经存在，文件指针将放在文件的末尾（即新内容会被写入到已有内容之后），否则，创建新文件用于读写</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong><code>buffering</code><strong>：可选参数，</strong>用于指定读写文件的缓冲模式</strong>，值为0表达式不缓存；值为1表示缓存；值大于1，则表示缓冲区的大小。默认为缓存模式。</p>
+</li>
+</ul>
+<h5 id="编写爬取百度实时热点排行榜的代码"><a href="#编写爬取百度实时热点排行榜的代码" class="headerlink" title="编写爬取百度实时热点排行榜的代码"></a>编写爬取百度实时热点排行榜的代码</h5><p>（1）在**<code>/home/qingjiao</code> 目录** 下创建一个名为 <strong>hotspot.py</strong> 的文件，将代码写入此 Python 文件中。</p>
+<p>（2）导入<strong>请求模块<code>requests</code></strong> 和 <strong><code>etree</code> 子模块</strong>。</p>
+<p>（3）由于 HTML 代码中的信息内<strong>存在大量的空白符</strong>，所以创建一个 <strong><code>processing()</code> 函数</strong>，<strong>用于处理字符串中的空白符</strong>。提示：</p>
+<ul>
+<li><strong><code>join()</code>函数</strong>：返回通过指定字符连接序列中元素后生成的新字符串。语法为：**<code>str.join(sequence)</code>**，其中，<code>sequence</code> 表示要连接的元素序列。</li>
+<li><strong><code>split()</code>函数</strong>：用于通过指定分隔符对字符串进行切片。默认分隔符为所有的空字符，包括空格、换行(\n)、制表符(\t)等。<strong>多个空格也会被当成一个空格</strong>。</li>
+</ul>
+<p>参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 处理字符串中的空白符，并拼接字符串</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">processing</span>(<span class="params">strs</span>):</span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span>  <span class="comment"># 定义保存内容的字符串</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> strs:</span><br><span class="line">        n = <span class="string">&#x27;&#x27;</span>.？？？(n.？？？)  <span class="comment"># 去除空白符</span></span><br><span class="line">        s = s + n  <span class="comment"># 拼接字符串</span></span><br><span class="line">    <span class="keyword">return</span> s  <span class="comment"># 返回拼接后的字符串</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（4）创建 <strong><code>get_hotspot_info()</code> 函数</strong>，在该函数中首先通过 <strong><code>requests.get()</code> 函数****发送网络请求</strong>，然后通过 <strong><code>etree.HTML()</code> 函数****解析 HTML 代码</strong>，最后<strong>通过 XPath 分别提取百度实时热点“排名”、“标题”和“热搜指数”</strong>。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义解析页面函数，用来获取百度实时热点排行榜信息</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hotspot_info</span>(<span class="params">url, headers</span>):</span><br><span class="line">    response = ？？？  <span class="comment"># 发送网络请求</span></span><br><span class="line">    html = ？？？  <span class="comment"># 解析HTML字符串</span></span><br><span class="line">    div_all = html.？？？(<span class="string">&#x27;//div[@class=&quot;category-wrap_iQLoo horizontal_1eKyQ&quot;]&#x27;</span>)  <span class="comment"># 获取实时热点相关所有信息</span></span><br><span class="line">    <span class="keyword">for</span> div <span class="keyword">in</span> div_all:</span><br><span class="line">        rank = ？？？ <span class="comment"># 获取实时热点排名</span></span><br><span class="line">        rank = processing(rank)  <span class="comment"># 处理实时热点排名</span></span><br><span class="line">        title = ？？？  <span class="comment"># 获取实时热点标题</span></span><br><span class="line">        title = processing(title)  <span class="comment"># 处理实时热点标题</span></span><br><span class="line">        index = ？？？  <span class="comment"># 获取实时热点热搜指数</span></span><br><span class="line">        index = processing(index)  <span class="comment"># 处理实时热点热搜指数</span></span><br><span class="line">        record = rank + <span class="string">&#x27;\t&#x27;</span> + title + <span class="string">&#x27;\t&#x27;</span> + index  <span class="comment"># 拼接百度实时热点排行榜信息</span></span><br><span class="line">        <span class="built_in">print</span>(record)  <span class="comment"># 输出</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（5）创建程序入口，定义百度实时热点排行榜链接和 Chrome 浏览器请求头信息。然后，调用 <strong><code>get_hotspot_info()</code> 函数</strong>获取百度实时热点排行榜信息。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序入口</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://top.baidu.com/board?tab=realtime&#x27;</span>  <span class="comment"># 百度实时热点排行榜链接</span></span><br><span class="line">    ？？？ <span class="comment"># 定义请求头信息</span></span><br><span class="line">     ？？？ <span class="comment"># 调用爬虫方法，获取百度实时热点排行榜信息</span></span><br></pre></td></tr></table></figure></div>
+
+<p>获取当前环境谷歌浏览器请求头信息的步骤如下：<br>按下 <strong><code>&lt;F12&gt;</code> 快捷键</strong>打开“开发者工具箱”，然后选择<strong>“Network”</strong>，接着在浏览器地址栏中任意打开一个网页（如：<a class="link"   target="_blank" rel="noopener" href="https://www.baidu.com/%EF%BC%89%EF%BC%8C%E5%9C%A8%E8%AF%B7%E6%B1%82%E5%88%97%E8%A1%A8%E4%B8%AD%E9%80%89%E6%8B%A9%E4%B8%80%E9%A1%B9%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF%EF%BC%8C%E6%9C%80%E5%90%8E%E5%9C%A8" >https://www.baidu.com/），在请求列表中选择一项请求信息，最后在 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> <strong>“Request Headers”</strong> 中找到请求头信息。具体步骤如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210806/jyqngavd_OaXvPPNTlCiQ0nmqcPHT#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<h5 id="将爬取的百度实时热点排行榜信息保存到本地-TXT-文件"><a href="#将爬取的百度实时热点排行榜信息保存到本地-TXT-文件" class="headerlink" title="将爬取的百度实时热点排行榜信息保存到本地 TXT 文件"></a>将爬取的百度实时热点排行榜信息保存到本地 TXT 文件</h5><p>（1）在 <strong><code>get_hotspot_info()</code> 函数</strong> 中定义空列表 <strong><code>records</code></strong> ，使用 <strong><code>append()</code></strong> 将拼接<br>的每条百度实时热点排行榜信息追加到 <strong><code>records</code></strong> 列表中，最后返回列表。</p>
+<p>（2）创建写入文件函数 <strong><code>save_as_txt()</code><strong>，将百度实时热点排行榜信息写入本地 TXT 文件。在该函数中首先通过 <strong><code>open()</code> 函数****创建 <code>open</code> 对象，以只写模式打开文件，编码为“utf-8”</strong>，然后</strong>循环遍历 <code>records</code> 列表</strong>，最后通过 <strong><code>write()</code> 函数****将爬取的每条百度实时热点排行榜信息写入文件并在结尾换行</strong>。</p>
+<p>（3）在主函数中调用 <strong><code>save_as_txt()</code> 函数</strong>将百度实时热点排行榜信息写入本地 <strong><code>/home/qingjiao/records.txt</code> 文件</strong>。</p>
+<h4 id="一、BeautifulSoup-概述"><a href="#一、BeautifulSoup-概述" class="headerlink" title="一、BeautifulSoup 概述"></a>一、BeautifulSoup 概述</h4><h5 id="1-什么是-BeautifulSoup？"><a href="#1-什么是-BeautifulSoup？" class="headerlink" title="1. 什么是 BeautifulSoup？"></a>1. 什么是 BeautifulSoup？</h5><p>　　<strong>BeautifulSoup 是一个用于从 HTML 和 XML 文件中提取数据的 Python 模块。</strong>BeautifulSoup 提供一些简单的函数用来<strong>处理导航、搜索、修改分析树等功能</strong>。BeautifulSoup 模块中的<strong>查找提取功能</strong>非常强大，而且非常便捷，通常可以节省程序员数小时或数天的工作时间。</p>
+<p>　　<strong>BeautifulSoup 自动将输入文档转换为 Unicode 编码，输出文档转换为 UTF-8 编码。</strong> 开发者不需要考虑编码方式，除非文档没有指定一个编码方式，这时，BeautifulSoup 就不能自动识别编码方式了。此时，开发者仅仅需要说明一下原始编码方式就可以了。</p>
+<h5 id="2-解析器"><a href="#2-解析器" class="headerlink" title="2. 解析器"></a>2. 解析器</h5><p>　　BeautifulSoup 支持 <strong>Python 标准库</strong>中包含的 HTML 解析器，但它也支持许多第三方 Python 解析器，其中包含 <strong><code>lxml</code> 解析器</strong>。可以使用 <strong><code>pip</code> 命令</strong>进行安装：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install lxml</span><br></pre></td></tr></table></figure></div>
+
+<p>　　另一个解析器是 **<code>html5lib</code>**，它是一个用于解析 HTML 的 Python 库，按照 Web 浏览器的方式解析 HTML。可以使用 <strong><code>pip</code> 命令</strong>进行安装：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install html5lib</span><br></pre></td></tr></table></figure></div>
+
+<p>　　关于每个解析器的优缺点如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>解析器</th>
+<th>使用方法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python 标准库</td>
+<td>BeautifulSoup(markup,”html.parser”)</td>
+<td>Python 标准库，执行速度适中，文档容错能力强</td>
+<td>（在 Python 2.7.3 或 3.2.2 之前的版本中）文档容错能力差</td>
+</tr>
+<tr>
+<td>lxml 的 HTML 解析器</td>
+<td>BeautifulSoup(markup,”lxml”)</td>
+<td>速度快，文档容错能力强</td>
+<td>需要安装 C 语言库</td>
+</tr>
+<tr>
+<td>lxml 的 XML 解析器</td>
+<td>BeautifulSoup(markup,”lxml-xml”)BeautifulSoup(markup,”xml”)</td>
+<td>速度快，唯一支持 XML 的解析器</td>
+<td>需要安装 C 语言库</td>
+</tr>
+<tr>
+<td>html5lib</td>
+<td>BeautifulSoup(markup,”html5lib”)</td>
+<td>最好的容错性，以浏览器的方式解析文档，生成 HTML5 格式的文档</td>
+<td>速度慢，不依赖外部扩展</td>
+</tr>
+</tbody></table>
+<p>　　<strong>推荐使用 <code>lxml</code> 作为解析器，因为效率更高。</strong> 在 Python2.7.3 之前的版本和 Python 3 中 3.2.2 之前的版本，必须安装 <code>lxml</code> 或 <code>html5lib</code>，因为那些 Python 版本的标准库中内置的 HTML 解析方法不够稳定。</p>
+<h4 id="二、CSV-文件存储"><a href="#二、CSV-文件存储" class="headerlink" title="二、CSV 文件存储"></a>二、CSV 文件存储</h4><p>　　CSV 文件是文本文件的一种，该文件中每一行数据的各元素使用<strong>逗号</strong>进行分隔。其实存取 CSV 文件时同样可以使用 <strong><code>open()</code> 函数</strong>，不过我们有更好的办法，那就是<strong>用 pandas 模块实现 CSV 文件的存储工作</strong>。pandas 模块提供了 <strong><code>to_csv()</code> 函数</strong>用于实现 CSV 文件的存储。<code>to_csv()</code> 函数的基本语法格式如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.to_csv(self, path_or_buf=<span class="literal">None</span>, sep=<span class="string">&quot;,&quot;</span>, na_rep=<span class="string">&quot;&quot;</span>, float_format=<span class="literal">None</span>, columns=<span class="literal">None</span>, header=<span class="literal">True</span>, index=<span class="literal">True</span>, index_label=<span class="literal">None</span>, mode=<span class="string">&quot;w&quot;</span>, encoding=<span class="literal">None</span>, compression=<span class="string">&quot;infer&quot;</span>, quoting=<span class="literal">None</span>, quotechar=<span class="string">&#x27;&quot;&#x27;</span>, line_terminator=<span class="literal">None</span>, chunksize=<span class="literal">None</span>, date_format=<span class="literal">None</span>, doublequote=<span class="literal">True</span>, escapechar=<span class="literal">None</span>, decimal=<span class="string">&quot;.&quot;</span>, errors=<span class="string">&quot;strict&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>　　常用参数说明：</p>
+<ul>
+<li><code>path_or_buf</code>：<strong>表示文件路径的字符串</strong>。</li>
+<li><code>sep</code>：str 类型，<strong>表示分隔符</strong>，默认为逗号“,”。</li>
+<li><code>na_rep</code>：str 类型，<strong>用于替换缺失值</strong>，默认为“”空。</li>
+<li><code>float_format</code>：<strong>表示指定写入哪列数据的列名</strong>，默认为 None。</li>
+<li><code>columns</code>：<strong>要写入的列</strong>。</li>
+<li><code>header</code>：<strong>表示是否写入数据中的列名</strong>。如果给出了字符串列表, 则假定它是列名的别名。</li>
+<li><code>index</code>：<strong>表示是否将行索引写入文件</strong>，默认为 True。</li>
+<li><code>index_label</code>：<strong>引用索引列的列标签</strong>。如果未指定, 并且标头和索引为 True， 则使用索引名称。如果 DataFrame 使用 MultiIndex，则应给出一个序列。</li>
+<li><code>mode</code>：str 类型，<strong>表示写入模式默认为“w”</strong>。</li>
+<li><code>encoding</code>：str 类型，<strong>表示写入文件的编码格式</strong>。</li>
+</ul>
+<h5 id="编写爬取百度热点要闻的代码"><a href="#编写爬取百度热点要闻的代码" class="headerlink" title="编写爬取百度热点要闻的代码"></a>编写爬取百度热点要闻的代码</h5><p>（1）在**<code>/home/qingjiao</code> 目录** 下创建一个名为 <strong>wangyi.py</strong> 的文件，将代码写入此 Python 文件中。</p>
+<p>（2）导入<strong>请求模块<code>requests</code></strong> 和 <strong><code>bs4</code> 模块</strong>中的**数据解析模块<code>BeautifulSoup</code>**。</p>
+<p>（3）创建 <strong><code>get_news_info()</code> 函数</strong>，在该函数中：</p>
+<ul>
+<li>首先通过 <strong><code>requests.get()</code> 函数****发送网络请求</strong>；</li>
+<li>然后<strong>创建 BeautifulSoup 对象</strong>获取页面正文，要求使用 <code>Response</code> 对象的 <strong><code>text</code> 属性</strong>获取 HTML 代码，并指定解析器为 **<code>lxml</code>**；</li>
+<li>接下来使用 BeautifulSoup 解析网页数据，可以使用 <strong><code>find()</code> 函数</strong>和 <strong><code>find_all()</code> 函数</strong>获取网易新闻热点排行 Top10 内容；</li>
+<li>接下来分别获取网易新闻热点排行 Top10 的排名、标题、跟帖数和链接，并把每条新闻的排名、标题、跟帖数和链接添加到一个列表中，再追加到一个大列表中，将这个大列表返回。提示：<ul>
+<li><strong><code>find(name, attrs, recursive, text, \**wargs)</code> 函数</strong>：获取第一个匹配的节点内容。<code>name</code>参数为查找标签，<code>attrs</code> 为查找标签的属性，<code>text</code> 为查找文本。</li>
+<li><strong><code>find_all(name, attrs, recursive, text, limit, \**kwargs)</code> 函数</strong>：获取所有符合条件的节点内容。其中，<code>limit</code> 参数可以限制得到的结果的数目。</li>
+<li><strong><code>get_text()</code> 函数</strong>：会清除正在处理的 HTML 文档中的所有标签，然后返回一个只包含文字的 Unicode 字符串。</li>
+</ul>
+</li>
+</ul>
+<p>参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义解析页面函数，用来获取网易新闻热点排行Top10信息</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_news_info</span>(<span class="params">url, headers</span>):</span><br><span class="line">    response = ？？？  <span class="comment"># 发送网络请求</span></span><br><span class="line">    soup = ？？？  <span class="comment"># 创建一个BeautifulSoup对象，获取页面正文</span></span><br><span class="line">    all_news = soup.？？？(<span class="string">&#x27;div&#x27;</span>, ？？？).？？？(<span class="string">&#x27;ul&#x27;</span>).？？？(<span class="string">&#x27;li&#x27;</span>)  <span class="comment"># 获取网易新闻热点排行Top10内容</span></span><br><span class="line">    news_list = []  <span class="comment"># 创建空列表</span></span><br><span class="line">    <span class="keyword">for</span> news <span class="keyword">in</span> all_news:</span><br><span class="line">        news_rank = ？？？  <span class="comment"># 获取新闻排名</span></span><br><span class="line">        news_title = ？？？  <span class="comment"># 获取新闻标题</span></span><br><span class="line">        posts_num = ？？？  <span class="comment"># 获取新闻跟帖数</span></span><br><span class="line">        news_url = ？？？  <span class="comment"># 获取新闻链接</span></span><br><span class="line">        news_list.？？？  <span class="comment"># 把每条新闻的排名、标题、跟帖数和链接添加到一个列表中，再追加到一个大列表中</span></span><br><span class="line">    <span class="keyword">return</span> news_list  <span class="comment"># 返回列表</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（4）创建程序入口，定义网易新闻链接和 Chrome 浏览器请求头信息。然后，调用 <strong><code>get_news_info()</code> 函数</strong>获取网易新闻热点排行 Top10 信息。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序入口</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://news.163.com/&#x27;</span>  <span class="comment"># 网易新闻首页链接</span></span><br><span class="line">    <span class="comment"># 定义请求头信息</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;？？？&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/71.0.3578.80 Chrome/71.0.3578.80 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">    news_list = ？？？  <span class="comment"># 调用爬虫方法，获取网易新闻热点排行Top10</span></span><br><span class="line">    <span class="built_in">print</span>(news_list)  <span class="comment"># 输出网易新闻</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="将爬取的网易新闻热点排行Top10信息保存到本地-CSV-文件"><a href="#将爬取的网易新闻热点排行Top10信息保存到本地-CSV-文件" class="headerlink" title="将爬取的网易新闻热点排行Top10信息保存到本地 CSV 文件"></a>将爬取的网易新闻热点排行Top10信息保存到本地 CSV 文件</h5><p>（1）导入**数据导入与分析模块 <code>pandas</code>**，别名为 <code>pd</code>。</p>
+<p>（2）创建写入文件函数 **<code>save_as_csv()</code>**，将网易新闻热点排行Top10信息写入本地 CSV 文件。</p>
+<ul>
+<li>利用 <code>pandas</code> 模块创建 DataFrame 对象 **<code>df</code>**；</li>
+<li>将 DataFrame 对象 <strong><code>df</code></strong> 写入CSV 文件，要求不写入索引，不添加列名。</li>
+</ul>
+<p>（3）在主函数中调用 <strong><code>save_as_csv()</code> 函数</strong>将网易新闻热点排行 Top10 信息写入本地 <strong><code>/home/qingjiao/news.csv</code> 文件</strong>。</p>
+<h4 id="一、Ajax-简介"><a href="#一、Ajax-简介" class="headerlink" title="一、Ajax 简介"></a>一、Ajax 简介</h4><p>　　Ajax 的全称是 “Asynchronous JavaScript and XML”，可以说是 <strong>“异步 JavaScript”与“XML”的组合</strong>。</p>
+<p>　　传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页。<strong>Ajax 是一种创建快速动态网页的技术。</strong> 它是一门单独的编程语言，通过在后台与服务器进行少量数据交换，<strong>Ajax 可以使网页实现异步更新</strong>。这意味着，可以<strong>在不刷新、不更改页面链接的情况下实现与服务器交换数据并更新网页部分内容</strong>。</p>
+<h4 id="二、JSON-文件存储"><a href="#二、JSON-文件存储" class="headerlink" title="二、JSON 文件存储"></a>二、JSON 文件存储</h4><p>　　JSON 是一种轻量级的数据交换格式，它是基于 ECMAScript 的一个子集。JSON 采用完全独立于语言的文本格式，但也使用了类似于 C 语言家族的习惯（包括 C、C++、Java、JavaScript、Perl、Python等）。这些特性使 JSON 成为理想的数据交换语言，易与人们阅读和编写，同时也易于机器解析和生成（一般用于提升网络传输速率）。<strong>JSON 在 Python 中分别由 list 和 dict 组成。</strong> json 模块提供了4个功能，分别是：</p>
+<p>　　（1）**<code>dumps()</code>**：把数据类型转换为字符串。</p>
+<p>　　（2）**<code>dump()</code>**：把数据类型转换为字符串并存储在文件中。</p>
+<p>　　（3）**<code>loads()</code>**：把字符串转换为数据类型。　　</p>
+<p>　　（4）**<code>load()</code>**：把文件打开，并把字符串转换为数据类型。</p>
+<p>　　<strong><code>dump()</code> 函数的</strong>语法结构如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dump(obj, fp, *, skipkeys=<span class="literal">False</span>, ensure_ascii=<span class="literal">True</span>, check_circular=<span class="literal">True</span>,</span><br><span class="line">        allow_nan=<span class="literal">True</span>, cls=<span class="literal">None</span>, indent=<span class="literal">None</span>, separators=<span class="literal">None</span>,</span><br><span class="line">        default=<span class="literal">None</span>, sort_keys=<span class="literal">False</span>, **kw)</span><br></pre></td></tr></table></figure></div>
+
+<p>　　参数说明：</p>
+<ul>
+<li>**<code>obj</code>**：要序列化的对象。</li>
+<li>**<code>fp</code>**：文件描述符，将序列化的 str 保存到文件中。</li>
+<li>**<code>skipkeys</code>**：默认为 False，如果 skipkeys&#x3D;True，将跳过不是基本类型（str，int，float，bool，None）的 dict 键，不会引发TypeError。</li>
+<li>**<code>ensure_ascii</code>**：默认值为 True，能将所有传入的非 ASCII 字符转义输出。如果 ensure_ascii 为 False，字符将按原样输出。</li>
+<li>**<code>check_circular</code>**：默认值为 True，如果 check_circular 为 False，则将跳过对容器类型的循环引用检查，循环引用将导致 OverflowError。</li>
+<li>**<code>allow_nan</code>**：默认值为 True，如果 allow_nan 为 False，则严格遵守 JSON 规范，序列化超出范围的浮点值（nan，inf，-inf）会引发 ValueError。 如果 allow_nan 为 True，则将使用它们的 JavaScript 等效项（NaN，Infinity，-Infinity）。</li>
+<li>**<code>indent</code>**：设置缩进格式，默认值为 None，选择的是最紧凑的表示。如果 indent 是非负整数或字符串，那么 JSON 数组元素和对象成员将使用该缩进级别进行输入；indent 为 0、负数或“”仅插入换行符；indent 使用正整数缩进多个空格；如果 indent 是一个字符串（例如“\t”），则该字符串用于缩进每个级别。</li>
+<li>**<code>separators</code>**：去除分隔符后面的空格，默认值为 None，如果指定，则分隔符应为（item_separator、key_separator）元组。如果缩进为 None，则默认为（‘,’，’：’）；要获得最紧凑的 JSON 表示，可以指定（’，’，’:’）以消除空格。</li>
+<li>**<code>default</code>**：默认值为 None，如果指定，则 default 应该是为无法以其他方式序列化的对象调用的函数。它应返回对象的 JSON 可编码版本或引发 TypeError。如果未指定，则引发 TypeError。</li>
+<li>**<code>sort_keys</code>**：默认值为 False，如果 sort_keys 为 True，则字典的输出将按键值排序</li>
+</ul>
+<h5 id="一、抓取分析"><a href="#一、抓取分析" class="headerlink" title="一、抓取分析"></a>一、抓取分析</h5><p>（1）在谷歌（Google）浏览器输入（<a class="link"   target="_blank" rel="noopener" href="https://www.douban.com/%EF%BC%89%E9%93%BE%E6%8E%A5%EF%BC%8C%E8%BF%9B%E5%85%A5%E2%80%9C%E8%B1%86%E7%93%A3%E7%BD%91%E2%80%9D%E4%B8%BB%E9%A1%B5%E3%80%82%E9%A1%B5%E9%9D%A2%E5%B7%A6%E4%B8%8A%E6%96%B9%E6%9C%89%E4%B8%80%E4%B8%AA%E6%90%9C%E7%B4%A2%E5%85%A5%E5%8F%A3%EF%BC%8C%E8%BE%93%E5%85%A5%E2%80%9C%E7%A4%BE%E4%BC%9A%E7%83%AD%E7%82%B9%E2%80%9D%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2%E3%80%82%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A" >https://www.douban.com/）链接，进入“豆瓣网”主页。页面左上方有一个搜索入口，输入“社会热点”进行搜索。如下图所示： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_mizQNVH8Vlzc4lCfBmon#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>（2）进入搜索结果页面后，<strong>点击“社会热点”按钮</strong>。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_Xy4v22ta8ffgOSOov5Ho#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>（3）进入“社会热点”主页后，在键盘中按下 <strong><code>&lt;F12&gt;</code> 快捷键</strong>，打开浏览器开发者工具（这里使用谷歌浏览器），然后在顶部导航条中选择 <strong>“Network” 选项</strong>，重新刷新当前页面，可以发现这里出现了非常多的条目，其实这些条目就是页面在加载过程中浏览器与服务器之间发送请求和接收响应的所有记录。因为 Ajax 有其特殊的请求类型，它叫做 <strong>xhr</strong>，所以我们可以在类型出选择<strong>“Fetch&#x2F;XHR”</strong>。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_H2HB3p5DGp5Q9ugJ7mB1#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>（4）依次单击每条网络请求，然后选择<strong>“Preview”选项</strong>查看每条网络请求所返回的数据，并找到与网页内容相同的数据，主要的内容存放于 <strong>“items” 标签</strong>下。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_MN0MQJLqgF1ZDpdqo6hK#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>（5）将返回数据中的 <strong>“items” 标签</strong>展开，发现有许多条数据。点击 <strong>“items” 标签</strong>下的 0 索引，可以发现一个 <strong>“title” 字段</strong>，它的值正好就是页面中第一条数据的标题。再检查一下其它数据，也是一一对应的。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_7agTHA9a6grfw7JPKNvt#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>（6）“items” 标签中的每条数据还有一个 <strong>“author” 字段</strong>，以字典形式呈现，它包含了作者的相关信息，我们只需要将字典中的 <strong>name 和 url 字段</strong>提取出来即可。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_hi0uHVV4cCOBAWZRx4j8#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<h5 id="二、分析请求"><a href="#二、分析请求" class="headerlink" title="二、分析请求"></a>二、分析请求</h5><p>（1）选中当前网络请求，然后单击<strong>“Headers”选项</strong>获取网络请求地址。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_v5qwadMMOLzkxlJnUxts#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<p>可以看到，这是一个 <strong>GET 请求</strong>，<strong>请求 URL 的参数有 ck、for_mobile、start 和 count</strong>。我们需要找出这些参数的规律，因为这样才可以方便地用程序构造出来。</p>
+<p>（2）这里观察一下后续链接的参数，发现变化的参数只有 <strong>start</strong>，其它参数都没有变化，而且第二次请求的 start 值为20，第三次为40，第四次为60，所以可以发现规律，这个 <strong>start</strong> 值就是偏移量，进而可以推断出 <strong>count 参数</strong>就是一次性获取的数据条数。因此，我们可以<strong>用 start 参数来控制数据分页</strong>。另外，从第二页开始还多了一个值为 default 的 nav 参数。如下图所示：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://assets.qingjiaoclass.com/gdlzpoyzbkrj/20210825/jyqngavd_36HAKGD8hL9CgddPYYOL#business_type=upload_markdown"
+                      alt="img"
+                ></p>
+<h5 id="编写爬取豆瓣网社会热点数据的代码"><a href="#编写爬取豆瓣网社会热点数据的代码" class="headerlink" title="编写爬取豆瓣网社会热点数据的代码"></a>编写爬取豆瓣网社会热点数据的代码</h5><p>（1）在**<code>/home/qingjiao</code> 目录** 下创建一个名为 <strong>hotspots.py</strong> 的文件，将代码写入此 Python 文件中。</p>
+<p>（2）导入<strong>请求模块<code>requests</code></strong> 和 <strong><code>urllib.parse</code> 模块</strong>中的 <strong><code>urlencode()</code> 函数</strong>。</p>
+<p>（3）使用 <strong><code>headers</code></strong> 定义请求头信息，参数为字典类型。使用 <strong><code>User-Agent</code></strong> 来伪装成 Chrome 浏览器。使用 <strong><code>Referer</code><strong>设置当前请求页面的来源页面地址。（提示：选中任意一次网络请求，然后单击</strong>“Headers”选项</strong>获取 <code>Referer</code> 的值。）</p>
+<p>（4）创建请求页面函数 **<code>get_page()</code>**，用来加载单个 Ajax 请求的结果，返回 JSON 字符串。在函数中：</p>
+<ul>
+<li>定义请求 URL 的参数，使用 <strong><code>start</code> 参数</strong>来控制数据分页，其它都是固定参数。</li>
+<li>使用 <strong><code>urlencode()</code> 函数</strong>将定义的 URL 参数转换为 URL 的 GET 请求参数，即类似于<code>ck=null&amp;for_mobile=1&amp;start=20&amp;count=20&amp;nav=default</code> 这样的形式，然后<strong>将请求 URL 的前半部分与参数拼合形成一个新的 URL</strong>；</li>
+<li>使用 <strong><code>requests.get()</code> 函数****实现网络请求的发送</strong>，如果返回状态码为200，则调用 <strong><code>response</code> 的 <code>json()</code> 函数</strong>将结果转为 JSON 格式后返回，否则返回“请求索引页错误！！！”的信息。如果出现异常，则捕获并输出其异常信息。参考代码如下：</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 请求页面的函数，加载单个Ajax请求的结果，返回JSON字符串</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_page</span>(<span class="params">start</span>):</span><br><span class="line">    <span class="comment"># 请求URL的参数，使用start参数来控制数据分页，其它都是固定参数</span></span><br><span class="line">    params = &#123;</span><br><span class="line">        <span class="string">&#x27;ck&#x27;</span>: ？？？</span><br><span class="line">        <span class="string">&#x27;for_mobile&#x27;</span>: ？？？,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>: ？？？,</span><br><span class="line">        <span class="string">&#x27;count&#x27;</span>: ？？？,</span><br><span class="line">        <span class="string">&#x27;nav&#x27;</span>: ？？？</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 构造成一个完整的URL</span></span><br><span class="line">    <span class="comment"># urlencode()函数的功能：将存入的字典参数编码为URL查询字符串，即转换成以key1=value1&amp;key2=value2的形式</span></span><br><span class="line">    url = <span class="string">&#x27;https://m.douban.com/rexxar/api/v2/lembas/channel/27625724/feed?&#x27;</span> + ？？？</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = ？？？  <span class="comment"># 发送网络请求</span></span><br><span class="line">        <span class="keyword">if</span> ？？？ == <span class="number">200</span>:  <span class="comment"># 判断请求是否成功</span></span><br><span class="line">            <span class="keyword">return</span> ？？？  <span class="comment"># 返回JSON信息</span></span><br><span class="line">    <span class="keyword">except</span> requests.ConnectionError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;请求索引页错误！！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>（5）创建名为 <strong><code>get_hotspots()</code><strong>的解析函数，用来解析提取豆瓣网社会热点网页返回的 JSON 文本。在该函数中，使用字典的</strong><code>get()</code> 函数</strong>获取指定键的值。最后，使用 <strong><code>yield</code></strong> 返回一个生成器对象，将获取的热点标题、链接、创建时间、喜欢数、回应数、作者姓名和作者主页链接一并返回。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 实现豆瓣网社会热点网页解析函数，提取每条热点的标题、链接、创建时间、喜欢数、回应数、作者姓名和作者主页链接</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hotspots</span>(<span class="params">hotspots_json</span>):</span><br><span class="line">    <span class="keyword">if</span> hotspots_json.？？？(<span class="string">&#x27;items&#x27;</span>):  <span class="comment"># 判断JSON数据（字典）中是否包含&#x27;items&#x27;标签</span></span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> hotspots_json.？？？(<span class="string">&#x27;items&#x27;</span>):  <span class="comment"># 遍历列表，获取列表元素</span></span><br><span class="line">            hotspots_title = ？？？  <span class="comment"># 热点标题</span></span><br><span class="line">            hotspots_url = ？？？  <span class="comment"># 热点链接</span></span><br><span class="line">            create_time = ？？？ <span class="comment"># 创建时间</span></span><br><span class="line">            likers_count = ？？？  <span class="comment"># 喜欢数</span></span><br><span class="line">            comments_count =？？？  <span class="comment"># 回应数</span></span><br><span class="line">            authors = ？？？  <span class="comment"># 作者信息，dict字典类型</span></span><br><span class="line">            <span class="keyword">if</span> authors:  <span class="comment"># 如果有作者信息</span></span><br><span class="line">                author = ？？？  <span class="comment"># 作者姓名</span></span><br><span class="line">                author_url = ？？？  <span class="comment"># 作者主页</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                author = <span class="literal">None</span></span><br><span class="line">                author_url = <span class="literal">None</span></span><br><span class="line">            ？？？&#123;  <span class="comment"># 返回一个生成器对象，将获取的热点信息一并返回</span></span><br><span class="line">                <span class="string">&#x27;hotspots_title&#x27;</span>: hotspots_title,</span><br><span class="line">                <span class="string">&#x27;hotspots_url&#x27;</span>: hotspots_url,</span><br><span class="line">                <span class="string">&#x27;create_time&#x27;</span>: create_time,</span><br><span class="line">                <span class="string">&#x27;likers_count&#x27;</span>: likers_count,</span><br><span class="line">                <span class="string">&#x27;comments_count&#x27;</span>: comments_count,</span><br><span class="line">                <span class="string">&#x27;author&#x27;</span>: author,</span><br><span class="line">                <span class="string">&#x27;author_url&#x27;</span>: author_url</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>（6）创建程序入口，然后<strong>创建步长为 20 的 for 循环</strong>，并在循环中替换每次请求的 <strong>start 参数</strong>，调用 <strong><code>get_page()</code> 函数</strong>获取 JSON 信息，调用 <strong><code>get_hotspots()</code> 函数</strong>获取社会热点信息。最后，使用 <strong><code>for</code> 循环</strong>遍历生成器，获取 <code>yield</code> 每次返回的值（字典类型），将值打印到控制台。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 程序入口</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> start <span class="keyword">in</span> ？？？:  <span class="comment"># 每页间隔20，实现循环，共3页</span></span><br><span class="line">        hotspots_json = ？？？  <span class="comment"># 调用请求页面的函数，获取JSON信息</span></span><br><span class="line">        hotspots = ？？？ <span class="comment"># 调用解析函数，获取社会热点信息</span></span><br><span class="line">        <span class="keyword">for</span> hotspot_dict <span class="keyword">in</span> ？？？:  <span class="comment"># 遍历生成器，获取yield每次返回的值（字典类型）</span></span><br><span class="line">            <span class="built_in">print</span>(hotspot_dict)</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="将爬取的豆瓣网社会热点数据保存到本地-JSON-文件"><a href="#将爬取的豆瓣网社会热点数据保存到本地-JSON-文件" class="headerlink" title="将爬取的豆瓣网社会热点数据保存到本地 JSON 文件"></a>将爬取的豆瓣网社会热点数据保存到本地 JSON 文件</h5><p>（1）将以下代码写入 <strong>&#x2F;home&#x2F;qingjiao&#x2F;hotspots.py</strong> Python 文件中。</p>
+<p>（2）导入**<code>json</code> 模块**。</p>
+<p>（3）创建写入文件函数 **<code>save_as_json()</code>*<em>，将豆瓣网社会热点数据保存到本地 JSON 文件。在该函数中首先通过 <strong><code>open()</code> 函数</strong></em>*创建 <code>open</code> 对象，以追加模式打开文件，编码为“utf-8”**，然后使用 <strong><code>json.dump()</code> 函数</strong>将字典转换为字符串并存储到 JSON 文件中。最后，使用 <strong><code>write()</code> 函数</strong>在每条 JSON 数据结尾换行。参考代码如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义写入文件函数，将豆瓣社会热点信息写入本地JSON文件</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">save_as_json</span>(<span class="params">hotspot_dict, filename</span>):</span><br><span class="line">    <span class="keyword">with</span> ？？？ <span class="keyword">as</span> f:  <span class="comment"># 创建open对象</span></span><br><span class="line">        ？？？  <span class="comment"># 将字典转换为字符串并存储在文件中，ensure_ascii为False，表示将字符按原样输出</span></span><br><span class="line">        ？？？  <span class="comment"># 结尾换行</span></span><br></pre></td></tr></table></figure></div>
+
+<p>（4）在主函数中调用 <strong><code>save_as_json()</code> 函数</strong>将豆瓣网社会热点数据写入本地 <strong><code>/home/qingjiao/hotspots.json</code> 文件</strong>。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 爬虫</li>
+        <li><strong>作者:</strong> 小禹君</li>
+        <li><strong>创建于
+                :</strong> 2024-06-23 08:25:03</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-08-10 06:30:05
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/06/23/爬虫/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+            本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/python%E7%88%AC%E8%99%AB/">#python爬虫</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/08/09/%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">重要知识点</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/06/13/pyecharts/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">pyecharts</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;评论
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">爬虫</div>
+        
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">小禹君</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

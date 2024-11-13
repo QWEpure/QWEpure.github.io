@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="小禹君">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://QWEpure.gihub.io/2024/06/13/pyecharts/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="【pyecharts教程】应该是全网最全的教程了～ - Heywhale.com  【pyecharts】50个完整例子，带你玩转可视化～ - Heywhale.com  [TOC] pyecharts安装pip install pyecharts pyecharts 图表类型   图表类型 pyecharts 类 包引入    折线图 Line from pyecharts.charts imp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pyecharts">
+<meta property="og:url" content="http://qwepure.gihub.io/2024/06/13/pyecharts/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="【pyecharts教程】应该是全网最全的教程了～ - Heywhale.com  【pyecharts】50个完整例子，带你玩转可视化～ - Heywhale.com  [TOC] pyecharts安装pip install pyecharts pyecharts 图表类型   图表类型 pyecharts 类 包引入    折线图 Line from pyecharts.charts imp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2023/12/26f13344b108d4be7556200846ffefd3.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2023/12/37408929ecb93d284bc420fbc12e9ff0.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2023/12/aa84ae9581fcd95f9b40ec6c73f400ef.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2023/12/190eac8906c4561f29a26f110bd9f7fe.png">
+<meta property="article:published_time" content="2024-06-13T02:07:17.968Z">
+<meta property="article:modified_time" content="2024-06-13T04:03:20.132Z">
+<meta property="article:author" content="小禹君">
+<meta property="article:tag" content="数据分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2023/12/26f13344b108d4be7556200846ffefd3.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/OIP-C.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/OIP-C.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/OIP-C.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            pyecharts -
+        
+        Myblog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"qwepure.gihub.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background1.webp","dark":"/images/background2.webp"},"title":"/ᐠ - ˕ -マ Ⳋ","subtitle":{"text":["All you need just One More Try"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":"ture","links":{"zhihu":"https://www.zhihu.com/people/32-12-13-6# your ZhiHu URL","github":"https://github.com/QWEpure# your GitHub URL","instagram":null,"bilibili":"https://space.bilibili.com/372259848","email":"145780475@qq.com# your email"},"qrs":{"weixin":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171226598.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Connected Sky","artist":"Blue Archive# audio artist","url":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171229490.MP3# audio url","cover":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171228460.png# audio cover url"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":70},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}},"search":{"enable":"ture","preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"施工博客中","links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/3/18 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/OIP-C.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Myblog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        归档
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tags"></i>
+                                        
+                                        标签
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-folder"></i>
+                                        
+                                        分类
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                归档
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tags"></i>
+                                
+                                标签
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-regular fa-folder"></i>
+                                
+                                分类
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">pyecharts</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/head2.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">小禹君</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-06-13 10:07:17</span>
+        <span class="mobile">2024-06-13 10:07:17</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-06-13 12:03:20</span>
+            <span class="mobile">2024-06-13 12:03:20</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/python/">python</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>15 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <p><a class="link"   target="_blank" rel="noopener" href="https://www.heywhale.com/mw/project/5eb7958f366f4d002d783d4a" >【pyecharts教程】应该是全网最全的教程了～ - Heywhale.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.heywhale.com/mw/project/666a59ecc32ba1f3df7cdde3" >【pyecharts】50个完整例子，带你玩转可视化～ - Heywhale.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>[TOC]</p>
+<h2 id="pyecharts安装"><a href="#pyecharts安装" class="headerlink" title="pyecharts安装"></a>pyecharts安装</h2><p>pip install pyecharts</p>
+<h3 id="pyecharts-图表类型"><a href="#pyecharts-图表类型" class="headerlink" title="pyecharts 图表类型"></a>pyecharts 图表类型</h3><table>
+<thead>
+<tr>
+<th align="left">图表类型</th>
+<th align="left">pyecharts 类</th>
+<th align="left">包引入</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">折线图</td>
+<td align="left"><code>Line</code></td>
+<td align="left"><code>from pyecharts.charts import Line</code></td>
+</tr>
+<tr>
+<td align="left">柱状图</td>
+<td align="left"><code>Bar</code></td>
+<td align="left"><code>from pyecharts.charts import Bar</code></td>
+</tr>
+<tr>
+<td align="left">散点图</td>
+<td align="left"><code>Scatter</code></td>
+<td align="left"><code>from pyecharts.charts import Scatter</code></td>
+</tr>
+<tr>
+<td align="left">饼图</td>
+<td align="left"><code>Pie</code></td>
+<td align="left"><code>from pyecharts.charts import Pie</code></td>
+</tr>
+<tr>
+<td align="left">雷达图</td>
+<td align="left"><code>Radar</code></td>
+<td align="left"><code>from pyecharts.charts import Radar</code></td>
+</tr>
+<tr>
+<td align="left">热力图</td>
+<td align="left"><code>HeatMap</code></td>
+<td align="left"><code>from pyecharts.charts import HeatMap</code></td>
+</tr>
+<tr>
+<td align="left">K 线图</td>
+<td align="left"><code>Kline</code></td>
+<td align="left"><code>from pyecharts.charts import Kline</code></td>
+</tr>
+<tr>
+<td align="left">箱线图</td>
+<td align="left"><code>Boxplot</code></td>
+<td align="left"><code>from pyecharts.charts import Boxplot</code></td>
+</tr>
+<tr>
+<td align="left">地图</td>
+<td align="left"><code>Map</code></td>
+<td align="left"><code>from pyecharts.charts import Map</code></td>
+</tr>
+</tbody></table>
+<h3 id="创建第一个图表"><a href="#创建第一个图表" class="headerlink" title="创建第一个图表"></a>创建第一个图表</h3><p>接下来我们使用 Pyecharts 创建了一个简单的柱状图，展示了五个月份的销售额:</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备数据</span></span><br><span class="line">x_data = [<span class="string">&#x27;一月&#x27;</span>, <span class="string">&#x27;二月&#x27;</span>, <span class="string">&#x27;三月&#x27;</span>, <span class="string">&#x27;四月&#x27;</span>, <span class="string">&#x27;五月&#x27;</span>]</span><br><span class="line">y_data = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">30</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建柱状图</span></span><br><span class="line">bar_chart = Bar()</span><br><span class="line">bar_chart.add_xaxis(x_data)</span><br><span class="line">bar_chart.add_yaxis(<span class="string">&quot;销售额&quot;</span>, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以传入路径参数，如 bar_chart.render(&quot;bar_chart.html&quot;)</span></span><br><span class="line">bar_chart.render()<span class="comment">###</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>说明：</strong></p>
+<ul>
+<li><code>add_xaxis</code> 和 <code>add_yaxis</code>：分别用于添加横轴和纵轴的数据。</li>
+<li><code>Bar()</code>：创建一个柱状图对象。</li>
+</ul>
+<p>如果在 <strong>bar_chart.render()</strong> 中不指定文件路径，Pyecharts 默认会在<strong>当前工作目录</strong>下生成一个名为 “render.html” 的文件，即生成的图表将保存在 “render.html” 文件中。</p>
+<p>如果你希望图表的文件名有一定的规范，或者想要<strong>指定保存的路径</strong>，可以在 render() 方法中提供文件路径参数。例如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bar_chart.render(&quot;my_bar_chart.html&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<p>这样，生成的图表就会保存在当前工作目录下的 “my_bar_chart.html” 文件中。</p>
+<p>以上代码，执行结果为：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.runoob.com/wp-content/uploads/2023/12/26f13344b108d4be7556200846ffefd3.png"
+                      alt="img"
+                ></p>
+<p><strong>设置图表配置选项</strong></p>
+<p>实例中图表的标题是 “月度销售额柱状图”，横轴是月份，纵轴是销售额，可以根据实际需求调整数据和图表配置：</p>
+<h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备数据</span></span><br><span class="line">x_data = [<span class="string">&#x27;一月&#x27;</span>, <span class="string">&#x27;二月&#x27;</span>, <span class="string">&#x27;三月&#x27;</span>, <span class="string">&#x27;四月&#x27;</span>, <span class="string">&#x27;五月&#x27;</span>]</span><br><span class="line">y_data = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">30</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建柱状图</span></span><br><span class="line">bar_chart = Bar()</span><br><span class="line">bar_chart.add_xaxis(x_data)</span><br><span class="line">bar_chart.add_yaxis(<span class="string">&quot;销售额&quot;</span>, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment">#### 配置图表###</span></span><br><span class="line">bar_chart.set_global_opts(</span><br><span class="line">    title_opts=opts.TitleOpts(title=<span class="string">&quot;月度销售额柱状图&quot;</span>),</span><br><span class="line">    xaxis_opts=opts.AxisOpts(name=<span class="string">&quot;月份&quot;</span>),</span><br><span class="line">    yaxis_opts=opts.AxisOpts(name=<span class="string">&quot;销售额（万元）&quot;</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 渲染图表</span></span><br><span class="line">bar_chart.render(<span class="string">&quot;bar_chart.html&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>说明：</strong></p>
+<ul>
+<li><code>set_global_opts</code>：配置全局选项，包括标题、坐标轴的名称等。</li>
+</ul>
+<p>生成的图表将保存为 “bar_chart.html” 文件，你可以在浏览器中打开该文件，查看生成的柱状图。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.runoob.com/wp-content/uploads/2023/12/37408929ecb93d284bc420fbc12e9ff0.png"
+                      alt="img"
+                ></p>
+<h3 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h3><p>pyecharts 支持主题切换，用户可以根据自己的需求选择合适的主题来改变图表的样式。</p>
+<p>pyecharts 提供了 10+ 种内置主题，开发者也可以定制自己喜欢的主题。</p>
+<p>以下是一个简单的例子，演示了如何使用 pyecharts 切换主题：</p>
+<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar</span><br><span class="line"><span class="comment"># 内置主题类型可查看 pyecharts.globals.ThemeType</span></span><br><span class="line"><span class="keyword">from</span> pyecharts.<span class="built_in">globals</span> <span class="keyword">import</span> ThemeType</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备数据</span></span><br><span class="line">x_data = [<span class="string">&#x27;一月&#x27;</span>, <span class="string">&#x27;二月&#x27;</span>, <span class="string">&#x27;三月&#x27;</span>, <span class="string">&#x27;四月&#x27;</span>, <span class="string">&#x27;五月&#x27;</span>]</span><br><span class="line">y_data = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">30</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建柱状图</span></span><br><span class="line">bar_chart = Bar(init_opts=opts.InitOpts(theme=ThemeType.LIGHT))  <span class="comment"># 初始主题为亮色系</span></span><br><span class="line">bar_chart.add_xaxis(x_data)</span><br><span class="line">bar_chart.add_yaxis(<span class="string">&quot;销售额&quot;</span>, y_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置图表</span></span><br><span class="line">bar_chart.set_global_opts(</span><br><span class="line">    title_opts=opts.TitleOpts(title=<span class="string">&quot;月度销售额柱状图&quot;</span>),</span><br><span class="line">    xaxis_opts=opts.AxisOpts(name=<span class="string">&quot;月份&quot;</span>),</span><br><span class="line">    yaxis_opts=opts.AxisOpts(name=<span class="string">&quot;销售额（万元）&quot;</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">### 切换到暗色系主题###</span></span><br><span class="line">bar_chart.set_global_opts(theme=ThemeType.DARK)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 渲染图表</span></span><br><span class="line">bar_chart.render(<span class="string">&quot;themed_bar_chart.html&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>以上例子演示了如何在 pyecharts 中使用 <code>ThemeType</code> 来切换主题，pyecharts 支持的主题类型包括 <code>LIGHT</code>（亮色系）、<code>DARK</code>（暗色系）等，你可以根据需求选择合适的主题。</p>
+<ul>
+<li><code>init_opts=opts.InitOpts(theme=ThemeType.LIGHT)</code>：在创建图表对象时，通过 <code>init_opts</code> 参数指定图表的初始主题，这里设置为亮色系。</li>
+</ul>
+<p>生成的图表如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.runoob.com/wp-content/uploads/2023/12/aa84ae9581fcd95f9b40ec6c73f400ef.png"
+                      alt="img"
+                ></p>
+<p>以下是 pyecharts 支持的主题列表：</p>
+<p><strong>Light Themes（亮色系主题）:</strong></p>
+<ul>
+<li><code>&quot;LIGHT&quot;</code>: 亮色系默认主题</li>
+<li><code>&quot;WESTEROS&quot;</code>: 经典的暖色调主题</li>
+<li><code>&quot;CHALK&quot;</code>: 粉笔风格主题</li>
+<li><code>&quot;ESSOS&quot;</code>: 温和的绿色调主题</li>
+<li><code>&quot;INFOGRAPHIC&quot;</code>: 信息图形主题</li>
+<li><code>&quot;MACARONS&quot;</code>: 美味糖果色主题</li>
+</ul>
+<p><strong>Dark Themes（暗色系主题）:</strong></p>
+<ul>
+<li><code>&quot;DARK&quot;</code>: 暗色系默认主题</li>
+<li><code>&quot;PURPLE-PASSION&quot;</code>: 深紫色调主题</li>
+<li><code>&quot;SHINE&quot;</code>: 简洁的黑色调主题</li>
+<li><code>&quot;VINTAGE&quot;</code>: 复古风格主题</li>
+<li><code>&quot;ROMA&quot;</code>: 古罗马风格主题</li>
+<li><code>&quot;WALDEN&quot;</code>: 森林深色系主题</li>
+</ul>
+<p>用户可以通过设置自定义的颜色和样式来创建自定义主题。</p>
+<hr>
+<h2 id="设置全局配置项"><a href="#设置全局配置项" class="headerlink" title="设置全局配置项"></a>设置全局配置项</h2><p>set_global_opts 是 pyecharts 中用于设置全局配置项的方法，该方法允许你配置整个图表的一些全局属性，如标题、坐标轴、图例等。</p>
+<p>以下是一些常用的全局配置项：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">bar_chart.set_global_opts(</span><br><span class="line">    title_opts=opts.TitleOpts(title=&quot;月度销售额柱状图&quot;, subtitle=&quot;副标题&quot;),</span><br><span class="line">    xaxis_opts=opts.AxisOpts(name=&quot;月份&quot;),</span><br><span class="line">    yaxis_opts=opts.AxisOpts(name=&quot;销售额（万元）&quot;),</span><br><span class="line">    legend_opts=opts.LegendOpts(pos_left=&quot;center&quot;, pos_top=&quot;top&quot;),</span><br><span class="line">    toolbox_opts=opts.ToolboxOpts(),</span><br><span class="line">    tooltip_opts=opts.TooltipOpts(trigger=&quot;axis&quot;, axis_pointer_type=&quot;cross&quot;),</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>说明：</strong></p>
+<ul>
+<li><code>title_opts</code>: <strong>标题</strong>配置项，可以设置主标题和副标题，以及相关的样式设置。</li>
+<li><code>xaxis_opts</code> 和 <code>yaxis_opts</code>: <strong>x 轴和 y 轴的配置项</strong>，可以设置轴的名称、轴线样式等。</li>
+<li><code>legend_opts</code>: <strong>图例配置项</strong>，可以设置图例的位置、样式等。</li>
+<li><code>toolbox_opts</code>: <strong>工具箱配置项</strong>，用于添加一些交互工具，如保存为图片、数据视图等。</li>
+<li><code>tooltip_opts</code>: <strong>提示框配置项</strong>，可以设置提示框的触发方式、样式等。</li>
+</ul>
+<h2 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts import options as opts</span><br><span class="line">from pyecharts.charts import Bar</span><br><span class="line"></span><br><span class="line"># 准备数据</span><br><span class="line">x_data = [&#x27;一月&#x27;, &#x27;二月&#x27;, &#x27;三月&#x27;, &#x27;四月&#x27;, &#x27;五月&#x27;]</span><br><span class="line">y_data = [10, 20, 15, 25, 30]</span><br><span class="line"></span><br><span class="line"># 创建柱状图</span><br><span class="line">bar_chart = Bar()</span><br><span class="line">bar_chart.add_xaxis(x_data)</span><br><span class="line">bar_chart.add_yaxis(&quot;销售额&quot;, y_data)</span><br><span class="line"></span><br><span class="line"># 配置全局属性</span><br><span class="line">bar_chart.set_global_opts(</span><br><span class="line">    title_opts=opts.TitleOpts(title=&quot;月度销售额柱状图&quot;, subtitle=&quot;副标题&quot;),</span><br><span class="line">    xaxis_opts=opts.AxisOpts(name=&quot;月份&quot;),</span><br><span class="line">    yaxis_opts=opts.AxisOpts(name=&quot;销售额（万元）&quot;),</span><br><span class="line">    legend_opts=opts.LegendOpts(pos_left=&quot;center&quot;, pos_top=&quot;top&quot;),</span><br><span class="line">    toolbox_opts=opts.ToolboxOpts(),</span><br><span class="line">    tooltip_opts=opts.TooltipOpts(trigger=&quot;axis&quot;, axis_pointer_type=&quot;cross&quot;),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 渲染图表</span><br><span class="line">bar_chart.render(&quot;global_options_bar_chart.html&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<p>生成的图表如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.runoob.com/wp-content/uploads/2023/12/190eac8906c4561f29a26f110bd9f7fe.png"
+                      alt="img"
+                ></p>
+<h2 id="示例分析"><a href="#示例分析" class="headerlink" title="示例分析"></a>示例分析</h2><p>以下的在编译器里面运行把chart.render_notebook() 改成 chart.render(“global_options_bar_chart.html”)</p>
+<h4 id="1-柱状图堆叠"><a href="#1-柱状图堆叠" class="headerlink" title="1.柱状图堆叠"></a>1.柱状图堆叠</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.faker <span class="keyword">import</span> Faker</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_stack</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    bar.add_xaxis(Faker.choose())</span><br><span class="line">    <span class="comment"># stack值一样的系列会堆叠在一起</span></span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values(), stack=<span class="string">&#x27;stack1&#x27;</span>)<span class="comment">### Faker.values()：随机虚假数据</span></span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;B&#x27;</span>, Faker.values(), stack=<span class="string">&#x27;stack1&#x27;</span>)</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;C&#x27;</span>, Faker.values(), stack=<span class="string">&#x27;stack2&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_stack()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-关闭坐标轴显示"><a href="#2-关闭坐标轴显示" class="headerlink" title="2.关闭坐标轴显示"></a>2.关闭坐标轴显示</h4><p>碰上类目标签过长的时候，可以选择关闭坐标轴，将数据&amp;标签直接显示在图形中；</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.faker <span class="keyword">import</span> Faker</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_with_axis_off</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    </span><br><span class="line">    bar.add_xaxis(Faker.choose())<span class="comment">### Faker.choose()：随机虚假标签</span></span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;&#x27;</span>, Faker.values())</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 碰上类目标签过长的时候，可以选择关闭坐标轴，直接显示在图形中</span></span><br><span class="line">    bar.set_series_opts(label_opts=opts.LabelOpts(position=<span class="string">&#x27;insideLeft&#x27;</span>, formatter=<span class="string">&#x27;&#123;b&#125;:&#123;c&#125;&#x27;</span>))</span><br><span class="line">    <span class="comment">###label_opts：这是一个用于设置标签选项的参数。</span></span><br><span class="line">    <span class="comment">###position=&#x27;insideLeft&#x27;：放在内部的左侧</span></span><br><span class="line">    <span class="comment">###formatter=&#x27;&#123;b&#125;:&#123;c&#125;&#x27;：这个选项指定了标签的格式。&#123;b&#125;代表标签的名称（通常是x轴的标签），&#123;c&#125;代表数据值。</span></span><br><span class="line">    </span><br><span class="line">    bar.set_global_opts(xaxis_opts=opts.AxisOpts(is_show=<span class="literal">False</span>),</span><br><span class="line">                        yaxis_opts=opts.AxisOpts(is_show=<span class="literal">False</span>))</span><br><span class="line">    bar.reversal_axis()<span class="comment">###反转柱状图的坐标轴，即将横轴和纵轴进行交换</span></span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_with_axis_off()<span class="comment">#&#x27;function&#x27; object has no attribute &#x27;render&#x27;</span></span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-自定义坐标轴标签文本（在已有的数据基础上）"><a href="#3-自定义坐标轴标签文本（在已有的数据基础上）" class="headerlink" title="3.自定义坐标轴标签文本（在已有的数据基础上）"></a>3.自定义坐标轴标签文本（在已有的数据基础上）</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">x_data = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">2010</span>, <span class="number">2020</span>))</span><br><span class="line">y_data = [random.randint(<span class="number">20</span>, <span class="number">200</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x_data))]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_with_custom_axis_label</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    bar.add_xaxis(x_data)</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;&#x27;</span>, y_data)</span><br><span class="line"></span><br><span class="line">    bar.set_global_opts(xaxis_opts=opts.AxisOpts(</span><br><span class="line">        <span class="comment"># 自定义坐标轴标签，在年份后加上`年`</span></span><br><span class="line">        axislabel_opts=opts.LabelOpts(formatter=<span class="string">&#x27;&#123;value&#125;年&#x27;</span>)))<span class="comment">###</span></span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_with_custom_axis_label()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-更改坐标轴数据类型"><a href="#4-更改坐标轴数据类型" class="headerlink" title="4.更改坐标轴数据类型"></a>4.更改坐标轴数据类型</h4><p>x轴默认数据类型是使用离散型，在使用散点图的时候可调整为数值型；</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">x_data = [random.randint(<span class="number">0</span>, <span class="number">20</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>)]</span><br><span class="line">y_data = [random.randint(<span class="number">0</span>, <span class="number">50</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">scatter_with_value_xaxis</span>():</span><br><span class="line">    scatter = Scatter(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                              width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                              height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    scatter.add_xaxis(x_data)</span><br><span class="line">    scatter.add_yaxis(<span class="string">&#x27;&#x27;</span>, y_data)</span><br><span class="line">    <span class="comment"># X轴默认数据类型为离散数据，设置为数值型</span></span><br><span class="line">    scatter.set_global_opts(xaxis_opts=opts.AxisOpts(type_=<span class="string">&quot;value&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> scatter</span><br><span class="line"></span><br><span class="line">chart = scatter_with_value_xaxis()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="5-双Y轴【直方图-折线图】"><a href="#5-双Y轴【直方图-折线图】" class="headerlink" title="5.双Y轴【直方图&amp;折线图】"></a>5.双Y轴【直方图&amp;折线图】</h4><p>实际是Bar和Line两个图表共用同一套坐标体系，将Bar和Line分别指向不同的Y轴；</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts.charts import *</span><br><span class="line">from pyecharts import options as opts</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">x_data = [&#x27;香蕉&#x27;, &#x27;梨子&#x27;, &#x27;水蜜桃&#x27;, &#x27;核桃&#x27;, &#x27;西瓜&#x27;, &#x27;苹果&#x27;]</span><br><span class="line">y_data_1 = [random.randint(10, 50) for _ in range(len(x_data))]</span><br><span class="line">y_data_2 = [random.randint(100, 500) for _ in range(len(x_data))]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def bar_line_combine_with_two_axis():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=&#x27;light&#x27;,</span><br><span class="line">                                      width=&#x27;1000px&#x27;,</span><br><span class="line">                                      height=&#x27;600px&#x27;))</span><br><span class="line">    bar.add_xaxis(x_data)</span><br><span class="line">    # 添加一个Y轴</span><br><span class="line">    bar.extend_axis(yaxis=opts.AxisOpts())</span><br><span class="line">    bar.add_yaxis(&#x27;左边Y轴&#x27;, y_data_1, yaxis_index=0)</span><br><span class="line"></span><br><span class="line">    line = Line(init_opts=opts.InitOpts(theme=&#x27;light&#x27;,</span><br><span class="line">                                        width=&#x27;1000px&#x27;,</span><br><span class="line">                                        height=&#x27;600px&#x27;))</span><br><span class="line">    line.add_xaxis(x_data)</span><br><span class="line">    # 将line数据通过yaxis_index指向后添加的Y轴</span><br><span class="line">    line.add_yaxis(&#x27;右边Y轴&#x27;, y_data_2, yaxis_index=1)</span><br><span class="line"></span><br><span class="line">    bar.overlap(line)</span><br><span class="line">    return bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_line_combine_with_two_axis()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="6-直方图——双Y轴"><a href="#6-直方图——双Y轴" class="headerlink" title="6.直方图——双Y轴"></a>6.直方图——双Y轴</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts.charts import *</span><br><span class="line">from pyecharts import options as opts</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">x_data = [&#x27;香蕉&#x27;, &#x27;梨子&#x27;, &#x27;水蜜桃&#x27;, &#x27;核桃&#x27;, &#x27;西瓜&#x27;, &#x27;苹果&#x27;]</span><br><span class="line">y_data_1 = [random.randint(10, 50) for _ in range(len(x_data))]</span><br><span class="line">y_data_2 = [random.randint(100, 500) for _ in range(len(x_data))]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def bar_with_multiple_axis():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=&#x27;light&#x27;,</span><br><span class="line">                                      width=&#x27;1000px&#x27;,</span><br><span class="line">                                      height=&#x27;600px&#x27;))</span><br><span class="line">    bar.add_xaxis(x_data)</span><br><span class="line">    # 添加一个Y轴</span><br><span class="line">    bar.extend_axis(yaxis=opts.AxisOpts())</span><br><span class="line">    # 分别指定使用的Y轴</span><br><span class="line">    bar.add_yaxis(&#x27;左边Y轴&#x27;, y_data_1, yaxis_index=0)</span><br><span class="line">    bar.add_yaxis(&#x27;右边Y轴&#x27;, y_data_2, yaxis_index=1)</span><br><span class="line">    return bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_with_multiple_axis()</span><br><span class="line">chart.render_notebook()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="7-折线图——双X轴"><a href="#7-折线图——双X轴" class="headerlink" title="7.折线图——双X轴"></a>7.折线图——双X轴</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts.charts import *</span><br><span class="line">from pyecharts import options as opts</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">x_data_1 = [&quot;2020/10/&#123;&#125;&quot;.format(i + 1) for i in range(30)]</span><br><span class="line">x_data_2 = [&quot;2019/10/&#123;&#125;&quot;.format(i + 1) for i in range(30)]</span><br><span class="line">y_data_1 = [random.randint(10, 50) for _ in range(30)]</span><br><span class="line">y_data_2 = [random.randint(20, 60) for _ in range(30)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def line_with_two_xaxis():</span><br><span class="line">    line = Line(init_opts=opts.InitOpts(theme=&#x27;light&#x27;,</span><br><span class="line">                                        width=&#x27;1000px&#x27;,</span><br><span class="line">                                        height=&#x27;600px&#x27;))</span><br><span class="line">    line.add_xaxis(x_data_1)</span><br><span class="line">    # 添加一个x轴</span><br><span class="line">    line.extend_axis(xaxis_data=x_data_2, xaxis=opts.AxisOpts())</span><br><span class="line">    line.add_yaxis(&#x27;下面X轴&#x27;, y_data_1)</span><br><span class="line">    line.add_yaxis(&#x27;上面X轴&#x27;, y_data_2)</span><br><span class="line">    return line</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = line_with_two_xaxis()</span><br><span class="line">chart.render_notebook()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="图例选择设置单选"><a href="#图例选择设置单选" class="headerlink" title="图例选择设置单选"></a>图例选择设置单选</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.faker <span class="keyword">import</span> Faker</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_single_selected</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    bar.add_xaxis(Faker.choose())</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values())</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;B&#x27;</span>, Faker.values())</span><br><span class="line">    <span class="comment"># 设置图例选择模式为单选</span></span><br><span class="line">    bar.set_global_opts(legend_opts=opts.LegendOpts(selected_mode=<span class="string">&#x27;single&#x27;</span>))</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_single_selected()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="10-设置默认选中系列（接着上一个）"><a href="#10-设置默认选中系列（接着上一个）" class="headerlink" title="10.设置默认选中系列（接着上一个）"></a>10.设置默认选中系列（接着上一个）</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.faker <span class="keyword">import</span> Faker</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_with_default_selected_series</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    bar.add_xaxis(Faker.choose())</span><br><span class="line">    <span class="comment"># 默认选中A C</span></span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values(), is_selected=<span class="literal">True</span>)<span class="comment">###is_selected=True</span></span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;B&#x27;</span>, Faker.values(), is_selected=<span class="literal">False</span>)</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;C&#x27;</span>, Faker.values(), is_selected=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_with_default_selected_series()</span><br><span class="line">chart.render_notebook()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="11-缩略轴——inside组件-可缩放"><a href="#11-缩略轴——inside组件-可缩放" class="headerlink" title="11.缩略轴——inside组件(可缩放)"></a>11.缩略轴——inside组件(可缩放)</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">x_data = [<span class="string">&quot;2020/10/&#123;&#125;&quot;</span>.<span class="built_in">format</span>(i + <span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">30</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 随机生成点数据</span></span><br><span class="line">y_data = [random.randint(<span class="number">10</span>, <span class="number">20</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x_data))]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar_datazoom_inside</span>():</span><br><span class="line">    bar = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;1000px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;600px&#x27;</span>))</span><br><span class="line">    bar.add_xaxis(x_data)</span><br><span class="line">    bar.add_yaxis(<span class="string">&#x27;&#x27;</span>, y_data)</span><br><span class="line">    bar.set_global_opts(datazoom_opts=opts.DataZoomOpts(type_=<span class="string">&#x27;inside&#x27;</span>,</span><br><span class="line">                                                        range_start=<span class="number">50</span>,   <span class="comment"># 设置起止位置，50%-100%</span></span><br><span class="line">                                                        range_end=<span class="number">100</span>))</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = bar_datazoom_inside()</span><br><span class="line">chart.render_notebook()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="Page更改布局"><a href="#Page更改布局" class="headerlink" title="Page更改布局"></a>Page更改布局</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.faker <span class="keyword">import</span> Faker</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">page_simple_layout</span>():</span><br><span class="line">    <span class="comment"># 图表1</span></span><br><span class="line">    bar_1 = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                        width=<span class="string">&#x27;500px&#x27;</span>,</span><br><span class="line">                                        height=<span class="string">&#x27;300px&#x27;</span>))</span><br><span class="line">    bar_1.add_xaxis(Faker.choose())</span><br><span class="line">    bar_1.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values())</span><br><span class="line">    bar_1.add_yaxis(<span class="string">&#x27;B&#x27;</span>, Faker.values())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图表2</span></span><br><span class="line">    bar_2 = Bar(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                        width=<span class="string">&#x27;500px&#x27;</span>,</span><br><span class="line">                                        height=<span class="string">&#x27;300px&#x27;</span>))</span><br><span class="line">    bar_2.add_xaxis(Faker.choose())</span><br><span class="line">    bar_2.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values())</span><br><span class="line">    <span class="comment"># x,y轴翻转</span></span><br><span class="line">    bar_2.reversal_axis()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图表3</span></span><br><span class="line">    line = Line(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                        width=<span class="string">&#x27;500px&#x27;</span>,</span><br><span class="line">                                        height=<span class="string">&#x27;300px&#x27;</span>))</span><br><span class="line">    line.add_xaxis(Faker.choose())</span><br><span class="line">    line.add_yaxis(<span class="string">&#x27;A&#x27;</span>, Faker.values())</span><br><span class="line">    line.add_yaxis(<span class="string">&#x27;B&#x27;</span>, Faker.values())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图表4</span></span><br><span class="line">    pie = Pie(init_opts=opts.InitOpts(theme=<span class="string">&#x27;light&#x27;</span>,</span><br><span class="line">                                      width=<span class="string">&#x27;500px&#x27;</span>,</span><br><span class="line">                                      height=<span class="string">&#x27;300px&#x27;</span>))</span><br><span class="line">    pie.add(<span class="string">&quot;&quot;</span>,</span><br><span class="line">            [<span class="built_in">list</span>(z) <span class="keyword">for</span> z <span class="keyword">in</span> <span class="built_in">zip</span>(Faker.choose(), Faker.values())],</span><br><span class="line">            radius=[<span class="string">&quot;40%&quot;</span>, <span class="string">&quot;75%&quot;</span>])</span><br><span class="line"></span><br><span class="line">    page = Page(layout=Page.SimplePageLayout)</span><br><span class="line">    <span class="comment"># 需要自行调整每个 chart 的 height/width，布局会因为页面大小而不同</span></span><br><span class="line">    page.add(bar_1, bar_2, line, pie)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> page</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = page_simple_layout()</span><br><span class="line">chart.render_notebook()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="Timeline-自动播放"><a href="#Timeline-自动播放" class="headerlink" title="Timeline 自动播放"></a>Timeline 自动播放</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts.charts import *</span><br><span class="line">from pyecharts import options as opts</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def timeline_auto_play():</span><br><span class="line">    timeline = Timeline(init_opts=opts.InitOpts(theme=&#x27;light&#x27;,</span><br><span class="line">                                                width=&#x27;1000px&#x27;,</span><br><span class="line">                                                height=&#x27;600px&#x27;))</span><br><span class="line">    timeline.add_schema(is_auto_play=True,  # 自动播放</span><br><span class="line">                        is_loop_play=True  # 循环播放</span><br><span class="line">                        )</span><br><span class="line">    for year in range(2000, 2020):</span><br><span class="line">        bar = Bar()</span><br><span class="line">        bar.add_xaxis([&#x27;香蕉&#x27;, &#x27;梨子&#x27;, &#x27;水蜜桃&#x27;, &#x27;核桃&#x27;, &#x27;西瓜&#x27;, &#x27;苹果&#x27;, &#x27;菠萝&#x27;])</span><br><span class="line">        bar.add_yaxis(&#x27;A&#x27;, Faker.values())</span><br><span class="line">        bar.add_yaxis(&#x27;B&#x27;, Faker.values())</span><br><span class="line">        timeline.add(bar, &#x27;&#123;&#125;年&#x27;.format(year))</span><br><span class="line">    return timeline</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chart = timeline_auto_play()</span><br><span class="line">chart.render_notebook()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> pyecharts</li>
+        <li><strong>作者:</strong> 小禹君</li>
+        <li><strong>创建于
+                :</strong> 2024-06-13 10:07:17</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-06-13 12:03:20
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/06/13/pyecharts/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+            本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">#数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/06/23/%E7%88%AC%E8%99%AB/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">爬虫</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/06/13/Untitled%203/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;评论
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">pyecharts</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pyecharts%E5%AE%89%E8%A3%85"><span class="nav-text">pyecharts安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pyecharts-%E5%9B%BE%E8%A1%A8%E7%B1%BB%E5%9E%8B"><span class="nav-text">pyecharts 图表类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9B%BE%E8%A1%A8"><span class="nav-text">创建第一个图表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-text">使用主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="nav-text">设置全局配置项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-3"><span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">示例分析</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">小禹君</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
