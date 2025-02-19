@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="[TOC] 日期库（datetime）1import datetime  计算经过多久时间(datetime )datetime.datetime.fromtimestamp(） 从1970-01-01 08：00：00开始计时，经过（）秒，是什么日期。 123456import datetimemydatetime &#x3D; datetime.datetime.fromtimestamp(60)pri">
+        <meta name="description" content="[TOC] 日期库（datetime）1import datetime  datetime.datetime 类**strftime(format)**：格式化日期和时间为指定格式的字符串。 **strptime(date_string, format)**：从字符串解析日期和时间 1234567from datetime import datetimedt &#x3D; datetime.now()  #">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日期">
 <meta property="og:url" content="http://qwepure.gihub.io/2024/04/15/%E6%97%A5%E6%9C%9F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC] 日期库（datetime）1import datetime  计算经过多久时间(datetime )datetime.datetime.fromtimestamp(） 从1970-01-01 08：00：00开始计时，经过（）秒，是什么日期。 123456import datetimemydatetime &#x3D; datetime.datetime.fromtimestamp(60)pri">
+<meta property="og:description" content="[TOC] 日期库（datetime）1import datetime  datetime.datetime 类**strftime(format)**：格式化日期和时间为指定格式的字符串。 **strptime(date_string, format)**：从字符串解析日期和时间 1234567from datetime import datetimedt &#x3D; datetime.now()  #">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-15T01:02:19.241Z">
-<meta property="article:modified_time" content="2024-09-01T02:09:41.457Z">
+<meta property="article:modified_time" content="2025-02-01T18:13:36.781Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="日期">
 <meta name="twitter:card" content="summary">
@@ -446,8 +446,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-01 10:09:41</span>
-            <span class="mobile">2024-09-01 10:09:41</span>
+            <span class="desktop">2025-02-02 02:13:36</span>
+            <span class="mobile">2025-02-02 02:13:36</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -462,6 +462,16 @@ mjx-container[display="true"] + br {
                         
                         <li>
                             <a href="/categories/AC/">AC</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/AC/%E9%A2%98%E5%9E%8B/">题型</a>&nbsp;
                         </li>
                     
                     
@@ -485,12 +495,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>432 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>803 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
         </span>
     
     
@@ -511,6 +521,20 @@ mjx-container[display="true"] + br {
         <div class="article-content markdown-body">
             <p>[TOC]</p>
 <h1 id="日期库（datetime）"><a href="#日期库（datetime）" class="headerlink" title="日期库（datetime）"></a>日期库（<em><strong>datetime</strong></em>）</h1><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="datetime-datetime-类"><a href="#datetime-datetime-类" class="headerlink" title="datetime.datetime 类"></a>datetime.datetime 类</h2><p>**<code>strftime(format)</code>**：格式化日期和时间为指定格式的字符串。</p>
+<p>**<code>strptime(date_string, format)</code>**：从字符串解析日期和时间</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from datetime import datetime</span><br><span class="line"></span><br><span class="line">dt = datetime.now()  # 获取当前日期时间</span><br><span class="line"></span><br><span class="line">formatted = dt.strftime("%Y-%m-%d %H:%M:%S")  # 格式化日期时间</span><br><span class="line">print(formatted)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="datetime-timedelta-类"><a href="#datetime-timedelta-类" class="headerlink" title="datetime.timedelta 类"></a><code>datetime.timedelta</code> 类</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from datetime import timedelta, datetime</span><br><span class="line"></span><br><span class="line">delta = timedelta(days=2, hours=3)  # 2天3小时 seconds</span><br><span class="line">dt = datetime.now()</span><br><span class="line">new_date = dt + delta  # 当前时间加上时间间隔</span><br><span class="line">print(new_date)</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
 
 <h2 id="计算经过多久时间-datetime"><a href="#计算经过多久时间-datetime" class="headerlink" title="计算经过多久时间(datetime )"></a>计算经过多久时间(datetime )</h2><p><strong>datetime.datetime.fromtimestamp(）</strong></p>
 <p>从1970-01-01 08：00：00开始计时，经过（）秒，是什么日期。</p>
@@ -535,6 +559,8 @@ mjx-container[display="true"] + br {
 
 <h4 id="2-模拟"><a href="#2-模拟" class="headerlink" title="2.模拟"></a>2.模拟</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def is_leap(y):</span><br><span class="line">    return y % 400 == 0 or y % 4 == 0 and y % 100 != 0</span><br></pre></td></tr></table></figure></div>
 
+<h3 id="例题2"><a href="#例题2" class="headerlink" title="例题2"></a>例题2</h3><p>对于一个日期，我们可以计算出年份的各个数位上的数字之和，也可以分别计算月和日的各位数字之和。请问从 1900 年 1 月 1 日至 9999 年 12 月 31 日，总共有多少天，年份的数位数字之和等于月的数位数字之和加日的数位数字之和。<br>　例如，2022年11月13日满足要求，因为 2+0+2+2=(1+1)+(1+3) 。<br>　　请提交满足条件的日期的总数量。<br>答案提交<br>这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。<br>————————————————</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line"></span><br><span class="line"># 使用四位年份格式 %Y</span><br><span class="line">s = datetime.datetime.strptime("1900-01-01", "%Y-%m-%d")</span><br><span class="line">e = datetime.datetime.strptime("9999-12-31", "%Y-%m-%d")</span><br><span class="line"></span><br><span class="line">res = 0</span><br><span class="line"></span><br><span class="line">while s != e:</span><br><span class="line">    st = str(s)</span><br><span class="line">    # 求和条件检查</span><br><span class="line">    if sum(map(int, st[0:4])) == sum(map(int, st[5:7])) + sum(map(int, st[8:10])):</span><br><span class="line">        res += 1</span><br><span class="line">    # 增加一天</span><br><span class="line">    d = datetime.timedelta(days=1)</span><br><span class="line">    s += d</span><br><span class="line"></span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure></div>
 
         </div>
 
@@ -549,7 +575,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-09-01 10:09:41
+                    :</strong> 2025-02-02 02:13:36
             </li>
         
         <li>
@@ -673,7 +699,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">日期</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F%E5%BA%93%EF%BC%88datetime%EF%BC%89"><span class="nav-text">日期库（datetime）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%BB%8F%E8%BF%87%E5%A4%9A%E4%B9%85%E6%97%B6%E9%97%B4-datetime"><span class="nav-text">计算经过多久时间(datetime )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-%E8%BD%AC%E6%8D%A2%E5%9B%9E-unixtimestamp"><span class="nav-text">datetime 转换回 unixtimestamp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-%E8%BD%AC%E6%8D%A2%E6%88%90-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="nav-text">datetime 转换成 字符型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F%E5%BA%93%EF%BC%88datetime%EF%BC%89"><span class="nav-text">日期库（datetime）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-datetime-%E7%B1%BB"><span class="nav-text">datetime.datetime 类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-timedelta-%E7%B1%BB"><span class="nav-text">datetime.timedelta 类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%BB%8F%E8%BF%87%E5%A4%9A%E4%B9%85%E6%97%B6%E9%97%B4-datetime"><span class="nav-text">计算经过多久时间(datetime )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-%E8%BD%AC%E6%8D%A2%E5%9B%9E-unixtimestamp"><span class="nav-text">datetime 转换回 unixtimestamp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datetime-%E8%BD%AC%E6%8D%A2%E6%88%90-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="nav-text">datetime 转换成 字符型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%982"><span class="nav-text">例题2</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
@@ -701,7 +727,7 @@ mjx-container[display="true"] + br {
               <span>2023</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">小禹君</a>
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">小禹君</a>
         </div>
         
             <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

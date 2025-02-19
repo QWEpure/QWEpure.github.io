@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="小禹君">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://QWEpure.gihub.io/2025/02/09/数据结构模板/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="[TOC] 普通树邻接表存有权树1234567g &#x3D; [[] for _ in nums]for x, y, w in edges:	g[x].append((y, w))	g[y].append((x, w))          树的搜索123456for y, w in g[x]:	dis.append(dis[-1] + w)	dfs(y, x, top_depth)	dis.pop()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="http://qwepure.gihub.io/2025/02/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] 普通树邻接表存有权树1234567g &#x3D; [[] for _ in nums]for x, y, w in edges:	g[x].append((y, w))	g[y].append((x, w))          树的搜索123456for y, w in g[x]:	dis.append(dis[-1] + w)	dfs(y, x, top_depth)	dis.pop()">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-09T15:00:11.768Z">
+<meta property="article:modified_time" content="2025-02-19T15:01:03.605Z">
+<meta property="article:author" content="小禹君">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/OIP-C.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/OIP-C.png">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/OIP-C.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            数据结构 -
+        
+        Myblog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"qwepure.gihub.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background1.webp","dark":"/images/background2.webp"},"title":"/ᐠ - ˕ -マ Ⳋ","subtitle":{"text":["All you need just One More Try"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":"ture","links":{"zhihu":"https://www.zhihu.com/people/32-12-13-6# your ZhiHu URL","github":"https://github.com/QWEpure# your GitHub URL","instagram":null,"bilibili":"https://space.bilibili.com/372259848","email":"145780475@qq.com# your email"},"qrs":{"weixin":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171226598.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Connected Sky","artist":"Blue Archive# audio artist","url":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171229490.MP3# audio url","cover":"https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202310171228460.png# audio cover url"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":70},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}},"search":{"enable":"ture","preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"施工博客中","links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/3/18 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/OIP-C.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Myblog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        归档
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tags"></i>
+                                        
+                                        标签
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-folder"></i>
+                                        
+                                        分类
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                归档
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tags"></i>
+                                
+                                标签
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-regular fa-folder"></i>
+                                
+                                分类
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">数据结构</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/head2.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">小禹君</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-02-09 23:11</span>
+        <span class="mobile">2025-02-09 23:11</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-02-19 23:01:03</span>
+            <span class="mobile">2025-02-19 23:01:03</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.3k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <p>[TOC]</p>
+<h2 id="普通树"><a href="#普通树" class="headerlink" title="普通树"></a>普通树</h2><h4 id="邻接表存有权树"><a href="#邻接表存有权树" class="headerlink" title="邻接表存有权树"></a>邻接表存有权树</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">g = [[] for _ in nums]</span><br><span class="line">for x, y, w in edges:</span><br><span class="line">	g[x].append((y, w))</span><br><span class="line">	g[y].append((x, w))</span><br><span class="line"></span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+<h4 id="树的搜索"><a href="#树的搜索" class="headerlink" title="树的搜索"></a>树的搜索</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for y, w in g[x]:</span><br><span class="line">	dis.append(dis[-1] + w)</span><br><span class="line">	dfs(y, x, top_depth)</span><br><span class="line">	dis.pop()  # 恢复现场</span><br><span class="line">	last_depth[color] = old_depth  # 恢复现场</span><br><span class="line">                </span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="线段树"><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">MAX_X = <span class="number">32001</span> <span class="comment"># from [0, 32000]==&gt;[1, 32001]</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">    树状数组板子</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">tree = [<span class="number">0</span>]*(MAX_X+<span class="number">1</span>) <span class="comment"># 树状数组 from 1-&gt;n</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">lowbit</span>(<span class="params">x</span>):<span class="comment">#看二进制后缀0</span></span><br><span class="line">    <span class="keyword">return</span> x&amp;-x</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, value</span>):<span class="comment">#更新线段树</span></span><br><span class="line">    <span class="keyword">while</span> x&lt;=MAX_X:</span><br><span class="line">        tree[x] += value</span><br><span class="line">        x += lowbit(x)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_sum</span>(<span class="params">x</span>):<span class="comment">#遍历线段树，求区间和</span></span><br><span class="line">    res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x&gt;=<span class="number">1</span>:<span class="comment">#一般不从0</span></span><br><span class="line">        res += tree[x]</span><br><span class="line">        x -= lowbit(x)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> typing</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LazySegTree</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">            self,</span></span><br><span class="line"><span class="params">            op: typing.<span class="type">Callable</span>[[typing.<span class="type">Any</span>, typing.<span class="type">Any</span>], typing.<span class="type">Any</span>],</span></span><br><span class="line"><span class="params">            e: typing.<span class="type">Any</span>,</span></span><br><span class="line"><span class="params">            mapping: typing.<span class="type">Callable</span>[[typing.<span class="type">Any</span>, typing.<span class="type">Any</span>], typing.<span class="type">Any</span>],</span></span><br><span class="line"><span class="params">            composition: typing.<span class="type">Callable</span>[[typing.<span class="type">Any</span>, typing.<span class="type">Any</span>], typing.<span class="type">Any</span>],</span></span><br><span class="line"><span class="params">            id_: typing.<span class="type">Any</span>,</span></span><br><span class="line"><span class="params">            v: typing.<span class="type">Union</span>[<span class="built_in">int</span>, typing.<span class="type">List</span>[typing.<span class="type">Any</span>]]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        self._op = op <span class="comment"># 线段树的合并操作，例如：max,add,gcd</span></span><br><span class="line">        self._e = e <span class="comment"># 线段树的值的幺元，默认大小</span></span><br><span class="line">        self._mapping = mapping <span class="comment"># 父结点的懒标记更新子结点的值，区间修改 F(映射) 的方法，定义 def mapping(x,y):</span></span><br><span class="line">        self._composition = composition <span class="comment"># 父结点的懒标记更新子结点的懒标记，区间修改 F 的条件，定义 def composition(x,y): (懒标记相关）</span></span><br><span class="line">        self._<span class="built_in">id</span> = id_ <span class="comment"># 更新操作/懒标记的幺元，恒等映射id(F作用于None得到的返回值)，例如：add的id_ = 0,max的id_ = -inf</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isinstance</span>(v, <span class="built_in">int</span>): <span class="comment"># 原数组（如果输入int则表示数组长度，用幺元生成数组）</span></span><br><span class="line">            v = [e] * v</span><br><span class="line"></span><br><span class="line">        self._n = <span class="built_in">len</span>(v)</span><br><span class="line">        self._log = (self._n - <span class="number">1</span>).bit_length()</span><br><span class="line">        self._size = <span class="number">1</span> &lt;&lt; self._log</span><br><span class="line">        self._d = [e] * (<span class="number">2</span> * self._size)</span><br><span class="line">        self._lz = [self._<span class="built_in">id</span>] * self._size</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._n):</span><br><span class="line">            self._d[self._size + i] = v[i]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._size - <span class="number">1</span>, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">            self._update(i)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 单点修改，修改a[p] = x，复杂度：o(logn)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set</span>(<span class="params">self, p: <span class="built_in">int</span>, x: typing.<span class="type">Any</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">0</span> &lt;= p &lt; self._n</span><br><span class="line"></span><br><span class="line">        p += self._size</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._log, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">            self._push(p &gt;&gt; i)</span><br><span class="line">        self._d[p] = x</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, self._log + <span class="number">1</span>):</span><br><span class="line">            self._update(p &gt;&gt; i)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 单点查询，返回a[p]，复杂度：o(1)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get</span>(<span class="params">self, p: <span class="built_in">int</span></span>) -&gt; typing.<span class="type">Any</span>:</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">0</span> &lt;= p &lt; self._n</span><br><span class="line"></span><br><span class="line">        p += self._size</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._log, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">            self._push(p &gt;&gt; i)</span><br><span class="line">        <span class="keyword">return</span> self._d[p]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 区间查询，返回op(a[l],……,a[r-1])，复杂度：o(logn)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">prod</span>(<span class="params">self, left: <span class="built_in">int</span>, right: <span class="built_in">int</span></span>) -&gt; typing.<span class="type">Any</span>:</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">0</span> &lt;= left &lt;= right &lt;= self._n</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> left == right:</span><br><span class="line">            <span class="keyword">return</span> self._e</span><br><span class="line"></span><br><span class="line">        left += self._size</span><br><span class="line">        right += self._size</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._log, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> ((left &gt;&gt; i) &lt;&lt; i) != left:</span><br><span class="line">                self._push(left &gt;&gt; i)</span><br><span class="line">            <span class="keyword">if</span> ((right &gt;&gt; i) &lt;&lt; i) != right:</span><br><span class="line">                self._push(right &gt;&gt; i)</span><br><span class="line"></span><br><span class="line">        sml = self._e</span><br><span class="line">        smr = self._e</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            <span class="keyword">if</span> left &amp; <span class="number">1</span>:</span><br><span class="line">                sml = self._op(sml, self._d[left])</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> right &amp; <span class="number">1</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">                smr = self._op(self._d[right], smr)</span><br><span class="line">            left &gt;&gt;= <span class="number">1</span></span><br><span class="line">            right &gt;&gt;= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self._op(sml, smr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 返回op(a[0], ..., a[n - 1])，复杂度：o(1)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">all_prod</span>(<span class="params">self</span>) -&gt; typing.<span class="type">Any</span>:</span><br><span class="line">        <span class="keyword">return</span> self._d[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 区间修改，</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">apply</span>(<span class="params">self, left: <span class="built_in">int</span>, right: typing.<span class="type">Optional</span>[<span class="built_in">int</span>] = <span class="literal">None</span>,</span></span><br><span class="line"><span class="params">              f: typing.<span class="type">Optional</span>[typing.<span class="type">Any</span>] = <span class="literal">None</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">assert</span> f <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> right <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            p = left</span><br><span class="line">            <span class="keyword">assert</span> <span class="number">0</span> &lt;= left &lt; self._n</span><br><span class="line"></span><br><span class="line">            p += self._size</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._log, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">                self._push(p &gt;&gt; i)</span><br><span class="line">            self._d[p] = self._mapping(f, self._d[p])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, self._log + <span class="number">1</span>):</span><br><span class="line">                self._update(p &gt;&gt; i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">assert</span> <span class="number">0</span> &lt;= left &lt;= right &lt;= self._n</span><br><span class="line">            <span class="keyword">if</span> left == right:</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">            left += self._size</span><br><span class="line">            right += self._size</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self._log, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> ((left &gt;&gt; i) &lt;&lt; i) != left:</span><br><span class="line">                    self._push(left &gt;&gt; i)</span><br><span class="line">                <span class="keyword">if</span> ((right &gt;&gt; i) &lt;&lt; i) != right:</span><br><span class="line">                    self._push((right - <span class="number">1</span>) &gt;&gt; i)</span><br><span class="line"></span><br><span class="line">            l2 = left</span><br><span class="line">            r2 = right</span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                <span class="keyword">if</span> left &amp; <span class="number">1</span>:</span><br><span class="line">                    self._all_apply(left, f)</span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> right &amp; <span class="number">1</span>:</span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                    self._all_apply(right, f)</span><br><span class="line">                left &gt;&gt;= <span class="number">1</span></span><br><span class="line">                right &gt;&gt;= <span class="number">1</span></span><br><span class="line">            left = l2</span><br><span class="line">            right = r2</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, self._log + <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> ((left &gt;&gt; i) &lt;&lt; i) != left:</span><br><span class="line">                    self._update(left &gt;&gt; i)</span><br><span class="line">                <span class="keyword">if</span> ((right &gt;&gt; i) &lt;&lt; i) != right:</span><br><span class="line">                    self._update((right - <span class="number">1</span>) &gt;&gt; i)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_update</span>(<span class="params">self, k: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        self._d[k] = self._op(self._d[<span class="number">2</span> * k], self._d[<span class="number">2</span> * k + <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_all_apply</span>(<span class="params">self, k: <span class="built_in">int</span>, f: typing.<span class="type">Any</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        self._d[k] = self._mapping(f, self._d[k])</span><br><span class="line">        <span class="keyword">if</span> k &lt; self._size:</span><br><span class="line">            self._lz[k] = self._composition(f, self._lz[k])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_push</span>(<span class="params">self, k: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        self._all_apply(<span class="number">2</span> * k, self._lz[k])</span><br><span class="line">        self._all_apply(<span class="number">2</span> * k + <span class="number">1</span>, self._lz[k])</span><br><span class="line">        self._lz[k] = self._<span class="built_in">id</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">separateSquares</span>(<span class="params">self, squares: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">        xs = []</span><br><span class="line">        events = []</span><br><span class="line">        <span class="keyword">for</span> (lx, ly, l) <span class="keyword">in</span> squares:</span><br><span class="line">            rx = lx + l</span><br><span class="line">            ry = ly + l</span><br><span class="line">            xs.append(lx)</span><br><span class="line">            xs.append(rx)</span><br><span class="line">            events.append((ly, lx, rx, <span class="number">1</span>))</span><br><span class="line">            events.append((ry, lx, rx, -<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        xs = <span class="built_in">sorted</span>(<span class="built_in">set</span>(xs)) <span class="comment"># 排序，方便离散化</span></span><br><span class="line">        events.sort() <span class="comment"># 模拟扫描线从下往上移动</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">op</span>(<span class="params">x: <span class="type">Tuple</span>[<span class="built_in">int</span>, <span class="built_in">int</span>], y: <span class="type">Tuple</span>[<span class="built_in">int</span>, <span class="built_in">int</span>]</span>) -&gt; <span class="type">Tuple</span>[<span class="built_in">int</span>, <span class="built_in">int</span>]:</span><br><span class="line">            minCoverLen1, minCover1 = x</span><br><span class="line">            minCoverLen2, minCover2 = y</span><br><span class="line">            <span class="keyword">if</span> minCover1 &lt; minCover2:</span><br><span class="line">                <span class="keyword">return</span> x</span><br><span class="line">            <span class="keyword">if</span> minCover1 &gt; minCover2:</span><br><span class="line">                <span class="keyword">return</span> y</span><br><span class="line">            <span class="keyword">return</span> minCoverLen1 + minCoverLen2, minCover1</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">mapping</span>(<span class="params">x: <span class="built_in">int</span>, y: <span class="type">Tuple</span>[<span class="built_in">int</span>, <span class="built_in">int</span>]</span>) -&gt; <span class="type">Tuple</span>[<span class="built_in">int</span>, <span class="built_in">int</span>]:</span><br><span class="line">            <span class="keyword">return</span> y[<span class="number">0</span>], y[<span class="number">1</span>] + x</span><br><span class="line"></span><br><span class="line">        a = [(y - x, <span class="number">0</span>) <span class="keyword">for</span> x, y <span class="keyword">in</span> pairwise(xs)]</span><br><span class="line">        st = LazySegTree(op, (<span class="number">0</span>, <span class="number">0</span>), mapping, add, <span class="number">0</span>, a) <span class="comment"># 初始化线段树</span></span><br><span class="line">        totx = xs[-<span class="number">1</span>] - xs[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        records = []</span><br><span class="line">        tot_area = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (y, lx, rx, delta), e2 <span class="keyword">in</span> pairwise(events):</span><br><span class="line">            l = bisect_left(xs, lx)         <span class="comment"># 离散化</span></span><br><span class="line">            r = bisect_left(xs, rx) - <span class="number">1</span>     <span class="comment"># r 对应着 xs[r] 与 xs[r + 1] == rx 的差值</span></span><br><span class="line">            st.apply(l, r + <span class="number">1</span>, delta)       <span class="comment"># 更新被 [lx, rx] 覆盖的次数</span></span><br><span class="line">            minCoverLen, minCover = st.all_prod()</span><br><span class="line">            sum_len = totx - (<span class="number">0</span> <span class="keyword">if</span> minCover <span class="keyword">else</span> minCoverLen) <span class="comment"># 减去没被矩形覆盖的长度</span></span><br><span class="line">            records.append((tot_area, sum_len))  <span class="comment"># 记录关键数据</span></span><br><span class="line">            tot_area += sum_len * (e2[<span class="number">0</span>] - y)    <span class="comment"># 新增面积 = 被至少一个矩形覆盖的底边长之和 * 矩形高度</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 二分找最后一个 &lt; tot_area / 2 的面积</span></span><br><span class="line">        i = bisect_left(records, tot_area, key=<span class="keyword">lambda</span> r: r[<span class="number">0</span>] * <span class="number">2</span>) - <span class="number">1</span></span><br><span class="line">        area, sum_len = records[i]</span><br><span class="line">        <span class="keyword">return</span> events[i][<span class="number">0</span>] + (tot_area - area * <span class="number">2</span>) / (sum_len * <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 数据结构</li>
+        <li><strong>作者:</strong> 小禹君</li>
+        <li><strong>创建于
+                :</strong> 2025-02-09 23:00:11</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-02-19 23:01:03
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2025/02/09/数据结构模板/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+            本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2025/02/19/%E4%BA%8C%E5%88%86/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">二分查找 - 二分 - 模板</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2025/02/02/%E6%AF%94%E8%B5%9B%E6%97%B6%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">比赛时好用的函数</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;评论
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">数据结构</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%A0%91"><span class="nav-text">普通树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="nav-text">线段树</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">小禹君</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
