@@ -18,18 +18,20 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="[TOC] 日期datetime1234567s &#x3D; datetime.datetime.strptime(s, &quot;%Y-%m-%d %H:%M:%S&quot;)e &#x3D; datetime.datetime.strptime(e, &quot;%Y-%m-%d %H:%M:%S&quot;)diff &#x3D; e - sdelta&#x3D;diff.total_seconds()&#x2F;&#x2F;60%int(ti">
+        <meta name="description" content="[TOC] 日期datetime1234567s &#x3D; datetime.datetime.strptime(s, &quot;%Y-%m-%d %H:%M:%S&quot;)e &#x3D; datetime.datetime.strptime(e, &quot;%Y-%m-%d %H:%M:%S&quot;)diff &#x3D; e - sdelta&#x3D;diff.total_seconds()&#x2F;&#x2F;60%int(times)print(str(e-date">
 <meta property="og:type" content="article">
 <meta property="og:title" content="比赛时好用的函数">
 <meta property="og:url" content="http://qwepure.gihub.io/2025/02/02/%E6%AF%94%E8%B5%9B%E6%97%B6%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC] 日期datetime1234567s &#x3D; datetime.datetime.strptime(s, &quot;%Y-%m-%d %H:%M:%S&quot;)e &#x3D; datetime.datetime.strptime(e, &quot;%Y-%m-%d %H:%M:%S&quot;)diff &#x3D; e - sdelta&#x3D;diff.total_seconds()&#x2F;&#x2F;60%int(ti">
+<meta property="og:description" content="[TOC] 日期datetime1234567s &#x3D; datetime.datetime.strptime(s, &quot;%Y-%m-%d %H:%M:%S&quot;)e &#x3D; datetime.datetime.strptime(e, &quot;%Y-%m-%d %H:%M:%S&quot;)diff &#x3D; e - sdelta&#x3D;diff.total_seconds()&#x2F;&#x2F;60%int(times)print(str(e-date">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161520407.png">
 <meta property="article:published_time" content="2025-02-01T18:51:37.011Z">
-<meta property="article:modified_time" content="2025-02-19T14:36:28.515Z">
+<meta property="article:modified_time" content="2025-04-16T01:11:50.445Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="知识点">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161520407.png">
     
     
     <!--- Icon Part-->
@@ -96,7 +98,119 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -334,8 +448,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-02-19 22:36:28</span>
-            <span class="mobile">2025-02-19 22:36:28</span>
+            <span class="desktop">2025-04-16 09:11:50</span>
+            <span class="mobile">2025-04-16 09:11:50</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -373,12 +487,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>528 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
         </span>
     
     
@@ -398,28 +512,39 @@
 
         <div class="article-content markdown-body">
             <p>[TOC]</p>
-<h3 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h3><h4 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s = datetime.datetime.strptime(s, &quot;%Y-%m-%d %H:%M:%S&quot;)</span><br><span class="line">e = datetime.datetime.strptime(e, &quot;%Y-%m-%d %H:%M:%S&quot;)</span><br><span class="line">diff = e - s</span><br><span class="line"></span><br><span class="line">delta=diff.total_seconds()//60%int(times)</span><br><span class="line">print(str(e-datetime.timedelta(minutes=delta)))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h3><h4 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s = datetime.datetime.strptime(s, "%Y-%m-%d %H:%M:%S")</span><br><span class="line">e = datetime.datetime.strptime(e, "%Y-%m-%d %H:%M:%S")</span><br><span class="line">diff = e - s</span><br><span class="line"></span><br><span class="line">delta=diff.total_seconds()//60%int(times)</span><br><span class="line">print(str(e-datetime.timedelta(minutes=delta)))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
 
 <h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><p>让字符串x的每一位相乘</p>
 <h4 id="reduce-mul-map-int-str-x"><a href="#reduce-mul-map-int-str-x" class="headerlink" title="reduce(mul, map(int, str(x)))"></a>reduce(mul, map(int, str(x)))</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">prod = reduce(mul, map(int, str(x)))</span><br></pre></td></tr></table></figure></div>
 
-
-
+<h4 id="海伦公式"><a href="#海伦公式" class="headerlink" title="海伦公式"></a>海伦公式</h4><p>三角形面积A 已知s半周长，a,b,c边长 </p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.21ex;" xmlns="http://www.w3.org/2000/svg" width="27.991ex" height="4.208ex" role="img" focusable="false" viewBox="0 -1325.3 12371.9 1860"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1027.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msqrt" transform="translate(2083.6,0)"><g transform="translate(1020,0)"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mo" transform="translate(469,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(858,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mo" transform="translate(1549.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(2549.4,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(3078.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(3467.4,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(3856.4,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mo" transform="translate(4547.7,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(5547.9,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(5976.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(6365.9,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(6754.9,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mo" transform="translate(7446.1,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(8446.3,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(8879.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g><g data-mml-node="mo" transform="translate(0,115.3)"><path data-c="221A" d="M1001 1150Q1017 1150 1020 1132Q1020 1127 741 244L460 -643Q453 -650 436 -650H424Q423 -647 423 -645T421 -640T419 -631T415 -617T408 -594T399 -560T385 -512T367 -448T343 -364T312 -259L203 119L138 41L111 67L212 188L264 248L472 -474L983 1140Q988 1150 1001 1150Z"></path></g><rect width="9268.3" height="60" x="1020" y="1205.3"></rect></g></g></g></svg></mjx-container></p>
 <p>组合</p>
-<h4 id="combinations"><a href="#combinations" class="headerlink" title="combinations"></a>combinations</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from itertools import combinations</span><br></pre></td></tr></table></figure></div>
+<h4 id="combinations"><a href="#combinations" class="headerlink" title="combinations"></a>combinations</h4><h4 id="comb"><a href="#comb" class="headerlink" title="comb"></a>comb</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from itertools import combinations</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import itertools</span><br><span class="line"></span><br><span class="line"># 生成长度为 2 的所有组合</span><br><span class="line">result = itertools.combinations([1, 2, 3], 2)</span><br><span class="line">print(list(result))  # 输出: [(1, 2), (1, 3), (2, 3)]</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line"># 计算从 4 个元素中选取 2 个元素的组合数</span><br><span class="line">result = math.comb(4, 2)</span><br><span class="line">print(result)  # 输出: 6</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><h4 id="开最大递归深度"><a href="#开最大递归深度" class="headerlink" title="开最大递归深度"></a>开最大递归深度</h4><h5 id="sys-setrecursionlimit-60000"><a href="#sys-setrecursionlimit-60000" class="headerlink" title="sys.setrecursionlimit(60000)"></a>sys.setrecursionlimit(60000)</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sys.setrecursionlimit(60000)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="记忆化搜索缓存"><a href="#记忆化搜索缓存" class="headerlink" title="记忆化搜索缓存"></a>记忆化搜索缓存</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from functools import lru_cache  # Python 3.7 需要使用 lru_cache </span><br><span class="line"></span><br><span class="line">@lru_cache(None)  # 替代 @cache</span><br></pre></td></tr></table></figure></div>
 
 
 
-<h3 id="开最大递归深度"><a href="#开最大递归深度" class="headerlink" title="开最大递归深度"></a>开最大递归深度</h3><h5 id="sys-setrecursionlimit-60000"><a href="#sys-setrecursionlimit-60000" class="headerlink" title="sys.setrecursionlimit(60000)"></a>sys.setrecursionlimit(60000)</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sys.setrecursionlimit(60000)</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字典序"><a href="#字典序" class="headerlink" title="字典序"></a>字典序</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=sorted(s)</span><br></pre></td></tr></table></figure></div>
 
 
 
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="str-replace-i-’’"><a href="#str-replace-i-’’" class="headerlink" title="str.replace(i,’’)"></a>str.replace(i,’’)</h4><p>字符串里面有替换函数(‘’内填替换成什么</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(i,&#x27;&#x27;)</span><br></pre></td></tr></table></figure></div>
+<h4 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h4><p>定义<strong>多行字符串</strong>用 <strong>三引号</strong></p>
+<h4 id="str-replace-i-’’"><a href="#str-replace-i-’’" class="headerlink" title="str.replace(i,’’)"></a>str.replace(i,’’)</h4><p>字符串里面有替换函数(‘’内填替换成什么</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(i,'')</span><br></pre></td></tr></table></figure></div>
 
-<h4 id="c-for-c-in-a-if-c-not-in-b"><a href="#c-for-c-in-a-if-c-not-in-b" class="headerlink" title="(c for c in a if c not in b)"></a>(c for c in a if c not in b)</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = &#x27;&#x27;.join(c for c in a if c not in b)   括号里面是一个数据，可以用语句来</span><br></pre></td></tr></table></figure></div>
+<h4 id="c-for-c-in-a-if-c-not-in-b"><a href="#c-for-c-in-a-if-c-not-in-b" class="headerlink" title="(c for c in a if c not in b)"></a>(c for c in a if c not in b)</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = ''.join(c for c in a if c not in b)   括号里面是一个数据，可以用语句来</span><br></pre></td></tr></table></figure></div>
 
 <h4 id="upper"><a href="#upper" class="headerlink" title=".upper"></a>.upper</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.upper 可以把字母变成大写</span><br></pre></td></tr></table></figure></div>
 
@@ -430,27 +555,49 @@
 
 
 
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h5 id="bisect"><a href="#bisect" class="headerlink" title="bisect"></a>bisect</h5><p>二分查找，插入比一个数组里面大于/小于一个数的数</p>
+<p><strong>bisect_left 查找插入位置（左侧）</strong></p>
+<p><strong>bisect_right</strong> <strong>查找插入位置（右侧）</strong></p>
+<p><strong>insort_left</strong> <strong>插入并保持有序（左侧）</strong></p>
+<p><strong>insort_right 插入并保持有序（右侧）</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import bisect</span><br><span class="line"></span><br><span class="line"># 示例列表</span><br><span class="line">sorted_list = [1, 3, 4, 4, 6, 8]</span><br><span class="line"></span><br><span class="line"># 1. bisect_left - 查找插入位置（左侧）</span><br><span class="line"># 查找值4应该插入的位置（左侧）</span><br><span class="line">pos_left = bisect.bisect_left(sorted_list, 4)</span><br><span class="line">print(f"bisect_left位置: {pos_left}")  # 输出2，因为第一个4在索引2</span><br><span class="line"></span><br><span class="line"># 2. bisect_right - 查找插入位置（右侧）</span><br><span class="line">pos_right = bisect.bisect_right(sorted_list, 4)</span><br><span class="line">print(f"bisect_right位置: {pos_right}")  # 输出4，因为最后一个4之后是索引4</span><br><span class="line"></span><br><span class="line"># 3. insort_left - 插入并保持有序（左侧）</span><br><span class="line">bisect.insort_left(sorted_list, 5)</span><br><span class="line">print(f"插入5后的列表: {sorted_list}")  # [1, 3, 4, 4, 5, 6, 8]</span><br><span class="line"></span><br><span class="line"># 4. insort_right - 插入并保持有序（右侧）</span><br><span class="line">bisect.insort_right(sorted_list, 4)</span><br><span class="line">print(f"插入4后的列表: {sorted_list}")  # [1, 3, 4, 4, 4, 5, 6, 8]</span><br><span class="line"></span><br><span class="line"># 查找元素</span><br><span class="line">def find_ge(sorted_list, x):</span><br><span class="line">    """在有序列表中查找第一个大于等于x的元素"""</span><br><span class="line">    i = bisect.bisect_left(sorted_list, x)</span><br><span class="line">    if i != len(sorted_list):</span><br><span class="line">        return sorted_list[i]</span><br><span class="line">    return None</span><br><span class="line"></span><br><span class="line">print(f"第一个大于等于4的元素: {find_ge(sorted_list, 4)}")  # 4</span><br><span class="line">print(f"第一个大于等于7的元素: {find_ge(sorted_list, 7)}")  # 8</span><br></pre></td></tr></table></figure></div>
 
 
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h5 id="pairwise"><a href="#pairwise" class="headerlink" title="pairwise"></a>pairwise</h5><p>循环，迭代器，连续赋值两个连续的单位</p>
+
+<h5 id="pairwise"><a href="#pairwise" class="headerlink" title="pairwise"></a>pairwise</h5><p>循环，迭代器，连续赋值两个连续的单位</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from itertools import pairwise</span><br><span class="line"></span><br><span class="line">nums=[1,2,3]</span><br><span class="line">for x,y in pairwise(nums):</span><br><span class="line">    print(x,y)</span><br><span class="line"></span><br><span class="line">1 2</span><br><span class="line">2 3</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <h5 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h5><p>两个数组同时赋值</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for x,y in zip(sorted(arr)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3]</span><br><span class="line">list2 = ['a', 'b', 'c']</span><br><span class="line">for x, y in zip(list1, list2):</span><br><span class="line">    print(x, y)</span><br></pre></td></tr></table></figure></div>
+
+<p>使用 zip() 合并两个列表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1, 2, 3]</span><br><span class="line">list2 = ['a', 'b', 'c']</span><br><span class="line"></span><br><span class="line"># 使用 zip() 合并两个列表</span><br><span class="line">combined = list(zip(list1, list2))</span><br><span class="line"></span><br><span class="line">print(combined)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h5 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a>enumerate</h5><p>索引，和值</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fruits = ['apple', 'banana', 'cherry']</span><br><span class="line"></span><br><span class="line">for index, fruit in enumerate(fruits):</span><br><span class="line">    print(index, fruit)</span><br></pre></td></tr></table></figure></div>
 
 
 
 
 
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h4 id="创建一个以-int-为默认值字典-defaultdict-int"><a href="#创建一个以-int-为默认值字典-defaultdict-int" class="headerlink" title="创建一个以 int 为默认值字典 defaultdict(int)"></a>创建一个以 int 为默认值字典 defaultdict(int)</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from collections import defaultdict</span><br><span class="line"></span><br><span class="line">#  defaultdict</span><br><span class="line">cnt = defaultdict(int)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><h4 id="创建一个以-int（0）-为默认值字典-defaultdict-int"><a href="#创建一个以-int（0）-为默认值字典-defaultdict-int" class="headerlink" title="创建一个以 int（0） 为默认值字典 defaultdict(int)"></a>创建一个以 int（0） 为默认值字典 defaultdict(int)</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from collections import defaultdict</span><br><span class="line"></span><br><span class="line">#  defaultdict</span><br><span class="line">cnt = defaultdict(int)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
+<h4 id="Counter专门用于统计可哈希对象（如整数、字符串等）的出现次数。"><a href="#Counter专门用于统计可哈希对象（如整数、字符串等）的出现次数。" class="headerlink" title="Counter专门用于统计可哈希对象（如整数、字符串等）的出现次数。"></a>Counter专门用于统计可哈希对象（如整数、字符串等）的出现次数。</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = [1, 2, 2, 3, 3, 3]</span><br><span class="line">cnt = Counter(data)</span><br><span class="line">print(cnt)  # 输出：Counter({3: 3, 2: 2, 1: 1})</span><br></pre></td></tr></table></figure></div>
 
+<p>不仅外面的字典有默认值，里面的字典也有</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defaultdict(Counter)</span><br><span class="line">#{0: {1: 1}, 1: {2: 1, 4: 1}, 2: {3: 1, 5: 1, 7: 1}, 3: {6: 1, 8: 1}}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<p>二维列表排序</p>
+<p>和上面一样的功能（但是麻烦一些）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">right = defaultdict(lambda: defaultdict(int))  # 嵌套 defaultdict</span><br><span class="line">left = defaultdict(lambda: defaultdict(int))</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h4 id="简单集合运算"><a href="#简单集合运算" class="headerlink" title="简单集合运算"></a>简单集合运算</h4><p><img lazyload="" src="/images/loading.svg" data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404161520407.png" alt="image-20240416152007418"></p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>二维列表排序</p>
 <p>加负号逆序，可以有两个参数，但是参数先后有讲究</p>
-<h4 id="array-sort-key-lambda-x-x-1"><a href="#array-sort-key-lambda-x-x-1" class="headerlink" title="array.sort(key&#x3D;lambda x: -x[1])"></a>array.sort(key&#x3D;lambda x: -x[1])</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个二维数组</span><br><span class="line">array = [[1, 2], [2, 1], [4, 1]]</span><br><span class="line"></span><br><span class="line"># 按第二列的值进行降序排序</span><br><span class="line">array.sort(key=lambda x: -x[1])</span><br><span class="line">print(array)  # 输出: [[1, 2], [4, 1], [2, 1]]</span><br><span class="line">  </span><br></pre></td></tr></table></figure></div>
+<h4 id="array-sort-key-lambda-x-x-1"><a href="#array-sort-key-lambda-x-x-1" class="headerlink" title="array.sort(key=lambda x: -x[1])"></a>array.sort(key=lambda x: -x[1])</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个二维数组</span><br><span class="line">array = [[1, 2], [2, 1], [4, 1]]</span><br><span class="line"></span><br><span class="line"># 按第二列的值进行降序排序</span><br><span class="line">array.sort(key=lambda x: -x[1])</span><br><span class="line">print(array)  # 输出: [[1, 2], [4, 1], [2, 1]]</span><br><span class="line">  </span><br></pre></td></tr></table></figure></div>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h4 id="product函数"><a href="#product函数" class="headerlink" title="product函数"></a>product函数</h4><p>生成一个二维笛卡尔积，表示所有可能的二维向量组合</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="product函数"><a href="#product函数" class="headerlink" title="product函数"></a>product函数</h4><p>生成一个二维笛卡尔积，表示所有可能的二维向量组合</p>
 <p>将列表 <code>[-1, 0, 1]</code> 复制两次，生成一个列表的列表：<code>[[-1, 0, 1], [-1, 0, 1]]</code>。</p>
 <p>这表示两个维度（二维），每个维度的取值范围都是[−1,0,1]。</p>
 <p>*<code>解包运算符将</code>[[−1, 0, 1], [−1, 0, 1]]<code>解包为两个单独的参数传递给</code>product</p>
@@ -473,7 +620,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-02-19 22:36:28
+                    :</strong> 2025-04-16 09:11:50
             </li>
         
         <li>
@@ -597,7 +744,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">比赛时好用的函数</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-text">日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6"><span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%80%E5%A4%A7%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6"><span class="nav-text">开最大递归深度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-text">对数据的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-text">日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6"><span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-text">对数据的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-text">循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-text">集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-text">排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-text">列表</span></a></li></ol>
 
     </div>
 </div>

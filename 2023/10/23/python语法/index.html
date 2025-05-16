@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404292211884.png">
 <meta property="og:image" content="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404292211004.png">
 <meta property="article:published_time" content="2023-10-23T14:29:14.474Z">
-<meta property="article:modified_time" content="2025-02-19T14:15:13.559Z">
+<meta property="article:modified_time" content="2025-04-06T08:54:42.488Z">
 <meta property="article:author" content="小禹君">
 <meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary">
@@ -351,8 +351,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-02-19 22:15:13</span>
-            <span class="mobile">2025-02-19 22:15:13</span>
+            <span class="desktop">2025-04-06 16:54:42</span>
+            <span class="mobile">2025-04-06 16:54:42</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -390,12 +390,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.2k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.3k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 分钟</span>
         </span>
     
     
@@ -499,11 +499,15 @@
 </ul>
 <h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">M = 100_000  ### _用于增加辨识度</span><br></pre></td></tr></table></figure></div>
 
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">定义无穷小   float(&#x27;-inf&#x27;)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Null在py里面是None</span><br></pre></td></tr></table></figure></div>
 
 
 
-
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>空字符不是None</p>
+<p>定义<strong>多行字符串</strong>用 <strong>三引号</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>想把字符串分割成每一个字符，直接把字符串转换成list</p>
 <p><img  
@@ -512,7 +516,12 @@
                      data-src="https://qwe-pic1.oss-cn-beijing.aliyuncs.com/images/202404190837173.png"
                       alt="image-20240419083741969"
                 ></p>
-<h2 id="列表（顺序表）"><a href="#列表（顺序表）" class="headerlink" title="列表（顺序表）"></a>列表（顺序表）</h2><p><strong><code>list.append(value)</code></strong>:在list尾部添加指定value</p>
+<h2 id="列表（顺序表）"><a href="#列表（顺序表）" class="headerlink" title="列表（顺序表）"></a>列表（顺序表）</h2><p>输入np,其余输入到nums</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np,*nums=map(int,input().split())</span><br><span class="line">print(np,nums)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p><strong><code>list.append(value)</code></strong>:在list尾部添加指定value</p>
 <p><strong><code>list.insert(index,value)</code></strong>:在指定index前插入指定value</p>
 <p><strong><code>list1.extend(list2)</code></strong>:将list2加到list1后面</p>
 <p><strong><code>del list[index]</code></strong>:删除指定下标</p>
@@ -520,12 +529,27 @@
 <p><strong><code>list.clear()</code></strong>:清空列表</p>
 <p><strong><code>list.index(value)</code></strong>:查找value的下标（索引）</p>
 <p><strong>list.count(value)</strong>&#96;:统计相同元素(value)个数</p>
-<p><strong><code>max(list)** **min(list)</code></strong></p>
+<p><strong><code>max(list)**  **min(list)</code></strong></p>
 <p><strong><code>new list=list.copy()</code></strong>:复制列表类似与list[:]</p>
+<p><strong>一维列表</strong></p>
 <p><strong><code>list.sort(key=none,reverse=False)</code></strong>:返回排序后原来的列表</p>
+<p><strong>二维列表</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二维列表排序默认看里面的第一个</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个二维数组</span><br><span class="line">array = [[1, 2], [2, 1], [4, 1]]</span><br><span class="line"></span><br><span class="line"># 按第二列的值进行降序排序</span><br><span class="line">array.sort(key=lambda x: -x[1])</span><br><span class="line">print(array)  # 输出: [[1, 2], [4, 1], [2, 1]]</span><br></pre></td></tr></table></figure></div>
+
+
+
 <p><code>key=none</code>:默认为升序</p>
 <p><code>reverse=True</code>:反转</p>
 <p><code>reverse=False</code>:不反转</p>
+<ul>
+<li><code>reverse=True</code> 表示从大到小排序（降序）。</li>
+<li><code>reverse=False</code>（默认值）表示从小到大排序（升序）。</li>
+</ul>
+<p><strong>array.sort(key&#x3D;lambda x: -x[1])</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+
 <p><strong>sorted(type,key,reverse)</strong>:返回一个排序后新的列表</p>
 <p><em>还有改，索引，切片等操作（与字符串差不多）</em></p>
 <h4 id="判断列表为空"><a href="#判断列表为空" class="headerlink" title="判断列表为空"></a>判断列表为空</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">list</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;list is empty&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
@@ -661,7 +685,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-02-19 22:15:13
+                    :</strong> 2025-04-06 16:54:42
             </li>
         
         <li>
